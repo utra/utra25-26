@@ -1,0 +1,6 @@
+/* Tailwind directives will be injected via PostCSS build */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS tokens can live here if needed */

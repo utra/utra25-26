@@ -14,7 +14,11 @@ This website is written in HTML, CSS, and JavaScript. It is a static website wit
 
 ## Deployment
 
+- `npm run dev` – start the local dev server
+- `npm run build` – build for production (used by CI)
+- `npm run preview` – preview the production build locally
 
+Deployment is automated to GitHub Pages via GitHub Actions. The site deploys to the `gh-pages` environment using the repository name as the base path.
 
 ## Structure
 
