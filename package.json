@@ -1,6 +1,7 @@
 {
     "name": "utra25-26",
     "version": "0.1.0",
+    "type": "module",
     "private": true,
     "scripts": {
         "dev": "vite",
