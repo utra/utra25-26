@@ -13,7 +13,9 @@ export default function Header() {
   ];
 
   const getNavItemClasses = (path) => {
-    const isActive = location.pathname === path;
+    // Initialize to home path if location hasn't loaded yet, otherwise use current path
+    const currentPath = location.pathname || "/";
+    const isActive = currentPath === path;
     const baseClasses = "relative transition-colors duration-500";
 
     if (isActive) {
