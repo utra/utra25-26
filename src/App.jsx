@@ -6,9 +6,11 @@ import Header from "./components/Header";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 text-gray-900">
+      <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
         <Header />
-        <Router />
+        <div className="flex-grow">
+          <Router />
+        </div>
         <Footer />
       </div>
     </BrowserRouter>
