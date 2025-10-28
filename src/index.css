@@ -4,3 +4,83 @@
 @tailwind utilities;
 
 /* Custom CSS tokens can live here if needed */
+@layer components {
+  .gradient-complex {
+    background: linear-gradient(
+      to bottom,
+      #4f4b60 0%,
+      #6d6886 20%,
+      #575078 34%,
+      #36397e 98%
+    );
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    mask: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
+  .scroll-container::before,
+  .scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* .scroll-container::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(79, 75, 96, 1) 0%,
+      rgba(79, 75, 96, 0) 100%
+    );
+  }
+
+  .scroll-container::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(79, 75, 96, 1) 0%,
+      rgba(79, 75, 96, 0) 100%
+    );
+  } */
+
+  .scroll-content {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+  }
+
+  .scroll-content:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50.75%);
+    }
+  }
+}
