@@ -1,13 +1,17 @@
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import utraLogo from "../assets/images/logo/utraLogoWhiteMobile.png";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="mx-auto max-w-5xl px-4 py-12">
-        <div className="flex flex-col items-start space-y-6">
+      <div className="mx-auto max-w-5xl px-4 py-8">
+        <div className="flex flex-col items-start space-y-4">
           {/* Logo and tagline */}
           <div className="flex flex-col space-y-2">
-            <h2 className="text-xl font-bold tracking-wide">UTRA</h2>
+            <div className="flex items-center space-x-3">
+              <span className="text-2xl font-bold">UTRA</span>
+              <img src={utraLogo} alt="UTRA Logo" className="h-12" />
+            </div>
             <p className="text-gray-400 text-sm">Design. Build. Inspire.</p>
           </div>
 
