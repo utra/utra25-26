@@ -3,8 +3,112 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS tokens can live here if needed */
+/* -----------------------------------
+   BASE LAYER: Font-face declarations
+----------------------------------- */
+@layer base {
+  /* Proxima Nova Light */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_light.otf")
+      format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Regular */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_regular.ttf")
+      format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Bold */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_bold.otf")
+      format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Bold Italic */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_boldit.otf")
+      format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Extra Bold */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_extrabold.otf")
+      format("opentype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Black */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_black.otf")
+      format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Proxima Nova Black Italic */
+  @font-face {
+    font-family: "proxima-nova";
+    src: url("./assets/fonts/proxima_nova/proximanova_blackit.otf")
+      format("opentype");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+}
+
+/* -----------------------------------
+   COMPONENTS LAYER: Utilities & Scroll
+----------------------------------- */
 @layer components {
+  /* Custom Proxima Nova utility classes */
+  .proxima-light {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 300;
+  }
+
+  .proxima-regular {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+  }
+
+  .proxima-bold {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+  }
+
+  .proxima-extrabold {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 800;
+  }
+
+  .proxima-black {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 900;
+  }
+
+  /* Past Sponsors Scroll Bar */
   .gradient-complex {
     background: linear-gradient(
       to bottom,
@@ -46,24 +150,6 @@
     z-index: 10;
     pointer-events: none;
   }
-
-  /* .scroll-container::before {
-    left: 0;
-    background: linear-gradient(
-      to right,
-      rgba(79, 75, 96, 1) 0%,
-      rgba(79, 75, 96, 0) 100%
-    );
-  }
-
-  .scroll-container::after {
-    right: 0;
-    background: linear-gradient(
-      to left,
-      rgba(79, 75, 96, 1) 0%,
-      rgba(79, 75, 96, 0) 100%
-    );
-  } */
 
   .scroll-content {
     display: inline-flex;

@@ -17,6 +17,13 @@ export default {
         "gradient-mid2": "#575078",
         "gradient-end": "#36397E",
       },
+
+      fontFamily: {
+        // Override default sans font to be Proxima Nova
+        sans: ["proxima-nova", "sans-serif"],
+        // Keep custom as backup
+        custom: ["proxima-nova", "sans-serif"],
+      },
     },
   },
   plugins: [],
