@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS tokens can live here if needed */
+/* -----------------------------------
+   BASE LAYER: Font-face declarations
+----------------------------------- */
 @layer base {
   /* Proxima Nova Light */
   @font-face {
@@ -76,6 +78,9 @@
   }
 }
 
+/* -----------------------------------
+   COMPONENTS LAYER: Utilities & Scroll
+----------------------------------- */
 @layer components {
   /* Custom Proxima Nova utility classes */
   .proxima-light {
@@ -101,5 +106,67 @@
   .proxima-black {
     font-family: "proxima-nova", sans-serif;
     font-weight: 900;
+  }
+
+  /* Past Sponsors Scroll Bar */
+  .gradient-complex {
+    background: linear-gradient(
+      to bottom,
+      #4f4b60 0%,
+      #6d6886 20%,
+      #575078 34%,
+      #36397e 98%
+    );
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    mask: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
+  .scroll-container::before,
+  .scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .scroll-content {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+  }
+
+  .scroll-content:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50.75%);
+    }
   }
 }
