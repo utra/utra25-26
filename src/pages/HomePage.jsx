@@ -105,16 +105,7 @@ export default function HomePage() {
                 SUMO
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[262px]">
-                Build a compact bot and battle it out in the ring. Perfect for
-                beginners.
-              </p>
-            </div>
-            <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
-              <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue-reversed">
-                Combat
-              </h3>
-              <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[290px]">
-                High speed & high power robots built for competitive clashes.
+                Battle it out in the ring. Perfect for beginners.
               </p>
             </div>
             <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
@@ -122,7 +113,15 @@ export default function HomePage() {
                 ART
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[262px]">
-                Rovers that navigate, sense, and explore, fully autonomous.
+                Autonomous rovers that explore, navigate and sense the world.
+              </p>
+            </div>
+            <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
+              <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue-reversed">
+                Combat
+              </h3>
+              <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[290px]">
+                High power robots built for competitive clashes.
               </p>
             </div>
             <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
@@ -130,7 +129,7 @@ export default function HomePage() {
                 RoboSoccer
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[262px]">
-                Humanoid robots playing fast-paced, fully autonomous soccer.
+                Humanoid robots that compete in real world soccer games.
               </p>
             </div>
             <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
@@ -138,8 +137,16 @@ export default function HomePage() {
                 6IX-PAC
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[300px]">
-                Pac-Man inspired robots built for quick, autonomous
-                maze-solving.
+                Pac-Man inspired robots built for quick and efficient maze
+                solving.
+              </p>
+            </div>
+            <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
+              <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue-reversed">
+                Robonars
+              </h3>
+              <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[300px]">
+                Technical Workshop and Seminar Speaker Series
               </p>
             </div>
           </div>
