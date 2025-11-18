@@ -8,7 +8,9 @@ export default function App() {
     <BrowserRouter>
       <div>
         <Header />
-        <Router />
+        <div className="flex-grow">
+          <Router />
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

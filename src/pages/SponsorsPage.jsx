@@ -1,5 +1,11 @@
 export const sponsors = [
   {
+    name: "AMD",
+    link: "https://www.amd.com/en.html",
+    img: new URL("../assets/images/logo_sponsors/amd-logo.png", import.meta.url)
+      .href,
+  },
+  {
     name: "DigiKey",
     link: "https://www.digikey.ca/",
     img: new URL("../assets/images/logo_sponsors/digikey.jpg", import.meta.url)
@@ -74,94 +80,6 @@ export const sponsors = [
       .href,
   },
 ];
-
-// const past_sponsors = [
-//   {
-//     name: "3M Canada",
-//     img: "https://www.3mcanada.ca/3m_theme_assets/themes/3MTheme/assets/images/unicorn/Logo.svg",
-//   },
-
-//   {
-//     name: "Atmel",
-//     img: "https://www.microchip.com/en-us/about/corporate-overview/acquisitions/atmel/_jcr_content/root/responsivegrid/isolatedimage/image.coreimg.png/1716788933716/atmel.png",
-//   },
-//   {
-//     name: "Connect Tech",
-//     img: "https://connecttech.com/wp-content/uploads/2017/01/CTI-Logo-Clean_white.png",
-//   },
-//   {
-//     name: "Crosslink Technology",
-//     img: "https://crosslinktech.com/images/CrosslinkTechnologyLogo.png#joomlaImage://local-images/CrosslinkTechnologyLogo.png?width=390&height=80",
-//   },
-//   {
-//     name: "Dremel DigiLab",
-//     img: "https://www.dremel.com/images/dremel_w340-png--16fe15ef3de449c0a6662896569f4483.png?imgWidth=680&imgHeight=222&scale=1",
-//   },
-//   {
-//     name: "Dutchman Industries",
-//     img: "https://www.dutchmantreespade.com/images/websitelogo.png",
-//   },
-//   {
-//     name: "eckertech",
-//     img: "https://brandfetch.com/eckertech/logo.svg",
-//   },
-//   {
-//     name: "estimote",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/3/33/Estimote_logo.svg",
-//   },
-//   {
-//     name: "FDM Group",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8f/FDM_Group_logo.svg",
-//   },
-//   {
-//     name: "Google",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-//   },
-//   {
-//     name: "iRobot",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/0/00/IRobot_Logo.svg",
-//   },
-//   {
-//     name: "Leap Motion",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Leap_Motion_logo.svg",
-//   },
-//   {
-//     name: "MDA Corporation",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/5/55/MDA_Corporation_logo.svg",
-//   },
-//   {
-//     name: "Novatel",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/4/41/Novatel_logo.svg",
-//   },
-//   {
-//     name: "Particle",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/9/98/Particle_Logo.svg",
-//   },
-//   {
-//     name: "Qualcomm",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Qualcomm_logo.svg",
-//   },
-//   {
-//     name: "RobotShop.com",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/RobotShop_logo.svg",
-//   },
-//   {
-//     name: "SolidWorks",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/4/49/SolidWorks_Logo.svg",
-//   },
-//   {
-//     name: "STMicroelectronics",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/6/61/STMicroelectronics.svg",
-//   },
-//   {
-//     name: "The Pint",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/placeholder.png",
-//   },
-//   {
-//     name: "Timbren",
-//     img: "https://upload.wikimedia.org/wikipedia/commons/placeholder.png",
-//   },
-// ];
 
 const past_sponsors = [
   {
@@ -254,7 +172,7 @@ export default function SponsorsPage() {
       <div className="mx-auto max-w-6xl px-4 pt-8">
         <div className="">
           <h1 className="text-3xl font-semibold text-white mb-4 text-center pt-8">
-            Sponsors
+            Sponsors & Partners
           </h1>
           <p className="text-gray-300 text-center font-light leading-7 text-sm max-w-5xl mx-auto">
             UTRA is supported by a strong network of educational and
