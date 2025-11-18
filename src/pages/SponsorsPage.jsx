@@ -1,3 +1,5 @@
+import bgGradient from "../assets/images/graphics/background_gradient.png";
+
 export const sponsors = [
   {
     name: "AMD",
@@ -168,8 +170,14 @@ function ScrollingCarousel() {
 
 export default function SponsorsPage() {
   return (
-    <main className="gradient-complex">
-      <div className="mx-auto max-w-6xl px-4 pt-8">
+    <main className="relative min-h-screen">
+      <div
+        className="absolute inset-0 bg-cover bg-center pointer-events-none"
+        style={{
+          backgroundImage: `url(${bgGradient})`,
+        }}
+      />
+      <div className="mx-auto max-w-6xl px-4 pt-8 relative z-10">
         <div className="">
           <h1 className="text-3xl font-semibold text-white mb-4 text-center pt-8">
             Sponsors & Partners
@@ -186,13 +194,12 @@ export default function SponsorsPage() {
         </div>
       </div>
 
-      <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent" />
-      <div className="max-w-screen-2xl mx-auto">
+      <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
+      <div className="max-w-screen-2xl mx-auto relative z-10">
         <ScrollingCarousel />
       </div>
-      <hr className="h-[1px] mb-0 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent" />
-
-      <div className="mx-auto max-w-6xl px-4 pt-4 pb-16">
+      <hr className="h-[1px] mb-0 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
+      <div className="mx-auto max-w-6xl px-4 pt-4 pb-16 relative z-10">
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {sponsors.map((sponsor) =>
             SponsorCard({
