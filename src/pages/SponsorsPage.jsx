@@ -1,5 +1,11 @@
 export const sponsors = [
   {
+    name: "AMD",
+    link: "https://www.amd.com/en.html",
+    img: new URL("../assets/images/logo_sponsors/amd-logo.png", import.meta.url)
+      .href,
+  },
+  {
     name: "DigiKey",
     link: "https://www.digikey.ca/",
     img: new URL("../assets/images/logo_sponsors/digikey.jpg", import.meta.url)
@@ -166,7 +172,7 @@ export default function SponsorsPage() {
       <div className="mx-auto max-w-6xl px-4 pt-8">
         <div className="">
           <h1 className="text-3xl font-semibold text-white mb-4 text-center pt-8">
-            Sponsors
+            Sponsors & Partners
           </h1>
           <p className="text-gray-300 text-center font-light leading-7 text-sm max-w-5xl mx-auto">
             UTRA is supported by a strong network of educational and
