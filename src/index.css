@@ -170,3 +170,56 @@
     }
   }
 }
+
+@font-face {
+  font-family: "BeautySalon";
+  src: url("./assets/fonts/BeautySalon Script Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/proximanova_extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.gradient-purple-blue {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(112deg, #ebd2ff 0%, #5c9ad5 99%);
+}
+
+.gradient-purple-blue-reversed {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(292deg, #ebd2ff 0%, #5c9ad5 99%);
+}
+
+.gradient-purple-lightblue {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    170deg,
+    #ffd1ff 21%,
+    #bdf0ff 54%,
+    #7171ff 100%
+  );
+}
+
+.fade-bottom {
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.fade-top {
+  mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+}
