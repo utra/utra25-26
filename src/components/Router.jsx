@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import JoinPage from "../pages/JoinPage";
 import SponsorsPage from "../pages/SponsorsPage";
+import CombatPage from "../pages/teams/CombatPage";
 
 export default function Router() {
   return (
@@ -13,6 +14,7 @@ export default function Router() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/join" element={<JoinPage />} />
       <Route path="/sponsors" element={<SponsorsPage />} />
+      <Route path="/teams/combat" element={<CombatPage />} />
     </Routes>
   );
 }

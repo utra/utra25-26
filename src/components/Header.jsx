@@ -9,6 +9,7 @@ export default function Header() {
     { name: "About Us", path: "/about" },
     { name: "Join Us", path: "/join" },
     { name: "Sponsors", path: "/sponsors" },
+    { name: "Combat", path: "/teams/combat" },
     { name: "UTRAHacks", path: "https://hackathon.utra.ca/", external: true },
   ];
 
