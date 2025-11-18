@@ -6,7 +6,7 @@ import Header from "./components/Header";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 text-gray-900">
+      <div>
         <Header />
         <Router />
         <Footer />
