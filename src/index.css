@@ -161,6 +161,16 @@
     animation-play-state: paused;
   }
 
+  .scroll-content-fast {
+    display: inline-flex;
+    animation: scroll 10s linear infinite;
+    will-change: transform;
+  }
+
+  .scroll-content-fast:hover {
+    animation-play-state: paused;
+  }
+
   @keyframes scroll {
     0% {
       transform: translateX(0%);
@@ -222,4 +232,38 @@
 .fade-top {
   mask-image: linear-gradient(to top, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+}
+
+/* Hide scrollbar for horizontal scroll carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for carousel */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(163, 160, 243, 0.6) rgba(255, 255, 255, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(163, 160, 243, 0.6);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 160, 243, 0.8);
 }
