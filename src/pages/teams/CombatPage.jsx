@@ -26,7 +26,7 @@ export const highlights = [
   },
 ];
 
-export const combat_pictures = [
+export const team_images = [
   {
     name: "combat1",
     img: new URL(
@@ -100,6 +100,33 @@ export const combat_pictures = [
   // Add more images here without importing them individually
 ];
 
+export const team_leadership = [
+  {
+    name: "Jane Doe",
+    role: "Combat PM",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+  },
+  {
+    name: "Jane Doe",
+    role: "Combat PM",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+  },
+  {
+    name: "Jane Doe",
+    role: "Combat PM",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+  },
+  {
+    name: "Jane Doe",
+    role: "Combat PM",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+  },
+];
+
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -141,7 +168,7 @@ const HorizontalScrollCarousel = () => {
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
-        className={`absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
+        className={`absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
           canScrollLeft ? "opacity-100" : "opacity-30 cursor-not-allowed"
         }`}
         disabled={!canScrollLeft}
@@ -165,7 +192,7 @@ const HorizontalScrollCarousel = () => {
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
-        className={`absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
+        className={`absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
           canScrollRight ? "opacity-100" : "opacity-30 cursor-not-allowed"
         }`}
         disabled={!canScrollRight}
@@ -189,7 +216,7 @@ const HorizontalScrollCarousel = () => {
       {/* Scrollable Container */}
       <div
         ref={scrollRef}
-        className="flex gap-8 overflow-x-scroll overflow-y-hidden pb-4 px-12 custom-scrollbar"
+        className="flex gap-8 overflow-x-scroll overflow-y-hidden pb-4 px-12 scrollbar-hide"
         style={{
           cursor: "grab",
           maskImage:
@@ -198,7 +225,7 @@ const HorizontalScrollCarousel = () => {
             "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)",
         }}
       >
-        {combat_pictures.map((card, index) => {
+        {team_images.map((card, index) => {
           return <Card card={card} key={`${card.name}-${index}`} />;
         })}
       </div>
@@ -226,7 +253,7 @@ function ScrollingCarousel() {
     <div className="">
       <div className="scroll-container">
         <div className="scroll-content-fast items-center space-x-[20px]">
-          {[...combat_pictures, ...combat_pictures].map((sponsor, index) => (
+          {[...team_images, ...team_images].map((sponsor, index) => (
             <div
               key={`${sponsor.name}-${index}`}
               className="flex-shrink-0 h-60 w-200 flex items-center justify-center p-6 shadow-sm"
@@ -274,8 +301,29 @@ export default function CombatPage() {
     );
   }
 
+  function TeamMemberCard({ name, role, img, bio }) {
+    return (
+      <div className="bg-black bg-opacity-40 rounded-xl w-[300px] flex flex-col items-center p-4">
+        <img
+          src={img}
+          alt={`${name} photo`}
+          className="w-[250px] h-[250px] object-cover rounded-full mb-4"
+        />
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] text-gray-100">
+          {role}
+        </h3>
+        <p className="text-gray-300 [font-family:'ProximaNova',sans-serif] text-[18px] mb-2">
+          {name}
+        </p>
+        <p className="text-gray-300 [font-family:'ProximaNova',sans-serif] text-[16px] text-center">
+          {bio}
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2200px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -296,7 +344,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2000px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2400px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -358,10 +406,25 @@ export default function CombatPage() {
           </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto pt-[120px]">
-          {/* <ScrollingCarousel /> */}
-
+        <div className="max-w-[1400px] mx-auto pt-[30px]">
           <HorizontalScrollCarousel />
+        </div>
+
+        <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
+          <h2 className="text-gray-200 [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px]">
+            Team Leadership
+          </h2>
+          <div className="flex flex-row gap-[50px] overflow-x-auto scrollbar-hide px-4 py-2">
+            {team_leadership.map((leader) => (
+              <TeamMemberCard
+                key={leader.name}
+                name={leader.name}
+                role={leader.role}
+                img={leader.img}
+                bio={leader.bio}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
