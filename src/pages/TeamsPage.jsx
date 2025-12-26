@@ -1,4 +1,4 @@
-export default function JoinPage() {
+export default function TeamsPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
       <div className="rounded-lg border bg-white p-6 shadow-sm">

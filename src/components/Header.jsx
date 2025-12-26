@@ -7,9 +7,8 @@ export default function Header() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Join Us", path: "/join" },
+    { name: "Teams", path: "/teams" },
     { name: "Sponsors", path: "/sponsors" },
-    { name: "Combat", path: "/teams/combat" },
     { name: "UTRAHacks", path: "https://hackathon.utra.ca/", external: true },
   ];
 
