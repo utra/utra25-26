@@ -108,27 +108,27 @@ export const team_images = [
 export const team_leadership = [
   {
     name: "Jane Doe",
-    role: "Combat PM",
-    bio: "ECE 2T8",
+    role: "Team Lead",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
+    name: "Jane Doe",
+    role: "Tech Lead",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
     role: "Combat PM",
-    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
     role: "Combat PM",
-    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-  },
-  {
-    name: "Jane Doe",
-    role: "Combat PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
   },
 ];
 
@@ -306,29 +306,35 @@ export default function CombatPage() {
     );
   }
 
-  function TeamMemberCard({ name, role, img, bio }) {
+  function TeamMemberCard({ name, role, img, linkedin }) {
     return (
-      <div className="bg-black bg-opacity-40 rounded-xl w-[300px] flex flex-col items-center p-4">
-        <img
-          src={img}
-          alt={`${name} photo`}
-          className="w-[250px] h-[250px] object-cover rounded-full mb-4"
-        />
-        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] text-gray-100">
-          {role}
-        </h3>
-        <p className="text-gray-300 [font-family:'ProximaNova',sans-serif] text-[18px] mb-2">
+      <div className="flex flex-col items-center">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group cursor-pointer"
+        >
+          <div className="w-[220px] h-[220px] rounded-full p-[5px] bg-gradient-to-br from-[#7c78b8] to-[#a3a0f3] group-hover:from-[#9490d4] group-hover:to-[#b8b5ff] transition-all duration-300">
+            <img
+              src={img}
+              alt={`${name} photo`}
+              className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </a>
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] text-white mt-5">
           {name}
-        </p>
-        <p className="text-gray-300 [font-family:'ProximaNova',sans-serif] text-[16px] text-center">
-          {bio}
+        </h3>
+        <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-[#a3a0f3] font-semibold uppercase tracking-wider">
+          {role}
         </p>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2500px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -348,7 +354,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2400px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2300px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -410,17 +416,17 @@ export default function CombatPage() {
         </div>
 
         <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
-          <h2 className="text-gray-200 [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px]">
+          <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row gap-[50px] overflow-x-auto scrollbar-hide px-4 py-2">
-            {team_leadership.map((leader) => (
+          <div className="flex flex-row justify-between w-[1210px] py-2">
+            {team_leadership.map((leader, index) => (
               <TeamMemberCard
-                key={leader.name}
+                key={`${leader.name}-${index}`}
                 name={leader.name}
                 role={leader.role}
                 img={leader.img}
-                bio={leader.bio}
+                linkedin={leader.linkedin}
               />
             ))}
           </div>
