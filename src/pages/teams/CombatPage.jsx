@@ -1,12 +1,31 @@
 import bgGradient from "../../assets/images/graphics/background_gradient.png";
-import combatphoto from "../../assets/images/subteams/combat/annie.jpg";
-import artphoto from "../../assets/images/subteams/art/art_sunset.jpg";
 
-export const skills = {
-  MECHANICAL_ENGINEERING: "Mechanical Engineering",
-  POWER_ELECTRONICS: "Power Electronics",
-  CONTROL_SYSTEMS: "Control Systems",
-};
+// ==================== SUBTEAM-SPECIFIC DATA ====================
+// Modify the values below to customize for each subteam
+
+export const teamName = "Combat";
+
+export const teamTagline = "High power robots built for competitive clashes.";
+
+export const heroImage = new URL(
+  "../../assets/images/subteams/combat/annie.jpg",
+  import.meta.url
+).href;
+
+export const aboutTitle = "About Combat";
+
+export const aboutDescription = `Combat robotics challenges students to design, build, and pilot remote-controlled machines—ranging from under a pound to over 200 lbs—with the sole purpose of neutralizing opponents. Through prototyping specialized weaponry and robust chassis, team members gain hands-on experience in mechanical design, electronics, and advanced manufacturing.`;
+
+export const featureImage = new URL(
+  "../../assets/images/subteams/combat/IMG_3306.jpeg",
+  import.meta.url
+).href;
+
+export const skills = [
+  "Mechanical Engineering",
+  "Power Electronics",
+  "Control Systems",
+];
 
 export const highlights = [
   {
@@ -35,63 +54,49 @@ export const team_images = [
     ).href,
   },
   {
-    name: "combat3",
+    name: "combat2",
     img: new URL(
       "../../assets/images/subteams/combat/combat.jpg",
       import.meta.url
     ).href,
   },
   {
-    name: "combat4",
-    img: new URL(
-      "../../assets/images/subteams/combat/Cover Photo.jpg",
-      import.meta.url
-    ).href,
-  },
-  {
-    name: "combat5",
-    img: new URL(
-      "../../assets/images/subteams/combat/Kludge.jpg",
-      import.meta.url
-    ).href,
-  },
-  {
-    name: "combat6",
-    img: new URL(
-      "../../assets/images/subteams/combat/yellowmouse.jpg",
-      import.meta.url
-    ).href,
-  },
-  {
-    name: "combat1",
-    img: new URL(
-      "../../assets/images/subteams/combat/annie.jpg",
-      import.meta.url
-    ).href,
-  },
-  {
     name: "combat3",
     img: new URL(
-      "../../assets/images/subteams/combat/combat.jpg",
+      "../../assets/images/subteams/combat/Cover Photo.jpg",
       import.meta.url
     ).href,
   },
   {
     name: "combat4",
     img: new URL(
-      "../../assets/images/subteams/combat/Cover Photo.jpg",
+      "../../assets/images/subteams/combat/Kludge.jpg",
       import.meta.url
     ).href,
   },
   {
     name: "combat5",
     img: new URL(
-      "../../assets/images/subteams/combat/Kludge.jpg",
+      "../../assets/images/subteams/combat/IMG_3321.jpeg",
       import.meta.url
     ).href,
   },
   {
     name: "combat6",
+    img: new URL(
+      "../../assets/images/subteams/combat/IMG_3348.jpeg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "combat7",
+    img: new URL(
+      "../../assets/images/subteams/combat/fight.png",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "combat8",
     img: new URL(
       "../../assets/images/subteams/combat/yellowmouse.jpg",
       import.meta.url
@@ -327,7 +332,7 @@ export default function CombatPage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
-          backgroundImage: `url('${combatphoto}')`,
+          backgroundImage: `url('${heroImage}')`,
           backgroundPosition: "center 15%",
         }}
       />
@@ -335,11 +340,10 @@ export default function CombatPage() {
       <div className="relative flex flex-col pt-[150px] w-full px-[350px]">
         <div className="justify-center h-[150px] w-[600px]">
           <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[100px]">
-            Combat
+            {teamName}
           </h1>
           <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px]">
-            {" "}
-            High power robots built for competitive clashes.
+            {teamTagline}
           </p>
         </div>
       </div>
@@ -355,7 +359,7 @@ export default function CombatPage() {
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
           <div className="w-[600px] h-[500px]">
             <img
-              src={artphoto}
+              src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
               alt=""
             />
@@ -370,19 +374,14 @@ export default function CombatPage() {
               }}
             > */}
             <h2 className="[font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px] text-white">
-              About Combat
+              {aboutTitle}
             </h2>
             <p className="text-white [font-family:'ProximaNova',sans-serif] text-[23px] leading-[1.5]">
-              Combat robotics challenges students to design, build, and pilot
-              remote-controlled machines—ranging from under a pound to over 200
-              lbs—with the sole purpose of neutralizing opponents. Through
-              prototyping specialized weaponry and robust chassis, team members
-              gain hands-on experience in mechanical design, electronics, and
-              advanced manufacturing.
+              {aboutDescription}
             </p>
 
             <div className="mt-[25px] flex flex-col gap-[20px]">
-              {Object.values(skills).map((skill) => (
+              {skills.map((skill) => (
                 <SkillTag key={skill} skill={skill} />
               ))}
             </div>
