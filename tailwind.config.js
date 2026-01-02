@@ -16,6 +16,10 @@ export default {
         "gradient-mid1": "#6D6886",
         "gradient-mid2": "#575078",
         "gradient-end": "#36397E",
+
+        // Text gradient colors from Figma
+        "text-gradient-purple": "#C286D3",
+        "text-gradient-blue": "#7F7FFF",
       },
 
       fontFamily: {
