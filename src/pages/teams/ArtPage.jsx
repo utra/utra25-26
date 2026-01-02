@@ -15,7 +15,7 @@ export const heroImage = new URL(
 
 export const aboutTitle = "About ART";
 
-export const aboutDescription = `The Autonomous Rover Team (ART) focuses on building fully autonomous robots to perform meaningful functions, often involving navigation and environment manipulation. Our members build the robot from the ground up, including its design, mechanical and electrical subsystems, navigation software, and computer vision models. The functionality is often motivated by various national and international competitions we aim to attend towards the end of each academic year.`;
+export const aboutDescription = `The Autonomous Rover Team (ART) focuses on building fully autonomous robots to perform meaningful functions, often involving navigation and environment manipulation. Our members build the robot from the ground up, including its design, mechanical and electrical subsystems, navigation software, and computer vision models.`;
 
 export const featureImage = new URL(
   "../../assets/images/subteams/art/PXL_20230603_010015283.jpg",
@@ -44,11 +44,6 @@ export const highlights = [
     title: "CV/ML",
     description:
       "Develop the 'eyes' of the robot using cameras, spatial sensors and machine learning models.",
-  },
-  {
-    title: "ROS",
-    description:
-      "The glue between all sub-teams—processing sensor inputs and producing motor commands.",
   },
 ];
 
@@ -89,13 +84,6 @@ export const team_images = [
     ).href,
   },
   {
-    name: "art6",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_4403.jpg",
-      import.meta.url
-    ).href,
-  },
-  {
     name: "art7",
     img: new URL(
       "../../assets/images/subteams/art/IMG_5199.JPG",
@@ -130,24 +118,28 @@ export const team_leadership = [
   {
     name: "Jane Doe",
     role: "Team Lead",
+    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
     role: "Tech Lead",
+    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
     role: "ART PM",
+    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
     role: "ART PM",
+    bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
@@ -327,7 +319,7 @@ export default function CombatPage() {
     );
   }
 
-  function TeamMemberCard({ name, role, img, linkedin }) {
+  function TeamMemberCard({ name, role, bio, img, linkedin }) {
     return (
       <div className="flex flex-col items-center">
         <a
@@ -344,10 +336,13 @@ export default function CombatPage() {
             />
           </div>
         </a>
-        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] text-white mt-5">
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[26px] text-white mt-5">
           {name}
         </h3>
-        <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-[#a3a0f3] font-semibold uppercase tracking-wider">
+        <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-gray-300">
+          {bio}
+        </p>
+        <p className="[font-family:'ProximaNova',sans-serif] text-[18spx] text-[#a3a0f3] font-semibold uppercase tracking-wider">
           {role}
         </p>
       </div>
@@ -355,7 +350,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2500px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2550px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -375,7 +370,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2300px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2350px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -446,6 +441,7 @@ export default function CombatPage() {
                 key={`${leader.name}-${index}`}
                 name={leader.name}
                 role={leader.role}
+                bio={leader.bio}
                 img={leader.img}
                 linkedin={leader.linkedin}
               />
