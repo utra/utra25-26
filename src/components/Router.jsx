@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import TeamsPage from "../pages/TeamsPage";
 import SponsorsPage from "../pages/SponsorsPage";
+import CombatPage from "../pages/teams/CombatPage";
 
 // Import team subpages
 import ArtPage from "../pages/teams/ArtPage";
