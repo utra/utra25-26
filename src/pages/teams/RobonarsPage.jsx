@@ -3,142 +3,140 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-const teamName = "Autonomous Rover Team";
+const teamName = "Robonars";
 
-const teamTagline =
-  "Autonomous rovers that explore, navigate and sense the world.";
+const teamTagline = "Technical workshops and seminar speaker series.";
 
 const heroImage = new URL(
-  "../../assets/images/photoshoot/utra_art.png",
+  "../../assets/images/robonars/IMG_6653.jpeg",
   import.meta.url
 ).href;
 
-const aboutTitle = "About ART";
+const aboutTitle = "About Robonars";
 
-const aboutDescription = `The Autonomous Rover Team (ART) focuses on building fully autonomous robots to perform meaningful functions, often involving navigation and environment manipulation. Our members build the robot from the ground up, including its design, mechanical and electrical subsystems, navigation software, and computer vision models.`;
+const aboutDescription = `Robonars is UTRA's educational initiative that hosts technical workshops and seminar speaker series for students interested in robotics. The team organizes hands-on sessions covering topics from basic electronics to advanced robotics concepts. Whether you're a beginner looking to learn the fundamentals or an experienced student wanting to expand your knowledge, Robonars provides valuable learning opportunities through interactive workshops and inspiring talks from industry professionals.`;
 
 const featureImage = new URL(
-  "../../assets/images/subteams/art/PXL_20230603_010015283.jpg",
+  "../../assets/images/robonars/Robonars Class.jpg",
   import.meta.url
 ).href;
 
 const skills = [
-  "Hardware (Mechanical)",
-  "Hardware (Electrical)",
-  "CV/ML",
-  "ROS",
+  "Workshop Facilitation",
+  "Technical Presentations",
+  "Event Organization",
+  "Educational Content Creation",
 ];
 
 const highlights = [
   {
-    title: "Hardware (Mechanical)",
+    title: "Technical Workshops",
     description:
-      "Out of metals and woods, we build the muscles and bones of the robots.",
+      "Hands-on sessions covering electronics, programming, CAD, and robotics fundamentals.",
   },
   {
-    title: "Hardware (Electrical)",
+    title: "Speaker Series",
     description:
-      "The bridge between software and mechanical—working on motors, power systems and sensors.",
+      "Inspiring talks from industry professionals and robotics experts sharing their experiences.",
   },
   {
-    title: "CV/ML",
+    title: "Learning Community",
     description:
-      "Develop the 'eyes' of the robot using cameras, spatial sensors and machine learning models.",
+      "A welcoming environment for students of all skill levels to learn and grow together.",
   },
 ];
 
 const team_images = [
   {
-    name: "art1",
+    name: "robonars1",
     img: new URL(
-      "../../assets/images/subteams/art/Art robot.jpg",
+      "../../assets/images/robonars/Robonars Workshop.jpg",
       import.meta.url
     ).href,
   },
   {
-    name: "art2",
+    name: "robonars2",
     img: new URL(
-      "../../assets/images/subteams/art/20230601_161926.jpg",
+      "../../assets/images/robonars/Robonars Class.jpg",
       import.meta.url
     ).href,
   },
   {
-    name: "art3",
+    name: "robonars3",
     img: new URL(
-      "../../assets/images/subteams/art/20230602_205628.jpg",
+      "../../assets/images/robonars/20230925_194250.jpg",
       import.meta.url
     ).href,
   },
   {
-    name: "art4",
+    name: "robonars4",
     img: new URL(
-      "../../assets/images/subteams/art/20230604_204124.jpg",
+      "../../assets/images/robonars/20231011_203930.jpg",
       import.meta.url
     ).href,
   },
   {
-    name: "art5",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_4167.jpg",
-      import.meta.url
-    ).href,
+    name: "robonars5",
+    img: new URL("../../assets/images/robonars/IMG_1331.jpg", import.meta.url)
+      .href,
   },
   {
-    name: "art7",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_5199.JPG",
-      import.meta.url
-    ).href,
+    name: "robonars6",
+    img: new URL("../../assets/images/robonars/IMG_1335.jpg", import.meta.url)
+      .href,
   },
   {
-    name: "art8",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_7015.jpg",
-      import.meta.url
-    ).href,
+    name: "robonars7",
+    img: new URL("../../assets/images/robonars/IMG_6641.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "art9",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_7075.jpg",
-      import.meta.url
-    ).href,
+    name: "robonars8",
+    img: new URL("../../assets/images/robonars/IMG_6649.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "art10",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_7084.jpg",
-      import.meta.url
-    ).href,
+    name: "robonars9",
+    img: new URL("../../assets/images/robonars/IMG_6650.jpeg", import.meta.url)
+      .href,
   },
-  // Add more images here without importing them individually
+  {
+    name: "robonars11",
+    img: new URL("../../assets/images/robonars/IMG_7131.jpeg", import.meta.url)
+      .href,
+  },
+  {
+    name: "robonars12",
+    img: new URL("../../assets/images/robonars/IMG_7143.jpeg", import.meta.url)
+      .href,
+  },
 ];
 
 const team_leadership = [
   {
     name: "Jane Doe",
-    role: "Team Lead",
+    role: "Robonars Lead",
     bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
-    role: "Tech Lead",
+    role: "Workshop Coordinator",
     bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
-    role: "ART PM",
+    role: "Speaker Coordinator",
     bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
     name: "Jane Doe",
-    role: "ART PM",
+    role: "Content Creator",
     bio: "ECE 2T8",
     img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
     linkedin: "https://www.linkedin.com/",
@@ -289,7 +287,7 @@ function ScrollingCarousel() {
   );
 }
 
-export default function CombatPage() {
+export default function RobonarsPage() {
   function SkillTag({ skill }) {
     return (
       <div className="flex flex-row items-center">
@@ -350,7 +348,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2550px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -370,7 +368,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2350px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -379,7 +377,7 @@ export default function CombatPage() {
         />
 
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
-          <div className="w-[600px] h-[500px]">
+          <div className="w-[600px] h-[580px]">
             <img
               src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"

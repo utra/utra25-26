@@ -12,6 +12,9 @@ import SumoPage from "../pages/teams/SumoPage";
 import CombatPage from "../pages/teams/CombatPage";
 import SixpacPage from "../pages/teams/SixpacPage";
 import RobosoccerPage from "../pages/teams/RobosoccerPage";
+import WebPage from "../pages/teams/WebPage";
+import MarketingPage from "../pages/teams/MarketingPage";
+import RobonarsPage from "../pages/teams/RobonarsPage";
 
 export default function Router() {
   return (
@@ -25,6 +28,9 @@ export default function Router() {
       <Route path="/teams/6ixpac" element={<SixpacPage />} />
       <Route path="/teams/robosoccer" element={<RobosoccerPage />} />
       <Route path="/sponsors" element={<SponsorsPage />} />
+      <Route path="/teams/web" element={<WebPage />} />
+      <Route path="/teams/marketing" element={<MarketingPage />} />
+      <Route path="/teams/robonars" element={<RobonarsPage />} />
     </Routes>
   );
 }

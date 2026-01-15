@@ -20,6 +20,9 @@ export default function Header() {
     { name: "Combat", path: "/teams/combat" },
     { name: "6ixpac", path: "/teams/6ixpac" },
     { name: "Robosoccer", path: "/teams/robosoccer" },
+    { name: "Robonars", path: "/teams/robonars" },
+    { name: "Web", path: "/teams/web" },
+    { name: "Marketing", path: "/teams/marketing" },
   ];
 
   const getNavItemClasses = (path, hasDropdown = false) => {

@@ -3,32 +3,32 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "SUMO";
+const teamName = "SUMO";
 
-export const teamTagline = "Battle it out in the ring. Perfect for beginners.";
+const teamTagline = "Battle it out in the ring. Perfect for beginners.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/subteams/sumo/teamPage Photos/good2.jpg",
   import.meta.url
 ).href;
 
-export const aboutTitle = "About SUMO";
+const aboutTitle = "About SUMO";
 
-export const aboutDescription = `SUMO is an introductory robotics division designed for students eager to explore robotics systems. Members gain practical experience in essential skills such as circuit design and soldering, CAD software for 3D modeling and printing, sheet metal fabrication, and programming with embedded C++. In teams of three, students apply these skills to build an autonomous robot for our annual SUMO competition, where the goal is to push the opponent out of the ring.`;
+const aboutDescription = `SUMO is an introductory robotics division designed for students eager to explore robotics systems. Members gain practical experience in essential skills such as circuit design and soldering, CAD software for 3D modeling and printing, sheet metal fabrication, and programming with embedded C++. In teams of three, students apply these skills to build an autonomous robot for our annual SUMO competition, where the goal is to push the opponent out of the ring.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/sumo/good.jpg",
   import.meta.url
 ).href;
 
-export const skills = [
+const skills = [
   "3D CAD Modelling",
   "Circuit Design & Soldering",
   "ROS Framework",
   "Embedded C++ Programming",
 ];
 
-export const highlights = [
+const highlights = [
   {
     title: "The Competition",
     description:
@@ -46,7 +46,7 @@ export const highlights = [
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "sumo2",
     img: new URL(
@@ -155,7 +155,7 @@ export const team_images = [
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
     name: "Jane Doe",
     role: "Team Lead",

@@ -3,31 +3,31 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "Combat";
+const teamName = "Combat";
 
-export const teamTagline = "High power robots built for competitive clashes.";
+const teamTagline = "High power robots built for competitive clashes.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/subteams/combat/annie.jpg",
   import.meta.url
 ).href;
 
-export const aboutTitle = "About Combat";
+const aboutTitle = "About Combat";
 
-export const aboutDescription = `Combat robotics challenges students to design, build, and pilot remote-controlled machines—ranging from under a pound to over 200 lbs—with the sole purpose of neutralizing opponents. Through prototyping specialized weaponry and robust chassis, team members gain hands-on experience in mechanical design, electronics, and advanced manufacturing.`;
+const aboutDescription = `Combat robotics challenges students to design, build, and pilot remote-controlled machines—ranging from under a pound to over 200 lbs—with the sole purpose of neutralizing opponents. Through prototyping specialized weaponry and robust chassis, team members gain hands-on experience in mechanical design, electronics, and advanced manufacturing.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/combat/IMG_3306.jpeg",
   import.meta.url
 ).href;
 
-export const skills = [
+const skills = [
   "Mechanical Engineering",
   "Power Electronics",
   "Control Systems",
 ];
 
-export const highlights = [
+const highlights = [
   {
     title: "Robobrawl Success",
     description:
@@ -45,7 +45,7 @@ export const highlights = [
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "combat1",
     img: new URL(
@@ -105,7 +105,7 @@ export const team_images = [
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
     name: "Jane Doe",
     role: "Team Lead",

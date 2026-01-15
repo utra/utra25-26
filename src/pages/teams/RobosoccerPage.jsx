@@ -3,33 +3,33 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "RoboSoccer";
+const teamName = "RoboSoccer";
 
-export const teamTagline =
+const teamTagline =
   "Autonomous humanoid soccer-playing robots for RoboCup competition.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/subteams/robosoccer/2022_3.jpg",
   import.meta.url
 ).href;
 
-export const aboutTitle = "About RoboSoccer";
+const aboutTitle = "About RoboSoccer";
 
-export const aboutDescription = `The RoboSoccer team designs and builds autonomous humanoid soccer-playing robots to compete in RoboCup; an international robotics competition. Standing over 60 cm tall, the robots will be able to walk, run, and kick a soccer ball while maintaining balance.`;
+const aboutDescription = `The RoboSoccer team designs and builds autonomous humanoid soccer-playing robots to compete in RoboCup; an international robotics competition. Standing over 60 cm tall, the robots will be able to walk, run, and kick a soccer ball while maintaining balance.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
   import.meta.url
 ).href;
 
-export const skills = [
+const skills = [
   "Hardware Design",
   "Software & Control",
   "Electrical & Embedded",
   "Computer Vision",
 ];
 
-export const highlights = [
+const highlights = [
   {
     title: "Hardware",
     description:
@@ -47,7 +47,7 @@ export const highlights = [
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "robosoccer1",
     img: new URL(
@@ -149,7 +149,7 @@ export const team_images = [
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
     name: "Jane Doe",
     role: "Team Lead",

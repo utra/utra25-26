@@ -4,13 +4,13 @@ import utraArt from "../assets/images/photoshoot/utra_art.png";
 import classroom from "../assets/images/robonars/Robonars Workshop.jpg";
 
 // ==================== PAGE DATA ====================
-export const pageInfo = {
+const pageInfo = {
   title: "Our Teams",
   subtitle: "Find Your Place in Robotics",
   description: `UTRA is home to six specialized subteams, each offering unique opportunities to learn, build, and compete. Whether you're a complete beginner or an experienced engineer, there's a team for you. Join us and be part of building the future of robotics.`,
 };
 
-export const teams = [
+const teams = [
   {
     name: "SUMO",
     tagline: "Battle it out in the ring. Perfect for beginners.",
@@ -61,13 +61,80 @@ export const teams = [
       import.meta.url
     ).href,
   },
+  {
+    name: "Web",
+    tagline: "Designing and maintaining UTRA's online presence.",
+    path: "/teams/web",
+    img: new URL("../assets/images/subteams/web/webicon.jpg", import.meta.url)
+      .href,
+  },
+  {
+    name: "Marketing",
+    tagline: "Promoting UTRA's projects and events.",
+    path: "/teams/marketing",
+    img: new URL(
+      "../assets/images/subteams/marketing/marketingicon.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "UTRAHacks",
+    tagline: "Organizing UTRA Hacks and other events.",
+    path: "https://hackathon.utra.ca/",
+    img: new URL(
+      "../assets/images/subteams/hackathon/hackathonicon.jpg",
+      import.meta.url
+    ).href,
+  },
 ];
 
-export const carouselImages = [
+const carouselImages = [
+  {
+    name: "robosoccer1",
+    img: new URL(
+      "../assets/images/subteams/robosoccer/2022_3.jpg",
+      import.meta.url
+    ).href,
+  },
   {
     name: "team1",
     img: new URL(
       "../assets/images/photoshoot/exec_photoshoot.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "combat1",
+    img: new URL(
+      "../assets/images/subteams/combat/IMG_3306.jpeg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "art1",
+    img: new URL(
+      "../assets/images/subteams/art/20230602_205628.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "robonars1",
+    img: new URL(
+      "../assets/images/robonars/Robonars Workshop.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "sumo1",
+    img: new URL(
+      "../assets/images/subteams/sumo/teamPage Photos/good2.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "pacbot1",
+    img: new URL(
+      "../assets/images/subteams/6ix-pac/IMG_3781.jpeg",
       import.meta.url
     ).href,
   },
@@ -77,14 +144,38 @@ export const carouselImages = [
       .href,
   },
   {
+    name: "robonars2",
+    img: new URL("../assets/images/robonars/IMG_6649.jpeg", import.meta.url)
+      .href,
+  },
+  {
     name: "team3",
     img: new URL("../assets/images/subteams/art/IMG_7084.jpg", import.meta.url)
       .href,
   },
   {
+    name: "robosoccer2",
+    img: new URL(
+      "../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
     name: "team4",
     img: new URL(
       "../assets/images/subteams/sumo/teamPage Photos/IMG_6860.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "combat2",
+    img: new URL("../assets/images/subteams/combat/Kludge.jpg", import.meta.url)
+      .href,
+  },
+  {
+    name: "pacbot2",
+    img: new URL(
+      "../assets/images/subteams/6ix-pac/pacbot.jpg",
       import.meta.url
     ).href,
   },
@@ -96,9 +187,26 @@ export const carouselImages = [
     ).href,
   },
   {
+    name: "art2",
+    img: new URL("../assets/images/subteams/art/Art robot.jpg", import.meta.url)
+      .href,
+  },
+  {
+    name: "robonars3",
+    img: new URL("../assets/images/robonars/IMG_7131.jpeg", import.meta.url)
+      .href,
+  },
+  {
     name: "team6",
     img: new URL(
       "../assets/images/subteams/6ix-pac/20240425_220952.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    name: "sumo2",
+    img: new URL(
+      "../assets/images/subteams/sumo/teamPage Photos/IMG_6843.jpg",
       import.meta.url
     ).href,
   },
@@ -231,8 +339,14 @@ const HorizontalScrollCarousel = () => {
 };
 
 function TeamCard({ name, tagline, path, img }) {
+  const isExternal = path.startsWith("http");
+  const Component = isExternal ? "a" : Link;
+  const linkProps = isExternal
+    ? { href: path, target: "_blank", rel: "noopener noreferrer" }
+    : { to: path };
+
   return (
-    <Link to={path} className="group">
+    <Component {...linkProps} className="group">
       <div className="relative bg-black bg-opacity-40 rounded-xl w-[335px] h-[280px] flex flex-col items-center overflow-hidden transition-all duration-300 group-hover:bg-opacity-50 group-hover:scale-105">
         <div
           className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-300"
@@ -256,13 +370,13 @@ function TeamCard({ name, tagline, path, img }) {
           </div>
         </div>
       </div>
-    </Link>
+    </Component>
   );
 }
 
 export default function TeamsPage() {
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2200px]">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2100px]">
       {/* Hero Section - Title Screen */}
       <div className="relative w-full h-[85vh] flex flex-col items-start justify-center px-[200px]">
         <div
@@ -282,7 +396,7 @@ export default function TeamsPage() {
       </div>
 
       {/* Content Section - Below the fold */}
-      <div className="relative w-full pt-[100px] flex flex-col items-center">
+      <div className="relative h-[1900px] w-full pt-[100px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{

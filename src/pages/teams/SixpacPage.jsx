@@ -3,33 +3,33 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "6ix-PAC";
+const teamName = "6ix-PAC";
 
-export const teamTagline =
+const teamTagline =
   "Pac-Man inspired robots built for quick and efficient maze solving.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/subteams/6ix-pac/pacman.jpeg",
   import.meta.url
 ).href;
 
-export const aboutTitle = "About PacBot";
+const aboutTitle = "About PacBot";
 
-export const aboutDescription = `The goal of the PacBot team is to design and build a robot that assumes the role of Pac-man in the popular arcade game. The team's work culminates in the PacBot competition hosted by the Harvard Undergraduate Robotics Club, which mimics the traditional Pac-man game. Each participating PacBot autonomously navigates the arena to collect dots ("power pellets") and avoid or attack ghosts.`;
+const aboutDescription = `The goal of the PacBot team is to design and build a robot that assumes the role of Pac-man in the popular arcade game. The team's work culminates in the PacBot competition hosted by the Harvard Undergraduate Robotics Club, which mimics the traditional Pac-man game. Each participating PacBot autonomously navigates the arena to collect dots ("power pellets") and avoid or attack ghosts.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/6ix-pac/IMG_3781.jpeg",
   import.meta.url
 ).href;
 
-export const skills = [
+const skills = [
   "Autonomous Navigation",
   "Computer Vision",
   "Path Planning Algorithms",
   "Real-time Strategy",
 ];
 
-export const highlights = [
+const highlights = [
   {
     title: "The Arena",
     description:
@@ -47,7 +47,7 @@ export const highlights = [
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "pacbot1",
     img: new URL(
@@ -121,7 +121,7 @@ export const team_images = [
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
     name: "Jane Doe",
     role: "Team Lead",
