@@ -9,7 +9,7 @@ const teamTagline = "High power robots built for competitive clashes.";
 
 const heroImage = new URL(
   "../../assets/images/subteams/combat/annie.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const aboutTitle = "About Combat";
@@ -18,30 +18,30 @@ const aboutDescription = `Combat robotics challenges students to design, build, 
 
 const featureImage = new URL(
   "../../assets/images/subteams/combat/IMG_3306.jpeg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const skills = [
   "Mechanical Engineering",
   "Power Electronics",
-  "Control Systems",
+  "Design for Manufacturing",
 ];
 
 const highlights = [
   {
-    title: "Robobrawl Success",
+    title: "International Success",
     description:
-      "Annie the Annihilator placed 7th internationally at UIUC Robobrawl 2019.",
+      "Our 30lb robot Agent P placed 4th internationally at NHRL, the world's largest robot combat event. Our 3lb robots secured spots in the top 32 out of a field of over one hundred.",
   },
   {
-    title: "Global Experience",
+    title: "Combat Opportunities",
     description:
-      "A veteran team competing at RoboGames, the world's largest robotics event.",
+      "We are currently running 6+ beetleweight (3lb) combat robots in our team, competing multiple times a year both domestically and abroad.",
   },
   {
-    title: "Rapid Expansion",
+    title: "A Varied Fleet",
     description:
-      "Surging membership led to the launch of a second dedicated combat squad.",
+      "Our robots all vary wildly in their designs, something which allows our members to build and work on whatever appeals to them the most.",
   },
 ];
 
@@ -50,56 +50,56 @@ const team_images = [
     name: "combat1",
     img: new URL(
       "../../assets/images/subteams/combat/annie.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat2",
     img: new URL(
       "../../assets/images/subteams/combat/combat.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat3",
     img: new URL(
       "../../assets/images/subteams/combat/Cover Photo.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat4",
     img: new URL(
       "../../assets/images/subteams/combat/Kludge.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat5",
     img: new URL(
       "../../assets/images/subteams/combat/IMG_3321.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat6",
     img: new URL(
       "../../assets/images/subteams/combat/IMG_3348.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat7",
     img: new URL(
       "../../assets/images/subteams/combat/fight.png",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat8",
     img: new URL(
       "../../assets/images/subteams/combat/yellowmouse.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   // Add more images here without importing them individually
@@ -107,28 +107,11 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Team Lead",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Tech Lead",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Combat PM",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Combat PM",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Indesh",
+    role: "Project Manager",
+    bio: "MECH 2T7 + PEY",
+    img: "https://drive.google.com/thumbnail?id=1uq7g7leTcPMkXqxhHVo7VvKViVOddGQr",
+    linkedin: "https://www.linkedin.com/in/indesh-vijayanand",
   },
 ];
 
@@ -306,7 +289,7 @@ export default function CombatPage() {
     );
   }
 
-  function TeamMemberCard({ name, role, img, linkedin }) {
+  function TeamMemberCard({ name, role, bio, img, linkedin }) {
     return (
       <div className="flex flex-col items-center">
         <a
@@ -323,10 +306,13 @@ export default function CombatPage() {
             />
           </div>
         </a>
-        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] text-white mt-5">
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[26px] text-white mt-5">
           {name}
         </h3>
-        <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-[#a3a0f3] font-semibold uppercase tracking-wider">
+        <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-gray-300">
+          {bio}
+        </p>
+        <p className="[font-family:'ProximaNova',sans-serif] text-[18spx] text-[#a3a0f3] font-semibold uppercase tracking-wider">
           {role}
         </p>
       </div>
@@ -334,7 +320,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2500px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -354,7 +340,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2300px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2400px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -419,12 +405,13 @@ export default function CombatPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}
                 name={leader.name}
                 role={leader.role}
+                bio={leader.bio}
                 img={leader.img}
                 linkedin={leader.linkedin}
               />

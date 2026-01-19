@@ -3,62 +3,45 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-const teamName = "Web";
+const teamName = "Outreach";
 
-const teamTagline = "Designing and maintaining UTRA's online presence.";
+const teamTagline = "Connecting UTRA with the community and industry.";
 
 const heroImage = new URL(
-  "../../assets/images/subteams/web/webbanner.jpg",
+  "../../assets/images/subteams/hackathon/hackathon_banner.JPG",
   import.meta.url,
 ).href;
 
-const aboutTitle = "About Web";
+const aboutTitle = "About Outreach";
 
-const aboutDescription = `The Web Team at UTRA is responsible for designing, developing, and maintaining the official website and online presence of the University of Toronto Robotics Association. The team focuses on creating an engaging and user-friendly experience for visitors, showcasing UTRA's projects, events, and initiatives. By working with evolving web technologies, they ensure that the site is not only visually appealing but also functional and accessible across all devices.`;
+const aboutDescription = `The Outreach team at UTRA connects our team with the wider community and industry. We are responsible for securing sponsorships, building and maintaining relationships with partners, and promoting UTRA to the public. Through outreach events and media presence, we share our passion for engineering while expanding awareness of our mission. By fostering strong partnerships and meaningful engagement, the Outreach team plays a key role in supporting UTRA's growth and impact.`;
 
 const featureImage = new URL(
-  "../../assets/images/subteams/web/webhero.jpg",
+  "../../assets/images/subteams/outreach/150thAnniversaryOpenHouse.jpeg",
   import.meta.url,
 ).href;
 
 const skills = [
-  "Frontend Development",
-  "UI/UX Design",
-  "React & Modern Frameworks",
-  "Responsive Web Design",
+  "Sponsorship & Fundraising",
+  "Relationship Building",
+  "Public Speaking",
+  "Event Coordination",
 ];
 
 const team_leadership = [
   {
-    name: "Amey Khatri",
-    role: "Executive Director",
-    bio: "CS/Physics 2T8",
-    img: "https://drive.google.com/thumbnail?id=1dwLXSwz5qAPN-xi7ArMTzMr7xiSxel0X",
-    linkedin: "https://www.linkedin.com/in/ameykhatri/",
-  },
-  {
     name: "Jane Doe",
-    role: "Frontend Dev",
-    bio: "CS 2T9",
-    img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
-      import.meta.url,
-    ).href,
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "UI/UX Designer",
+    role: "Outreach Lead",
     bio: "ECE 2T8",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
     ).href,
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "",
   },
 ];
 
-export default function WebPage() {
+export default function OutreachPage() {
   function SkillTag({ skill }) {
     return (
       <div className="flex flex-row items-center">
@@ -106,7 +89,7 @@ export default function WebPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1900px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1850px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -126,7 +109,7 @@ export default function WebPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1700px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[1650px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -135,7 +118,7 @@ export default function WebPage() {
         />
 
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
-          <div className="w-[600px] h-[610px]">
+          <div className="w-[600px] h-[570px]">
             <img
               src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
@@ -144,13 +127,6 @@ export default function WebPage() {
           </div>
 
           <div className="w-[600px]">
-            {/* <h2
-              className="[font-family:'ProximaNova',sans-serif] font-bold text-[55px] mb-[10px] bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(112deg, #f5d9ff 0%, #b8e0ff 99%)",
-              }}
-            > */}
             <h2 className="[font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px] text-white">
               {aboutTitle}
             </h2>

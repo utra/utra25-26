@@ -9,53 +9,56 @@ const teamTagline = "Promoting UTRA's projects, events, and initiatives.";
 
 const heroImage = new URL(
   "../../assets/images/subteams/marketing/marketing_b1.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const aboutTitle = "About Marketing";
 
-const aboutDescription = `The Marketing Team at UTRA is dedicated to promoting the association's projects, events, and initiatives both within the University of Toronto community and beyond. The team leverages various marketing strategies, including social media campaigns, event promotions, graphic design, and content creation, to enhance UTRA's visibility and engagement. They work closely with other UTRA teams to showcase their work and achievements, ensuring that the audience stays informed and excited about the innovative robotics projects undertaken by the association.`;
+const aboutDescription = `The Marketing Team at UTRA is responsible for promoting and showcasing the club through various channels. The team manages UTRA's social media and designs graphical material to spread the word about UTRA's activities, events, and more. By supporting the numerous subteams at UTRA, the team maintains brand identity and presence in the robotics community.`;
 
 const featureImage = new URL(
   "../../assets/images/subteams/marketing/marketingicon.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const skills = [
-  "Social Media Management",
   "Graphic Design",
-  "Content Creation",
-  "Event Promotion",
+  "Communication",
+  "Teamwork/Collaboration",
+  "Creativity and Attention-to-Detail",
 ];
 
 const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Marketing Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Sarah Hira",
+    role: "Director",
+    bio: "Bioinformatics + Chemistry, A&S 2T7",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
   },
   {
-    name: "Jane Doe",
-    role: "Social Media Manager",
-    bio: "CS 2T9",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Maggie Zhao",
+    role: "Director",
+    bio: "CIV 2T7",
+    img: "https://drive.google.com/thumbnail?id=1B_f-D5xagnXBNoxREY_yuJB0A6oMFSpZ",
+    linkedin: "",
   },
   {
-    name: "Jane Doe",
-    role: "Graphic Designer",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Sabaa Rashid",
+    role: "Associate",
+    bio: "EngSci 2T9 + PEY",
+    img: "https://drive.google.com/thumbnail?id=1l7SO-uzHV9hh1FYZ4uIXKKOU2Q4YnRRr",
+    linkedin: "https://www.linkedin.com/in/sabaa-a-rashid/",
   },
   {
-    name: "Jane Doe",
-    role: "Content Creator",
-    bio: "CS 2T9",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Jalilya Zhaxybayeva",
+    role: "Associate",
+    bio: "MECH 2T8",
+    img: "https://lh3.googleusercontent.com/d/1vIj3kgqI5UwEoWxREWLyabYqanuqSvXD=s220?authuser=0",
+    linkedin: "https://www.linkedin.com/in/jalilya-zhaxybayeva-269089348",
   },
 ];
 
@@ -107,7 +110,7 @@ export default function MarketingPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1900px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1825px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -127,7 +130,7 @@ export default function MarketingPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1700px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[1625px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -136,7 +139,7 @@ export default function MarketingPage() {
         />
 
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
-          <div className="w-[600px] h-[610px]">
+          <div className="w-[600px] h-[570px]">
             <img
               src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
@@ -171,7 +174,7 @@ export default function MarketingPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}

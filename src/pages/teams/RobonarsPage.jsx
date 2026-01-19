@@ -9,40 +9,40 @@ const teamTagline = "Technical workshops and seminar speaker series.";
 
 const heroImage = new URL(
   "../../assets/images/robonars/IMG_6653.jpeg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const aboutTitle = "About Robonars";
 
-const aboutDescription = `Robonars is UTRA's educational initiative that hosts technical workshops and seminar speaker series for students interested in robotics. The team organizes hands-on sessions covering topics from basic electronics to advanced robotics concepts. Whether you're a beginner looking to learn the fundamentals or an experienced student wanting to expand your knowledge, Robonars provides valuable learning opportunities through interactive workshops and inspiring talks from industry professionals.`;
+const aboutDescription = `The Robonars team focuses on providing interactive and hands-on workshops and speaker events for students interested in the field of robotics. Our events range from direct workshops in important skills in the field, to fireside chat events with industry specialists and academic professionals to provide insight into the field. We hope that with our events, we are able to provide an enriched learning environment and an immersive experience into the future of robotics.`;
 
 const featureImage = new URL(
   "../../assets/images/robonars/Robonars Class.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const skills = [
-  "Workshop Facilitation",
-  "Technical Presentations",
-  "Event Organization",
-  "Educational Content Creation",
+  "Hands-On Experience",
+  "Networking",
+  "State-of-the-Art Robotics Experiences",
+  "Academic and Industry Insight",
 ];
 
 const highlights = [
   {
-    title: "Technical Workshops",
+    title: "Team Onboarding",
     description:
-      "Hands-on sessions covering electronics, programming, CAD, and robotics fundamentals.",
+      "Worked alongside numerous UTRA teams to provide workshops to support their onboarding.",
   },
   {
-    title: "Speaker Series",
+    title: "Industry Connections",
     description:
-      "Inspiring talks from industry professionals and robotics experts sharing their experiences.",
+      "Worked with professors and industry specialists to provide students with insight and potential internship and job opportunities.",
   },
   {
-    title: "Learning Community",
+    title: "Club Collaboration",
     description:
-      "A welcoming environment for students of all skill levels to learn and grow together.",
+      "Collaborated with other UofT clubs to provide unique workshops diving into multifaceted fields in engineering.",
   },
 ];
 
@@ -51,28 +51,28 @@ const team_images = [
     name: "robonars1",
     img: new URL(
       "../../assets/images/robonars/Robonars Workshop.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robonars2",
     img: new URL(
       "../../assets/images/robonars/Robonars Class.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robonars3",
     img: new URL(
       "../../assets/images/robonars/20230925_194250.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robonars4",
     img: new URL(
       "../../assets/images/robonars/20231011_203930.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -433,7 +433,7 @@ export default function RobonarsPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}

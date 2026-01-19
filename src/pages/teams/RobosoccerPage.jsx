@@ -10,7 +10,7 @@ const teamTagline =
 
 const heroImage = new URL(
   "../../assets/images/subteams/robosoccer/2022_3.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const aboutTitle = "About RoboSoccer";
@@ -19,7 +19,7 @@ const aboutDescription = `The RoboSoccer team designs and builds autonomous huma
 
 const featureImage = new URL(
   "../../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const skills = [
@@ -52,98 +52,98 @@ const team_images = [
     name: "robosoccer1",
     img: new URL(
       "../../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer2",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01539.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer3",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2022_3.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer4",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01547.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer5",
     img: new URL(
       "../../assets/images/subteams/robosoccer/robot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer6",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01670.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer7",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2022_5.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer8",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01682.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer9",
     img: new URL(
       "../../assets/images/subteams/robosoccer/gazebo 2.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer10",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01719.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer11",
     img: new URL(
       "../../assets/images/subteams/robosoccer/DSC01782.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer12",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01735.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer13",
     img: new URL(
       "../../assets/images/subteams/robosoccer/2018 robocup/DSC01781.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robosoccer14",
     img: new URL(
       "../../assets/images/subteams/robosoccer/DSC01783.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   // Add more images here without importing them individually
@@ -151,32 +151,11 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Team Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Tech Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "RoboSoccer PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "RoboSoccer PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Jinali Dona",
+    role: "Executive Director",
+    bio: "MECH 2T5 + PEY",
+    img: "https://drive.google.com/thumbnail?id=1XCj6YbMzfKoKmvkJxlSsgiTEwQsckyvf",
+    linkedin: "https://www.linkedin.com/in/jinali-dona",
   },
 ];
 
@@ -385,7 +364,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -405,7 +384,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2400px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -470,7 +449,7 @@ export default function CombatPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}

@@ -17,7 +17,7 @@ const teams = [
     path: "/teams/sumo",
     img: new URL(
       "../assets/images/subteams/sumo/teamPage Photos/good2.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -40,7 +40,7 @@ const teams = [
     path: "/teams/robosoccer",
     img: new URL(
       "../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -49,7 +49,7 @@ const teams = [
     path: "/teams/6ixpac",
     img: new URL(
       "../assets/images/subteams/6ix-pac/pacbot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -58,7 +58,7 @@ const teams = [
     path: "/teams/robonars",
     img: new URL(
       "../assets/images/robonars/Robonars Workshop.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -74,7 +74,7 @@ const teams = [
     path: "/teams/marketing",
     img: new URL(
       "../assets/images/subteams/marketing/marketingicon.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -83,7 +83,16 @@ const teams = [
     path: "https://hackathon.utra.ca/",
     img: new URL(
       "../assets/images/subteams/hackathon/hackathonicon.jpg",
-      import.meta.url
+      import.meta.url,
+    ).href,
+  },
+  {
+    name: "Outreach",
+    tagline: "Connecting UTRA with the community.",
+    path: "/teams/outreach",
+    img: new URL(
+      "../assets/images/subteams/outreach/IndustryRoundtable.jpg",
+      import.meta.url,
     ).href,
   },
 ];
@@ -93,49 +102,49 @@ const carouselImages = [
     name: "robosoccer1",
     img: new URL(
       "../assets/images/subteams/robosoccer/2022_3.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "team1",
     img: new URL(
       "../assets/images/photoshoot/exec_photoshoot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "combat1",
     img: new URL(
       "../assets/images/subteams/combat/IMG_3306.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art1",
     img: new URL(
       "../assets/images/subteams/art/20230602_205628.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "robonars1",
     img: new URL(
       "../assets/images/robonars/Robonars Workshop.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo1",
     img: new URL(
       "../assets/images/subteams/sumo/teamPage Photos/good2.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot1",
     img: new URL(
       "../assets/images/subteams/6ix-pac/IMG_3781.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -157,14 +166,14 @@ const carouselImages = [
     name: "robosoccer2",
     img: new URL(
       "../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "team4",
     img: new URL(
       "../assets/images/subteams/sumo/teamPage Photos/IMG_6860.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -176,14 +185,14 @@ const carouselImages = [
     name: "pacbot2",
     img: new URL(
       "../assets/images/subteams/6ix-pac/pacbot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "team5",
     img: new URL(
       "../assets/images/subteams/robosoccer/2018 robocup/DSC01735.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -200,14 +209,14 @@ const carouselImages = [
     name: "team6",
     img: new URL(
       "../assets/images/subteams/6ix-pac/20240425_220952.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo2",
     img: new URL(
       "../assets/images/subteams/sumo/teamPage Photos/IMG_6843.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -219,7 +228,7 @@ const carouselImages = [
     name: "team8",
     img: new URL(
       "../assets/images/subteams/combat/Cover Photo.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
 ];
@@ -376,7 +385,7 @@ function TeamCard({ name, tagline, path, img }) {
 
 export default function TeamsPage() {
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2100px]">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2400px]">
       {/* Hero Section - Title Screen */}
       <div className="relative w-full h-[85vh] flex flex-col items-start justify-center px-[200px]">
         <div
@@ -389,14 +398,14 @@ export default function TeamsPage() {
           <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[120px] leading-none">
             {pageInfo.title}
           </h1>
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[32px] mt-4">
+          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[32px] mt-4 ml-4">
             {pageInfo.subtitle}
           </p>
         </div>
       </div>
 
       {/* Content Section - Below the fold */}
-      <div className="relative h-[1900px] w-full pt-[100px] flex flex-col items-center">
+      <div className="relative h-[2200px] w-full pt-[100px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{

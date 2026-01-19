@@ -9,40 +9,40 @@ const teamTagline = "Battle it out in the ring. Perfect for beginners.";
 
 const heroImage = new URL(
   "../../assets/images/subteams/sumo/teamPage Photos/good2.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const aboutTitle = "About SUMO";
 
-const aboutDescription = `SUMO is an introductory robotics division designed for students eager to explore robotics systems. Members gain practical experience in essential skills such as circuit design and soldering, CAD software for 3D modeling and printing, sheet metal fabrication, and programming with embedded C++. In teams of three, students apply these skills to build an autonomous robot for our annual SUMO competition, where the goal is to push the opponent out of the ring.`;
+const aboutDescription = `SUMO is the perfect place for beginners to get hands-on experience in both hardware and software robotics in a supportive, structured environment. Working in small teams of 2-4, members learn to design, build, and program autonomous robots that compete to push other robots out of the arena in a heated 1v1 battle. Each year, the SUMO team competes in an inter-university battle against other Ontario schools where there are prizes for top placing teams! Our inclusive community welcomes anyone curious about robotics, providing a guided introduction to everything from mechanical design to coding.`;
 
 const featureImage = new URL(
   "../../assets/images/subteams/sumo/good.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
 const skills = [
   "3D CAD Modelling",
-  "Circuit Design & Soldering",
-  "ROS Framework",
+  "Arduino Circuit Design",
+  "Soldering",
   "Embedded C++ Programming",
 ];
 
 const highlights = [
   {
-    title: "The Competition",
+    title: "Exciting Competitions",
     description:
-      "Create an autonomous robot with IR sensors to locate opponents and light sensors to detect the ring edge.",
+      "Top teams will compete with other top universities in Ontario in the SUMO bot league and take home a prize for UofT!",
   },
   {
-    title: "Mechanical Focus",
+    title: "Inclusive Community",
     description:
-      "Learn 3D CAD modelling, prototyping, and practical fabrication techniques.",
+      "There is no application to join SUMO! We welcome people from all experience levels. Just come with enthusiasm and an eagerness to learn.",
   },
   {
-    title: "Software Focus",
+    title: "Real World Skills",
     description:
-      "Use ROS framework to simulate robots, program sensors, and create your own algorithms.",
+      "Learn practical skills in design, coding, and electronics that you can apply in school projects, future jobs, or personal robotics ventures.",
   },
 ];
 
@@ -51,105 +51,105 @@ const team_images = [
     name: "sumo2",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/3.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo3",
     img: new URL(
       "../../assets/images/subteams/sumo/IMG_6944.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo4",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/IMG_6860.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo5",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/1.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo6",
     img: new URL(
       "../../assets/images/subteams/sumo/IMG_7052.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo7",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/IMG_6843.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo8",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/good3.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo9",
     img: new URL(
       "../../assets/images/subteams/sumo/IMG_6954.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo10",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/4.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo11",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/IMG_6845.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo12",
     img: new URL(
       "../../assets/images/subteams/sumo/IMG_7057.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo13",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/2.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo14",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/IMG_6862.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo15",
     img: new URL(
       "../../assets/images/subteams/sumo/IMG_6955.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "sumo16",
     img: new URL(
       "../../assets/images/subteams/sumo/teamPage Photos/IMG_6838.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   // Add more images here without importing them individually
@@ -157,32 +157,11 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Team Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Tech Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "SUMO PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "SUMO PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Aaliyah Pirani",
+    role: "Project Manager",
+    bio: "CS 2T8",
+    img: "https://drive.google.com/thumbnail?id=1s9zJR4q69b53WSBBlAVf2mTrHjxE3VUa",
+    linkedin: "https://www.linkedin.com/in/aaliyahpirani",
   },
 ];
 
@@ -391,7 +370,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2750px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -411,7 +390,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2550px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -420,7 +399,7 @@ export default function CombatPage() {
         />
 
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
-          <div className="w-[600px] h-[580px]">
+          <div className="w-[600px] h-[670px]">
             <img
               src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
@@ -476,7 +455,7 @@ export default function CombatPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}
