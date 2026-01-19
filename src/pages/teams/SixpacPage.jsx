@@ -3,152 +3,134 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "6ix-PAC";
+const teamName = "PacBot";
 
-export const teamTagline =
+const teamTagline =
   "Pac-Man inspired robots built for quick and efficient maze solving.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/subteams/6ix-pac/pacman.jpeg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
-export const aboutTitle = "About PacBot";
+const aboutTitle = "About PacBot";
 
-export const aboutDescription = `The goal of the PacBot team is to design and build a robot that assumes the role of Pac-man in the popular arcade game. The team's work culminates in the PacBot competition hosted by the Harvard Undergraduate Robotics Club, which mimics the traditional Pac-man game. Each participating PacBot autonomously navigates the arena to collect dots ("power pellets") and avoid or attack ghosts.`;
+const aboutDescription = `The goal of the PacBot team is to design and build a robot that assumes the role of Pac-Man in the popular arcade game. PacBot is split into two subteams: the Electrosense Team, responsible for hardware and electrical aspects including sensor integration, circuit and PCB designs; and the Algo Team, which designs maze-solving algorithms through ROS and Reinforcement Learning.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/6ix-pac/IMG_3781.jpeg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
-export const skills = [
-  "Autonomous Navigation",
-  "Computer Vision",
-  "Path Planning Algorithms",
-  "Real-time Strategy",
+const skills = [
+  "Teamwork",
+  "Circuit Design",
+  "Robot Building",
+  "Algorithm Optimization",
 ];
 
-export const highlights = [
+const highlights = [
   {
-    title: "The Arena",
-    description:
-      "Navigate a 4-inch tall arena mimicking the original Pac-Man game, collecting dots from each grid unit.",
+    title: "UIUC 2025",
+    description: "4th place in the PacBot competition.",
   },
   {
-    title: "Gameplay Strategy",
-    description:
-      "Earn points by collecting dots (10pts), power pellets (50pts), and eating frightened ghosts (200-1600pts).",
-  },
-  {
-    title: "Ghost Evasion",
-    description:
-      "Avoid four independent ghosts moving at 7 inches per second, or eat them after collecting power pellets.",
+    title: "UIUC 2024",
+    description: "2nd place in the PacBot competition.",
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "pacbot1",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/pacbot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot2",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/20240425_220952.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot3",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/pacbot-side.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot4",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/IMG_3768.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot5",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/20240427_091013.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot6",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/IMG_3829.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot7",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/IMG_4752.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot8",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/IMG_4759.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot9",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/IMG_4762.jpeg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "pacbot10",
     img: new URL(
       "../../assets/images/subteams/6ix-pac/pacbot1.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Team Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Patricia Krisanti",
+    role: "Project Manager",
+    bio: "EngSci - BME 2T6 + PEY",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
   },
   {
-    name: "Jane Doe",
-    role: "Tech Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "PacBot PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "PacBot PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Zain Azam",
+    role: "Project Manager",
+    bio: "ECE 2T7",
+    img: "https://drive.google.com/thumbnail?id=13el8fkHMEf3bcQ5tLGL2_krrmc90oSv8",
+    linkedin: "https://www.linkedin.com/in/zainyusufazam/",
   },
 ];
 
@@ -357,7 +339,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2575px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -377,7 +359,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2375px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -442,7 +424,7 @@ export default function CombatPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}

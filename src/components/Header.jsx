@@ -18,8 +18,12 @@ export default function Header() {
     { name: "ART", path: "/teams/art" },
     { name: "SUMO", path: "/teams/sumo" },
     { name: "Combat", path: "/teams/combat" },
-    { name: "6ixpac", path: "/teams/6ixpac" },
+    { name: "Pacbot", path: "/teams/6ixpac" },
     { name: "Robosoccer", path: "/teams/robosoccer" },
+    { name: "Robonars", path: "/teams/robonars" },
+    { name: "Web", path: "/teams/web" },
+    { name: "Marketing", path: "/teams/marketing" },
+    { name: "Outreach", path: "/teams/outreach" },
   ];
 
   const getNavItemClasses = (path, hasDropdown = false) => {
@@ -105,12 +109,12 @@ export default function Header() {
                               key={subItem.name}
                               to={subItem.path}
                               className={`group ${getDropdownItemClasses(
-                                subItem.path
+                                subItem.path,
                               )}`}
                             >
                               <span
                                 className={getDropdownItemTextClasses(
-                                  subItem.path
+                                  subItem.path,
                                 )}
                               >
                                 {subItem.name}

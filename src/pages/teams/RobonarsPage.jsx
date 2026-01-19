@@ -3,159 +3,143 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-const teamName = "RoboSoccer";
+const teamName = "Robonars";
 
-const teamTagline =
-  "Autonomous humanoid soccer-playing robots for RoboCup competition.";
+const teamTagline = "Technical workshops and seminar speaker series.";
 
 const heroImage = new URL(
-  "../../assets/images/subteams/robosoccer/2022_3.jpg",
+  "../../assets/images/robonars/IMG_6653.jpeg",
   import.meta.url,
 ).href;
 
-const aboutTitle = "About RoboSoccer";
+const aboutTitle = "About Robonars";
 
-const aboutDescription = `The RoboSoccer team designs and builds autonomous humanoid soccer-playing robots to compete in RoboCup; an international robotics competition. Standing over 60 cm tall, the robots will be able to walk, run, and kick a soccer ball while maintaining balance.`;
+const aboutDescription = `The Robonars team focuses on providing interactive and hands-on workshops and speaker events for students interested in the field of robotics. Our events range from direct workshops in important skills in the field, to fireside chat events with industry specialists and academic professionals to provide insight into the field. We hope that with our events, we are able to provide an enriched learning environment and an immersive experience into the future of robotics.`;
 
 const featureImage = new URL(
-  "../../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
+  "../../assets/images/robonars/Robonars Class.jpg",
   import.meta.url,
 ).href;
 
 const skills = [
-  "Hardware Design",
-  "Software & Control",
-  "Electrical & Embedded",
-  "Computer Vision",
+  "Hands-On Experience",
+  "Networking",
+  "State-of-the-Art Robotics Experiences",
+  "Academic and Industry Insight",
 ];
 
 const highlights = [
   {
-    title: "Hardware",
+    title: "Team Onboarding",
     description:
-      "Responsible for designing, assembling, and improving our robots.",
+      "Worked alongside numerous UTRA teams to provide workshops to support their onboarding.",
   },
   {
-    title: "Software",
+    title: "Industry Connections",
     description:
-      "Control mechanical components, implement strategies, and develop algorithms to find and kick the ball.",
+      "Worked with professors and industry specialists to provide students with insight and potential internship and job opportunities.",
   },
   {
-    title: "Electrical & Embedded",
+    title: "Club Collaboration",
     description:
-      "Ensure all components connect and function correctly through PCB design, testing, and firmware development.",
+      "Collaborated with other UofT clubs to provide unique workshops diving into multifaceted fields in engineering.",
   },
 ];
 
 const team_images = [
   {
-    name: "robosoccer1",
+    name: "robonars1",
     img: new URL(
-      "../../assets/images/subteams/robosoccer/robosoccerRobot.jpg",
+      "../../assets/images/robonars/Robonars Workshop.jpg",
       import.meta.url,
     ).href,
   },
   {
-    name: "robosoccer2",
+    name: "robonars2",
     img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01539.JPG",
+      "../../assets/images/robonars/Robonars Class.jpg",
       import.meta.url,
     ).href,
   },
   {
-    name: "robosoccer3",
+    name: "robonars3",
     img: new URL(
-      "../../assets/images/subteams/robosoccer/2022_3.jpg",
+      "../../assets/images/robonars/20230925_194250.jpg",
       import.meta.url,
     ).href,
   },
   {
-    name: "robosoccer4",
+    name: "robonars4",
     img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01547.JPG",
+      "../../assets/images/robonars/20231011_203930.jpg",
       import.meta.url,
     ).href,
   },
   {
-    name: "robosoccer5",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/robot.jpg",
-      import.meta.url,
-    ).href,
+    name: "robonars5",
+    img: new URL("../../assets/images/robonars/IMG_1331.jpg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer6",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01670.JPG",
-      import.meta.url,
-    ).href,
+    name: "robonars6",
+    img: new URL("../../assets/images/robonars/IMG_1335.jpg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer7",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2022_5.jpg",
-      import.meta.url,
-    ).href,
+    name: "robonars7",
+    img: new URL("../../assets/images/robonars/IMG_6641.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer8",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01682.JPG",
-      import.meta.url,
-    ).href,
+    name: "robonars8",
+    img: new URL("../../assets/images/robonars/IMG_6649.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer9",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/gazebo 2.jpg",
-      import.meta.url,
-    ).href,
+    name: "robonars9",
+    img: new URL("../../assets/images/robonars/IMG_6650.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer10",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01719.JPG",
-      import.meta.url,
-    ).href,
+    name: "robonars11",
+    img: new URL("../../assets/images/robonars/IMG_7131.jpeg", import.meta.url)
+      .href,
   },
   {
-    name: "robosoccer11",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/DSC01782.JPG",
-      import.meta.url,
-    ).href,
+    name: "robonars12",
+    img: new URL("../../assets/images/robonars/IMG_7143.jpeg", import.meta.url)
+      .href,
   },
-  {
-    name: "robosoccer12",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01735.JPG",
-      import.meta.url,
-    ).href,
-  },
-  {
-    name: "robosoccer13",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/2018 robocup/DSC01781.JPG",
-      import.meta.url,
-    ).href,
-  },
-  {
-    name: "robosoccer14",
-    img: new URL(
-      "../../assets/images/subteams/robosoccer/DSC01783.JPG",
-      import.meta.url,
-    ).href,
-  },
-  // Add more images here without importing them individually
 ];
 
 const team_leadership = [
   {
-    name: "Jinali Dona",
-    role: "Executive Director",
-    bio: "MECH 2T5 + PEY",
-    img: "https://drive.google.com/thumbnail?id=1XCj6YbMzfKoKmvkJxlSsgiTEwQsckyvf",
-    linkedin: "https://www.linkedin.com/in/jinali-dona",
+    name: "Jane Doe",
+    role: "Robonars Lead",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
+    name: "Jane Doe",
+    role: "Workshop Coordinator",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
+    name: "Jane Doe",
+    role: "Speaker Coordinator",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
+    name: "Jane Doe",
+    role: "Content Creator",
+    bio: "ECE 2T8",
+    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
+    linkedin: "https://www.linkedin.com/",
   },
 ];
 
@@ -303,7 +287,7 @@ function ScrollingCarousel() {
   );
 }
 
-export default function CombatPage() {
+export default function RobonarsPage() {
   function SkillTag({ skill }) {
     return (
       <div className="flex flex-row items-center">
@@ -364,7 +348,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -384,7 +368,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2400px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -393,7 +377,7 @@ export default function CombatPage() {
         />
 
         <div className="relative flex flex-row items-center justify-center pt-[100px] gap-[125px]">
-          <div className="w-[600px] h-[540px]">
+          <div className="w-[600px] h-[580px]">
             <img
               src={featureImage}
               className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"

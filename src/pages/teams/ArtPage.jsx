@@ -3,145 +3,124 @@ import bgGradient from "../../assets/images/graphics/background_gradient.png";
 // ==================== SUBTEAM-SPECIFIC DATA ====================
 // Modify the values below to customize for each subteam
 
-export const teamName = "Autonomous Rover Team";
+const teamName = "Autonomous Rover Team";
 
-export const teamTagline =
+const teamTagline =
   "Autonomous rovers that explore, navigate and sense the world.";
 
-export const heroImage = new URL(
+const heroImage = new URL(
   "../../assets/images/photoshoot/utra_art.png",
-  import.meta.url
+  import.meta.url,
 ).href;
 
-export const aboutTitle = "About ART";
+const aboutTitle = "About ART";
 
-export const aboutDescription = `The Autonomous Rover Team (ART) focuses on building fully autonomous robots to perform meaningful functions, often involving navigation and environment manipulation. Our members build the robot from the ground up, including its design, mechanical and electrical subsystems, navigation software, and computer vision models.`;
+const aboutDescription = `The Autonomous Rover Team (ART) focuses on building fully autonomous robots to perform meaningful functions, often involving navigation and environment manipulation. Our members build the robot from the ground up, including its design, mechanical and electrical subsystems, navigation software, and computer vision models.`;
 
-export const featureImage = new URL(
+const featureImage = new URL(
   "../../assets/images/subteams/art/PXL_20230603_010015283.jpg",
-  import.meta.url
+  import.meta.url,
 ).href;
 
-export const skills = [
-  "Hardware (Mechanical)",
-  "Hardware (Electrical)",
-  "CV/ML",
-  "ROS",
+const skills = [
+  "ROS & Robotics Software",
+  "Deep Learning & Computer Vision",
+  "Mechanical Design & Fabrication",
+  "Electrical Circuitry & Integration",
 ];
 
-export const highlights = [
+const highlights = [
   {
-    title: "Hardware (Mechanical)",
-    description:
-      "Out of metals and woods, we build the muscles and bones of the robots.",
+    title: "IGVC 2025",
+    description: "6th place in design competition.",
   },
   {
-    title: "Hardware (Electrical)",
-    description:
-      "The bridge between software and mechanical—working on motors, power systems and sensors.",
+    title: "IGVC 2024",
+    description: "5th place in design competition.",
   },
   {
-    title: "CV/ML",
-    description:
-      "Develop the 'eyes' of the robot using cameras, spatial sensors and machine learning models.",
+    title: "IGVC 2023",
+    description: "3rd place in design competition.",
   },
 ];
 
-export const team_images = [
+const team_images = [
   {
     name: "art1",
     img: new URL(
       "../../assets/images/subteams/art/Art robot.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art2",
     img: new URL(
       "../../assets/images/subteams/art/20230601_161926.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art3",
     img: new URL(
       "../../assets/images/subteams/art/20230602_205628.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art4",
     img: new URL(
       "../../assets/images/subteams/art/20230604_204124.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art5",
     img: new URL(
       "../../assets/images/subteams/art/IMG_4167.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art7",
     img: new URL(
       "../../assets/images/subteams/art/IMG_5199.JPG",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art8",
     img: new URL(
       "../../assets/images/subteams/art/IMG_7015.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art9",
     img: new URL(
       "../../assets/images/subteams/art/IMG_7075.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
     name: "art10",
     img: new URL(
       "../../assets/images/subteams/art/IMG_7084.jpg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   // Add more images here without importing them individually
 ];
 
-export const team_leadership = [
+const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Team Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "Tech Lead",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "ART PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "ART PM",
-    bio: "ECE 2T8",
-    img: "https://headshots-inc.com/wp-content/uploads/2021/04/linkedin-Headshots.png",
-    linkedin: "https://www.linkedin.com/",
+    name: "Jennifer Zhang",
+    role: "Project Manager",
+    bio: "EngSci 2T5 + PEY",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
   },
 ];
 
@@ -350,7 +329,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2550px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2450px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -370,7 +349,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2350px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2250px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -435,7 +414,7 @@ export default function CombatPage() {
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
-          <div className="flex flex-row justify-between w-[1210px] py-2">
+          <div className="flex flex-row justify-center gap-[60px] py-2">
             {team_leadership.map((leader, index) => (
               <TeamMemberCard
                 key={`${leader.name}-${index}`}
