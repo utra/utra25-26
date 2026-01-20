@@ -18,7 +18,7 @@ export const sponsors = [
     link: "https://sendcutsend.com/",
     img: new URL(
       "../assets/images/logo_sponsors/sendcutsend.svg",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -32,7 +32,7 @@ export const sponsors = [
     link: "https://www.fingertechrobotics.com/",
     img: new URL(
       "../assets/images/logo_sponsors/fingertech.png",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -46,7 +46,7 @@ export const sponsors = [
     link: "https://justcuzrobotics.com/",
     img: new URL(
       "../assets/images/logo_sponsors/justcuzrobotics.webp",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -60,7 +60,7 @@ export const sponsors = [
     link: "https://www.universal-solder.ca/",
     img: new URL(
       "../assets/images/logo_sponsors/universal-solder.webp",
-      import.meta.url
+      import.meta.url,
     ).href,
   },
   {
@@ -170,7 +170,7 @@ function ScrollingCarousel() {
 
 export default function SponsorsPage() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-[1525px]">
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{
@@ -194,11 +194,6 @@ export default function SponsorsPage() {
         </div>
       </div>
 
-      <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
-      <div className="max-w-screen-2xl mx-auto relative z-10">
-        <ScrollingCarousel />
-      </div>
-      <hr className="h-[1px] mb-0 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
       <div className="mx-auto max-w-6xl px-4 pt-4 pb-16 relative z-10">
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {sponsors.map((sponsor) =>
@@ -206,10 +201,16 @@ export default function SponsorsPage() {
               name: sponsor.name,
               logo: sponsor.img,
               companyUrl: sponsor.link,
-            })
+            }),
           )}
         </div>
       </div>
+
+      <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
+      <div className="max-w-screen-2xl mx-auto relative z-10">
+        <ScrollingCarousel />
+      </div>
+      <hr className="h-[1px] mb-0 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
     </main>
   );
 }
