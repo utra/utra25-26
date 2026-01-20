@@ -348,7 +348,8 @@ export default function RobonarsPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
+    // <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2650px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2100px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -368,7 +369,8 @@ export default function RobonarsPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      {/* <div className="relative w-full h-[2450px] mt-[-20px] pt-[230px] flex flex-col items-center"> */}
+      <div className="relative w-full h-[1900px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -429,7 +431,7 @@ export default function RobonarsPage() {
           <HorizontalScrollCarousel />
         </div>
 
-        <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
+        {/* <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
@@ -445,7 +447,7 @@ export default function RobonarsPage() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
