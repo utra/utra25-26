@@ -338,10 +338,12 @@ export default function CombatPage() {
         }}
       />
 
-      <div className="relative flex flex-col pt-[150px] w-full px-[350px]">
+      <div className="relative flex flex-col pt-[80px] w-full px-[350px]">
         <div className="justify-center h-[150px] w-[1000px]">
-          <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[100px]">
-            {teamName}
+          <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[100px] leading-[0.95]">
+            Autonomous <br /> Rover
+            <br />
+            Team
           </h1>
           <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px]">
             {teamTagline}
