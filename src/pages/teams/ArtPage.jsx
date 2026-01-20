@@ -345,7 +345,7 @@ export default function CombatPage() {
             <br />
             Team
           </h1>
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px]">
+          <p className="text-white [font-family:'ProximaNova',sans-serif] pt-[20px] text-[24px]">
             {teamTagline}
           </p>
         </div>
