@@ -36,26 +36,26 @@ const team_leadership = [
     img: "https://drive.google.com/thumbnail?id=1dwLXSwz5qAPN-xi7ArMTzMr7xiSxel0X",
     linkedin: "https://www.linkedin.com/in/ameykhatri/",
   },
-  {
-    name: "Jane Doe",
-    role: "Frontend Dev",
-    bio: "CS 2T9",
-    img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
-      import.meta.url,
-    ).href,
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Jane Doe",
-    role: "UI/UX Designer",
-    bio: "ECE 2T8",
-    img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
-      import.meta.url,
-    ).href,
-    linkedin: "https://www.linkedin.com/",
-  },
+  // {
+  //   name: "Jane Doe",
+  //   role: "Frontend Dev",
+  //   bio: "CS 2T9",
+  //   img: new URL(
+  //     "../../assets/images/logo/utraLogoWhiteMobile.png",
+  //     import.meta.url,
+  //   ).href,
+  //   linkedin: "https://www.linkedin.com/",
+  // },
+  // {
+  //   name: "Jane Doe",
+  //   role: "UI/UX Designer",
+  //   bio: "ECE 2T8",
+  //   img: new URL(
+  //     "../../assets/images/logo/utraLogoWhiteMobile.png",
+  //     import.meta.url,
+  //   ).href,
+  //   linkedin: "https://www.linkedin.com/",
+  // },
 ];
 
 export default function WebPage() {

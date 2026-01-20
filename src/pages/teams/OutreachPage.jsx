@@ -81,7 +81,7 @@ export default function OutreachPage() {
         <p className="[font-family:'ProximaNova',sans-serif] text-[16px] text-gray-300">
           {bio}
         </p>
-        <p className="[font-family:'ProximaNova',sans-serif] text-[18spx] text-[#a3a0f3] font-semibold uppercase tracking-wider">
+        <p className="[font-family:'ProximaNova',sans-serif] text-[18px] text-[#a3a0f3] font-semibold uppercase tracking-wider">
           {role}
         </p>
       </div>
@@ -89,7 +89,8 @@ export default function OutreachPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1850px] h-screen">
+    // <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1850px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1350px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -109,7 +110,8 @@ export default function OutreachPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1650px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      {/* <div className="relative w-full h-[1650px] mt-[-20px] pt-[230px] flex flex-col items-center"> */}
+      <div className="relative w-full h-[1150px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -142,7 +144,7 @@ export default function OutreachPage() {
           </div>
         </div>
 
-        <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
+        {/* <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
@@ -158,7 +160,7 @@ export default function OutreachPage() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
