@@ -154,7 +154,8 @@ export default function HomePage() {
                 UTRAHacks
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[300px]">
-                Organizing UTRAHacks, North America's largest robotics hackathon.
+                Organizing UTRAHacks, North America's largest robotics
+                hackathon.
               </p>
             </div>
           </div>

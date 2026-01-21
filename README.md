@@ -1,4 +1,5 @@
 # utra25-26
+
 Revamped, React based site for the University of Toronto's Robotics Association
 
 Welcome to UTRA, the University of Toronto Robotics Association. This repository contains source code for the utra2025 website. It is the latest design of the official website for UTRA.
@@ -29,6 +30,7 @@ To contribute to this project, read the [CONTRIBUTING](./docs/CONTRIBUTING.md) f
 ## Credits
 
 ### 2024-2025
+
 Amey Khatri\
 #DEV
 #DEV
