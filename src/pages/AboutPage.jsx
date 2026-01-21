@@ -2,19 +2,11 @@ import { motion } from "framer-motion";
 
 // Images
 import utraLogo from "../assets/images/logo/utraLogoWhiteMobile.png";
-import christopherImg from "../assets/images/headshots/christopher.jpg";
-import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg";
 import brendanImg from "../assets/images/headshots/brendan.jpeg";
 import lesleyImg from "../assets/images/headshots/lesley.png";
-import sabaaImg from "../assets/images/headshots/sabaa.jpg";
 import stanImg from "../assets/images/headshots/stan.jpg";
-import jalilyaImg from "../assets/images/headshots/jalilya.png";
-import indeshImg from "../assets/images/headshots/indesh.png";
-import zainImg from "../assets/images/headshots/zain.jpg";
-import maggieImg from "../assets/images/headshots/maggie.jpg";
+import raiyannImg from "../assets/images/headshots/raiyann.png";
 import aboutImage from "../assets/images/photoshoot/aboutImage.jpg";
-import justinImg from "../assets/images/headshots/justin.png";
-
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -61,101 +53,24 @@ const teamMembers = [
   },
   {
     name: "Rocklen Jeong",
-    role: "VP Partnerships",
+    role: "Vice-President Partnerships",
     program: "ECE 2T7",
     image: utraLogo, // Missing image
     linkedin: "",
   },
   {
     name: "Isabella Tang",
-    role: "VP Finance",
+    role: "Vice-President Finance",
     program: "IndE 2T6 + PEY",
     image: utraLogo, // Missing image
     linkedin: "https://www.linkedin.com/in/isabella-tang-0a482a22a/",
   },
   {
-    name: "Christopher Lee",
-    role: "UTRA Hacks Director",
-    program: "ECE 2T8",
-    image: christopherImg,
-    linkedin: "www.linkedin.com/in/chrislee6466",
-  },
-  {
-    name: "Justin Fang",
-    role: "Hackathon Director",
-    program: "ECE 2T7",
-    image: justinImg, // HEIC format not supported natively
-    linkedin: "",
-  },
-  {
-    name: "Sarah Hira",
-    role: "Marketing Director",
-    program: "Bioinformatics + Chemistry, A&S 2T7",
-    image: utraLogo, // Missing image
-    linkedin: "",
-  },
-  {
-    name: "Maggie Zhao",
-    role: "Marketing Director",
-    program: "CIV 2T7",
-    image: maggieImg,
-    linkedin: "",
-  },
-  {
-    name: "Sabaa Rashid",
-    role: "Marketing Associate",
-    program: "EngSci 2T9 + PEY",
-    image: sabaaImg,
-    linkedin: "https://www.linkedin.com/in/sabaa-a-rashid/",
-  },
-  {
-    name: "Jalilya Zhaxybayeva",
-    role: "Marketing Associate",
-    program: "MECH 2T8",
-    image: jalilyaImg,
-    linkedin: "https://www.linkedin.com/in/jalilya-zhaxybayeva-269089348",
-  },
-  {
-    name: "Aaliyah Pirani",
-    role: "Sumo PM",
-    program: "CS ‘28",
-    image: aaliyahImg,
-    linkedin: "https://www.linkedin.com/in/aaliyahpirani",
-  },
-  {
-    name: "Jennifer Zhang",
-    role: "Project Manager",
-    program: "EngSci 2T5 + PEY",
-    image: utraLogo, // Missing image
-    linkedin: "",
-  },
-  {
-    name: "Jinali Dona",
-    role: "Executive Director Robosoccer",
-    program: "MECH 2T5 +PEY",
-    image: utraLogo, // Missing image
-    linkedin: "https://www.linkedin.com/in/jinali-dona",
-  },
-  {
-    name: "Patricia Krisanti",
-    role: "Project Manager",
-    program: "EngSci - BME 2T6 + PEY",
-    image: utraLogo, // Missing image
-    linkedin: "",
-  },
-  {
-    name: "Indesh",
-    role: "UTRA Combat PM",
-    program: "MECH 2T7 + PEY",
-    image: indeshImg,
-    linkedin: "www.linkedin.com/in/indesh-vijayanand",
-  },
-  {
-    name: "Zain Azam",
-    role: "Project Manager",
-    program: "ECE 2T7",
-    image: zainImg,
-    linkedin: "https://www.linkedin.com/in/zainyusufazam/",
+    name: "Raiyann Jacob",
+    role: "Vice-President Communications",
+    program: "Engineering Science 2T6 + PEY",
+    image: raiyannImg,
+    linkedin: "https://www.linkedin.com/in/raiyannjacob",
   },
 ];
 
@@ -327,7 +242,7 @@ export default function AboutPage() {
                   description="Finish top 4 across all our competitions"
                 />
                 <Card
-                  title="Education"
+                  title="Education & Outreach"
                   description="Host more guest speaker sessions for Robonars"
                 />
               </motion.div>
@@ -346,7 +261,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-[70px] font-extrabold text-white mb-4 [font-family:'ProximaNova',sans-serif]">
-              Meet The Team
+              Meet the Admin Team
             </h2>
             <p className="text-[24px] text-white [font-family:'ProximaNova',sans-serif]">
               The brilliant minds behind our robots.
