@@ -47,7 +47,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1800px] mt-[-20px] pt-[200px] flex flex-col items-center h-[1280px]">
+      <div className="relative w-full h-[1800px] mt-[-20px] pt-[200px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{

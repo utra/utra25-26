@@ -11,6 +11,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import TeamsPage from "../pages/TeamsPage";
 import SponsorsPage from "../pages/SponsorsPage";
+import ContactPage from "../pages/ContactPage";
 
 // Import team subpages
 import ArtPage from "../pages/teams/ArtPage";
@@ -57,6 +58,7 @@ export default function Router() {
         <Route path="/teams/marketing" element={<MarketingPage />} />
         <Route path="/teams/robonars" element={<RobonarsPage />} />
         <Route path="/teams/outreach" element={<OutreachPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </>
   );

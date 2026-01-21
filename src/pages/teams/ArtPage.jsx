@@ -124,7 +124,6 @@ const team_leadership = [
   },
 ];
 
-import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 const HorizontalScrollCarousel = () => {
