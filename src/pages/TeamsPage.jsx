@@ -7,7 +7,7 @@ import classroom from "../assets/images/robonars/Robonars Workshop.jpg";
 const pageInfo = {
   title: "Our Teams",
   subtitle: "Find Your Place in Robotics",
-  description: `UTRA is home to six specialized subteams, each offering unique opportunities to learn, build, and compete. Whether you're a complete beginner or an experienced engineer, there's a team for you. Join us and be part of building the future of robotics.`,
+  description: `UTRA is home to seven specialized subteams, each offering unique opportunities to learn, build, and compete. Whether you're a complete beginner or an experienced engineer, there's a team for you. Join us and be part of building the future of robotics.`,
 };
 
 const teams = [

@@ -96,10 +96,10 @@ export default function HomePage() {
             Our Teams
           </h1>
           <p className="text-white [font-family:'ProximaNova',sans-serif] text-[28px]">
-            UTRA has 5 different subteams for all experience levels.
+            UTRA has 7 different subteams for all experience levels.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
             <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
               <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue">
                 SUMO
@@ -147,6 +147,14 @@ export default function HomePage() {
               </h3>
               <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[300px]">
                 Technical Workshop and Seminar Speaker Series
+              </p>
+            </div>
+            <div className="bg-black bg-opacity-40 py-4 rounded-xl w-[335px] flex items-center text-center flex-col">
+              <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue-reversed">
+                UTRAHacks
+              </h3>
+              <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] w-[300px]">
+                Organizing UTRAHacks, North America's largest robotics hackathon.
               </p>
             </div>
           </div>
