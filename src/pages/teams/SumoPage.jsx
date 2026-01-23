@@ -160,7 +160,8 @@ const team_leadership = [
     name: "Aaliyah Pirani",
     role: "Project Manager",
     bio: "CS 2T8",
-    img: "https://drive.google.com/thumbnail?id=1s9zJR4q69b53WSBBlAVf2mTrHjxE3VUa",
+    img: new URL("../../assets/images/headshots/aaliyah.jpeg", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/aaliyahpirani",
   },
 ];

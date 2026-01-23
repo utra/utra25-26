@@ -43,21 +43,24 @@ const team_leadership = [
     name: "Maggie Zhao",
     role: "Director",
     bio: "CIV 2T7",
-    img: "https://drive.google.com/thumbnail?id=1B_f-D5xagnXBNoxREY_yuJB0A6oMFSpZ",
+    img: new URL("../../assets/images/headshots/maggie.jpg", import.meta.url)
+      .href,
     linkedin: "",
   },
   {
     name: "Sabaa Rashid",
     role: "Associate",
     bio: "EngSci 2T9 + PEY",
-    img: "https://drive.google.com/thumbnail?id=1l7SO-uzHV9hh1FYZ4uIXKKOU2Q4YnRRr",
+    img: new URL("../../assets/images/headshots/sabaa.jpg", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/sabaa-a-rashid/",
   },
   {
     name: "Jalilya Zhaxybayeva",
     role: "Associate",
     bio: "MECH 2T8",
-    img: "https://lh3.googleusercontent.com/d/1vIj3kgqI5UwEoWxREWLyabYqanuqSvXD=s220?authuser=0",
+    img: new URL("../../assets/images/headshots/jalilya.png", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/jalilya-zhaxybayeva-269089348",
   },
 ];

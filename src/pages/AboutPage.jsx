@@ -68,7 +68,7 @@ const teamMembers = [
   {
     name: "Raiyann Jacob",
     role: "Vice-President Communications",
-    program: "Engineering Science 2T6 + PEY",
+    program: "EngSci 2T6 + PEY",
     image: raiyannImg,
     linkedin: "https://www.linkedin.com/in/raiyannjacob",
   },
@@ -273,7 +273,7 @@ export default function AboutPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto"
           >
             {teamMembers.map((member, index) => (
               <TeamMember
