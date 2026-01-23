@@ -157,18 +157,10 @@
     will-change: transform;
   }
 
-  .scroll-content:hover {
-    animation-play-state: paused;
-  }
-
   .scroll-content-fast {
     display: inline-flex;
     animation: scroll 10s linear infinite;
     will-change: transform;
-  }
-
-  .scroll-content-fast:hover {
-    animation-play-state: paused;
   }
 
   @keyframes scroll {

@@ -129,7 +129,8 @@ const team_leadership = [
     name: "Zain Azam",
     role: "Project Manager",
     bio: "ECE 2T7",
-    img: "https://drive.google.com/thumbnail?id=13el8fkHMEf3bcQ5tLGL2_krrmc90oSv8",
+    img: new URL("../../assets/images/headshots/zain.jpg", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/zainyusufazam/",
   },
 ];

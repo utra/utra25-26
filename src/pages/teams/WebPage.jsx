@@ -33,7 +33,8 @@ const team_leadership = [
     name: "Amey Khatri",
     role: "Executive Director",
     bio: "CS/Physics 2T8",
-    img: "https://drive.google.com/thumbnail?id=1dwLXSwz5qAPN-xi7ArMTzMr7xiSxel0X",
+    img: new URL("../../assets/images/headshots/amey.jpg", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/ameykhatri/",
   },
   // {
@@ -106,7 +107,7 @@ export default function WebPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1900px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[1850px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -126,7 +127,7 @@ export default function WebPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1700px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[1650px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{

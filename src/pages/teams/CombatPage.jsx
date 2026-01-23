@@ -110,7 +110,8 @@ const team_leadership = [
     name: "Indesh",
     role: "Project Manager",
     bio: "MECH 2T7 + PEY",
-    img: "https://drive.google.com/thumbnail?id=1uq7g7leTcPMkXqxhHVo7VvKViVOddGQr",
+    img: new URL("../../assets/images/headshots/indesh.png", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/indesh-vijayanand",
   },
 ];

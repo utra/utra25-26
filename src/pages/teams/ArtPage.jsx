@@ -328,7 +328,7 @@ export default function CombatPage() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2450px] h-screen">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2390px] h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
         style={{
@@ -350,7 +350,7 @@ export default function CombatPage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[2250px] mt-[-20px] pt-[230px] flex flex-col items-center">
+      <div className="relative w-full h-[2300px] mt-[-20px] pt-[230px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{

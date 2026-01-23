@@ -135,12 +135,12 @@ export default function ContactPage() {
       </section>
 
       {/* Cards Grid */}
-      <section className="container mx-auto px-4 relative z-10 max-w-7xl">
+      <section className="container mx-auto px-4 relative z-10 max-w-[1350px]">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6"
         >
           {/* Instagram / Updates */}
           <SocialCard
@@ -167,14 +167,24 @@ export default function ContactPage() {
             gradient="from-purple-500 to-indigo-600"
           />
 
-          {/* Email / Direct Contact */}
+          {/* Email / General Inquiries */}
           <SocialCard
             icon={FaPaperPlane}
-            title="Send a Message"
-            description="Missed recruitment? Have a sponsorship inquiry? Send us an email directly."
+            title="General Inquiries"
+            description="Have a question about UTRA? Missed recruitment? Reach out to us for general information."
             link="mailto:admin@utra.ca"
             label="admin@utra.ca"
             gradient="from-blue-500 to-cyan-500"
+          />
+
+          {/* Email / Sponsorship Inquiries */}
+          <SocialCard
+            icon={FaPaperPlane}
+            title="Sponsorship Inquiries"
+            description="Interested in partnering with or sponsoring UTRA? We'd love to discuss collaboration opportunities."
+            link="mailto:sponsorships@utra.ca"
+            label="sponsorships@utra.ca"
+            gradient="from-emerald-500 to-teal-500"
           />
         </motion.div>
       </section>

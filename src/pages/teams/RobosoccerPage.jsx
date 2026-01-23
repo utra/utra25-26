@@ -154,7 +154,8 @@ const team_leadership = [
     name: "Jinali Dona",
     role: "Executive Director",
     bio: "MECH 2T5 + PEY",
-    img: "https://drive.google.com/thumbnail?id=1XCj6YbMzfKoKmvkJxlSsgiTEwQsckyvf",
+    img: new URL("../../assets/images/headshots/jinali.png", import.meta.url)
+      .href,
     linkedin: "https://www.linkedin.com/in/jinali-dona",
   },
 ];
