@@ -47,7 +47,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="relative w-full h-[1800px] mt-[-20px] pt-[200px] flex flex-col items-center">
+      <div className="relative w-full h-[1800px] mt-[-40px] pt-[200px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -57,7 +57,7 @@ export default function HomePage() {
 
         <div className="relative z-10 w-[1040px]">
           <h1 className="text-white text-[70px] [font-family:'ProximaNova',sans-serif] font-extrabold">
-            Achivements
+            Achievements
           </h1>
           <p className="text-white [font-family:'ProximaNova',sans-serif] text-[28px]">
             UTRA actively participates in competitions worldwide, achieving
