@@ -260,7 +260,7 @@ const HorizontalScrollCarousel = () => {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = 520;
+      const scrollAmount = window.innerWidth < 640 ? 280 : 520;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -269,10 +269,10 @@ const HorizontalScrollCarousel = () => {
   };
 
   return (
-    <section className="relative w-full py-8">
+    <section className="relative w-full py-4 sm:py-8">
       <button
         onClick={() => scroll("left")}
-        className={`absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
+        className={`absolute left-1 sm:left-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 sm:p-3 transition-all duration-200 ${
           canScrollLeft ? "opacity-100" : "opacity-30 cursor-not-allowed"
         }`}
         disabled={!canScrollLeft}
@@ -283,7 +283,7 @@ const HorizontalScrollCarousel = () => {
           viewBox="0 0 24 24"
           strokeWidth={2.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-4 h-4 sm:w-6 sm:h-6"
         >
           <path
             strokeLinecap="round"
@@ -295,7 +295,7 @@ const HorizontalScrollCarousel = () => {
 
       <button
         onClick={() => scroll("right")}
-        className={`absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-3 transition-all duration-200 ${
+        className={`absolute right-1 sm:right-2 top-[calc(50%-8px)] -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 sm:p-3 transition-all duration-200 ${
           canScrollRight ? "opacity-100" : "opacity-30 cursor-not-allowed"
         }`}
         disabled={!canScrollRight}
@@ -306,7 +306,7 @@ const HorizontalScrollCarousel = () => {
           viewBox="0 0 24 24"
           strokeWidth={2.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-4 h-4 sm:w-6 sm:h-6"
         >
           <path
             strokeLinecap="round"
@@ -318,7 +318,7 @@ const HorizontalScrollCarousel = () => {
 
       <div
         ref={scrollRef}
-        className="flex gap-8 overflow-x-scroll overflow-y-hidden pb-4 px-12 scrollbar-hide"
+        className="flex gap-4 sm:gap-8 overflow-x-scroll overflow-y-hidden pb-4 px-8 sm:px-12 scrollbar-hide"
         style={{
           cursor: "grab",
           maskImage:
@@ -330,7 +330,7 @@ const HorizontalScrollCarousel = () => {
         {carouselImages.map((card, index) => (
           <div
             key={`${card.name}-${index}`}
-            className="group relative h-[250px] w-[400px] min-w-[400px] flex-shrink-0 overflow-hidden rounded-[15px] shadow-lg"
+            className="group relative h-[180px] w-[280px] min-w-[280px] sm:h-[250px] sm:w-[400px] sm:min-w-[400px] flex-shrink-0 overflow-hidden rounded-[15px] shadow-lg"
           >
             <div
               style={{
@@ -355,8 +355,8 @@ function TeamCard({ name, tagline, path, img }) {
     : { to: path };
 
   return (
-    <Component {...linkProps} className="group">
-      <div className="relative bg-black bg-opacity-40 rounded-xl w-[335px] h-[280px] flex flex-col items-center overflow-hidden transition-all duration-300 group-hover:bg-opacity-50 group-hover:scale-105">
+    <Component {...linkProps} className="group w-full sm:w-auto">
+      <div className="relative bg-black bg-opacity-40 rounded-xl w-full sm:w-[335px] h-[200px] sm:h-[280px] flex flex-col items-center overflow-hidden transition-all duration-300 group-hover:bg-opacity-50 group-hover:scale-105">
         <div
           className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-300"
           style={{
@@ -366,14 +366,14 @@ function TeamCard({ name, tagline, path, img }) {
           }}
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-4">
-          <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[40px] gradient-purple-blue text-center">
+          <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[28px] sm:text-[40px] gradient-purple-blue text-center">
             {name}
           </h3>
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[20px] w-[280px] text-center mt-2">
+          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[20px] w-[90%] sm:w-[280px] text-center mt-2">
             {tagline}
           </p>
-          <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-[#a3a0f3] [font-family:'ProximaNova',sans-serif] text-[16px] font-semibold">
+          <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-[#a3a0f3] [font-family:'ProximaNova',sans-serif] text-[14px] sm:text-[16px] font-semibold">
               Learn More →
             </span>
           </div>
@@ -385,9 +385,9 @@ function TeamCard({ name, tagline, path, img }) {
 
 export default function TeamsPage() {
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2400px]">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2000px] sm:min-h-[2400px]">
       {/* Hero Section - Title Screen */}
-      <div className="relative w-full h-[85vh] flex flex-col items-start justify-center px-[200px]">
+      <div className="relative w-full h-[50vh] sm:h-[85vh] flex flex-col items-start justify-center px-6 sm:px-12 md:px-[200px]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-70 fade-bottom"
           style={{
@@ -395,17 +395,17 @@ export default function TeamsPage() {
           }}
         />
         <div className="relative z-10 flex flex-col items-start">
-          <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[120px] leading-none">
+          <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[60px] sm:text-[90px] md:text-[120px] leading-none">
             {pageInfo.title}
           </h1>
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[32px] mt-4 ml-4">
+          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[18px] sm:text-[24px] md:text-[32px] mt-2 sm:mt-4 ml-1 sm:ml-4">
             {pageInfo.subtitle}
           </p>
         </div>
       </div>
 
       {/* Content Section - Below the fold */}
-      <div className="relative h-[2200px] w-full pt-[100px] flex flex-col items-center">
+      <div className="relative min-h-[1600px] sm:min-h-[2200px] w-full pt-[50px] sm:pt-[100px] flex flex-col items-center px-4">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -413,16 +413,16 @@ export default function TeamsPage() {
           }}
         />
 
-        <div className="relative z-10 w-[1100px]">
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[24px] leading-[1.6] mb-[60px] text-center">
+        <div className="relative z-10 w-full max-w-[1100px]">
+          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[20px] md:text-[24px] leading-[1.6] mb-[30px] sm:mb-[60px] text-center px-2">
             {pageInfo.description}
           </p>
 
-          <h2 className="text-gray-100 [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px] text-center">
+          <h2 className="text-gray-100 [font-family:'ProximaNova',sans-serif] font-bold text-[32px] sm:text-[40px] md:text-[50px] mb-[20px] sm:mb-[30px] text-center">
             Explore Our Teams
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-[30px]">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
             {teams.map((team) => (
               <TeamCard
                 key={team.name}
@@ -435,8 +435,8 @@ export default function TeamsPage() {
           </div>
         </div>
 
-        <div className="relative z-10 w-full mt-[100px]">
-          <h2 className="text-gray-100 [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px] text-center">
+        <div className="relative z-10 w-full mt-[50px] sm:mt-[100px]">
+          <h2 className="text-gray-100 [font-family:'ProximaNova',sans-serif] font-bold text-[32px] sm:text-[40px] md:text-[50px] mb-[10px] text-center">
             Our Community
           </h2>
           <div className="max-w-[1400px] mx-auto">

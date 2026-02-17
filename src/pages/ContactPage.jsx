@@ -28,7 +28,7 @@ const SocialCard = ({
   const CardContainer = secondaryLink ? motion.div : motion.a;
   const containerProps = {
     variants: cardVariants,
-    className: `relative group p-8 rounded-3xl backdrop-blur-md bg-black/40 border border-white/10 overflow-hidden flex flex-col h-full hover:border-white/20 transition-all duration-300`,
+    className: `relative group p-6 sm:p-8 rounded-3xl backdrop-blur-md bg-black/40 border border-white/10 overflow-hidden flex flex-col h-full hover:border-white/20 transition-all duration-300`,
     ...(secondaryLink
       ? {}
       : { href: link, target: "_blank", rel: "noopener noreferrer" }),
@@ -43,15 +43,15 @@ const SocialCard = ({
 
       <div className="relative z-10 flex flex-col items-center text-center h-full">
         <div
-          className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${gradient} shadow-lg shadow-purple-500/20`}
+          className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 bg-gradient-to-br ${gradient} shadow-lg shadow-purple-500/20`}
         >
-          <Icon className="text-3xl text-white" />
+          <Icon className="text-2xl sm:text-3xl text-white" />
         </div>
 
-        <h3 className="text-2xl font-bold text-white mb-3 [font-family:'ProximaNova',sans-serif]">
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 [font-family:'ProximaNova',sans-serif]">
           {title}
         </h3>
-        <p className="text-gray-300 mb-8 leading-relaxed [font-family:'ProximaNova',sans-serif] flex-grow">
+        <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed [font-family:'ProximaNova',sans-serif] flex-grow text-sm sm:text-base">
           {description}
         </p>
 
@@ -61,7 +61,7 @@ const SocialCard = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center space-x-2 text-sm font-semibold tracking-wider uppercase text-white/80 hover:text-white transition-colors bg-white/5 py-3 rounded-xl hover:bg-white/10 w-full"
+              className="inline-flex justify-center items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/80 hover:text-white transition-colors bg-white/5 py-2.5 sm:py-3 rounded-xl hover:bg-white/10 w-full"
             >
               <span>{label}</span>
               <Icon className="w-4 h-4 ml-2" />
@@ -70,14 +70,14 @@ const SocialCard = ({
               href={secondaryLink.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center space-x-2 text-sm font-semibold tracking-wider uppercase text-white/80 hover:text-white transition-colors bg-white/5 py-3 rounded-xl hover:bg-white/10 w-full"
+              className="inline-flex justify-center items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/80 hover:text-white transition-colors bg-white/5 py-2.5 sm:py-3 rounded-xl hover:bg-white/10 w-full"
             >
               <span>{secondaryLink.label}</span>
               <secondaryLink.icon className="w-4 h-4 ml-2" />
             </a>
           </div>
         ) : (
-          <span className="inline-flex items-center space-x-2 text-sm font-semibold tracking-wider uppercase text-white/80 group-hover:text-white transition-colors">
+          <span className="inline-flex items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/80 group-hover:text-white transition-colors">
             <span>{label}</span>
             <svg
               className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
@@ -114,20 +114,20 @@ export default function ContactPage() {
       />
 
       {/* Background Decor (Subtle overlays on top of image for readability) */}
-      <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-10%] w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-5%] w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-32 pb-16 text-center relative z-10">
+      <section className="container mx-auto px-4 pt-16 sm:pt-32 pb-8 sm:pb-16 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-[60px] md:text-[90px] font-extrabold gradient-purple-blue mb-6 [font-family:'ProximaNova',sans-serif] leading-tight">
+          <h1 className="text-[40px] sm:text-[60px] md:text-[90px] font-extrabold gradient-purple-blue mb-4 sm:mb-6 [font-family:'ProximaNova',sans-serif] leading-tight">
             Get In Touch
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed [font-family:'ProximaNova',sans-serif] drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed [font-family:'ProximaNova',sans-serif] drop-shadow-md px-4">
             Whether you're interested in joining, sponsoring, or just saying
             hello, we'd love to hear from you.
           </p>
@@ -140,7 +140,7 @@ export default function ContactPage() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {/* Instagram / Updates */}
           <SocialCard

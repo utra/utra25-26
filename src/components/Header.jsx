@@ -1,10 +1,30 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import utraLogo from "../assets/images/logo/utraLogoWhite.png";
 
 export default function Header() {
   const location = useLocation();
   const [isTeamsOpen, setIsTeamsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileTeamsOpen, setIsMobileTeamsOpen] = useState(false);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsMobileTeamsOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -67,15 +87,29 @@ export default function Header() {
     return "text-white group-hover:bg-gradient-to-r group-hover:from-text-gradient-purple group-hover:to-text-gradient-blue group-hover:bg-clip-text group-hover:text-transparent";
   };
 
+  const getMobileNavItemClasses = (path) => {
+    const currentPath = location.pathname || "/";
+    const isActive =
+      currentPath === path ||
+      (path === "/teams" && currentPath.startsWith("/teams"));
+
+    if (isActive) {
+      return "bg-gradient-to-r from-text-gradient-purple to-text-gradient-blue bg-clip-text text-transparent";
+    }
+    return "text-white";
+  };
+
   return (
     <>
-      <header className="w-full px-4 bg-black text-white fixed top-0 z-50">
-        <div className="max-w-6xl mx-auto">
-          <nav className="flex items-center justify-between">
+      <header className="w-full h-[84px] px-4 bg-black text-white fixed top-0 z-50">
+        <div className="max-w-6xl mx-auto h-full">
+          <nav className="flex items-center justify-between h-full">
             <Link to="/">
               <img src={utraLogo} alt="UTRA Logo" className="max-w-[180px]" />
             </Link>
-            <ul className="flex items-center space-x-10 py-[30px]">
+
+            {/* Desktop Navigation */}
+            <ul className="hidden lg:flex items-center space-x-10 py-[30px]">
               {navItems.map((item) => (
                 <li
                   key={item.name}
@@ -136,9 +170,135 @@ export default function Header() {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span
+                className={`block w-6 h-[3px] bg-white rounded transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
+              ></span>
+              <span
+                className={`block w-6 h-[3px] bg-white rounded my-1 transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
+              ></span>
+              <span
+                className={`block w-6 h-[3px] bg-white rounded transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`}
+              ></span>
+            </button>
           </nav>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
+      {/* Mobile Sidebar Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[280px] bg-neutral-900 z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex justify-end p-4">
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-white p-2"
+            aria-label="Close menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="px-6 py-4">
+          <ul className="space-y-4">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                {item.external ? (
+                  <a
+                    href={item.path}
+                    className="block text-lg text-white hover:text-purple-400 transition-colors py-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.name}
+                  </a>
+                ) : item.hasDropdown ? (
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <Link
+                        to={item.path}
+                        className={`text-lg py-2 transition-colors ${getMobileNavItemClasses(item.path)}`}
+                      >
+                        {item.name}
+                      </Link>
+                      <button
+                        onClick={() => setIsMobileTeamsOpen(!isMobileTeamsOpen)}
+                        className="text-white p-2"
+                        aria-label="Toggle teams submenu"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`h-5 w-5 transition-transform duration-200 ${isMobileTeamsOpen ? "rotate-180" : ""}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    {/* Mobile Teams Submenu */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${isMobileTeamsOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+                    >
+                      <ul className="pl-4 mt-2 space-y-2 border-l border-neutral-700">
+                        {teamSubItems.map((subItem) => (
+                          <li key={subItem.name}>
+                            <Link
+                              to={subItem.path}
+                              className={`block py-1.5 text-sm transition-colors ${getMobileNavItemClasses(subItem.path)}`}
+                            >
+                              {subItem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`block text-lg py-2 transition-colors ${getMobileNavItemClasses(item.path)}`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-[84px]"></div>
     </>
