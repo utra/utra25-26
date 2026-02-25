@@ -128,7 +128,7 @@ const past_sponsors = [
 
 function SponsorCard({ name, logo, companyUrl }) {
   return (
-    <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-8 h-48 w-full hover:scale-105 transition-transform duration-300">
+    <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4 sm:p-8 h-36 sm:h-48 w-full hover:scale-105 transition-transform duration-300">
       <a
         href={companyUrl}
         target="_blank"
@@ -149,11 +149,11 @@ function ScrollingCarousel() {
   return (
     <div className="">
       <div className="scroll-container">
-        <div className="scroll-content items-center space-x-20">
+        <div className="scroll-content items-center space-x-8 sm:space-x-20">
           {[...past_sponsors, ...past_sponsors].map((sponsor, index) => (
             <div
               key={`${sponsor.name}-${index}`}
-              className="flex-shrink-0 h-40 w-60 flex items-center justify-center rounded-lg p-6 shadow-sm"
+              className="flex-shrink-0 h-24 w-36 sm:h-40 sm:w-60 flex items-center justify-center rounded-lg p-4 sm:p-6 shadow-sm"
             >
               <img
                 src={sponsor.img}
@@ -170,19 +170,19 @@ function ScrollingCarousel() {
 
 export default function SponsorsPage() {
   return (
-    <main className="relative min-h-[1525px]">
+    <main className="relative min-h-[1200px] sm:min-h-[1525px]">
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{
           backgroundImage: `url(${bgGradient})`,
         }}
       />
-      <div className="mx-auto max-w-6xl px-4 pt-8 relative z-10">
+      <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-8 relative z-10">
         <div className="">
-          <h1 className="text-3xl font-semibold text-white mb-4 text-center pt-8">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-white mb-3 sm:mb-4 text-center pt-4 sm:pt-8">
             Sponsors & Partners
           </h1>
-          <p className="text-gray-300 text-center font-light leading-7 text-sm max-w-5xl mx-auto">
+          <p className="text-gray-300 text-center font-light leading-6 sm:leading-7 text-xs sm:text-sm max-w-5xl mx-auto px-2">
             UTRA is supported by a strong network of educational and
             professional institutions, and individuals within the University of
             Toronto, but it also relies heavily on the generous corporate donors
@@ -194,8 +194,8 @@ export default function SponsorsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pt-4 pb-16 relative z-10">
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="mx-auto max-w-6xl px-4 pt-4 pb-8 sm:pb-16 relative z-10">
+        <div className="mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-12">
           {sponsors.map((sponsor) =>
             SponsorCard({
               name: sponsor.name,
@@ -211,6 +211,7 @@ export default function SponsorsPage() {
         <ScrollingCarousel />
       </div>
       <hr className="h-[1px] mb-0 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />
+      <div className="h-16 sm:h-0"></div>
     </main>
   );
 }
