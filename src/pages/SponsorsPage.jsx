@@ -77,7 +77,7 @@ export const sponsors = [
   },
   {
     name: "Skule SEF",
-    link: "https://skule.ca/finances/SEF.html/",
+    link: "https://skule.ca/finances/SEF.html",
     img: new URL("../assets/images/logo_sponsors/skule.png", import.meta.url)
       .href,
   },
