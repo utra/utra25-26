@@ -1,5 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaHandshake, FaInstagram, FaLinkedin, FaPaperPlane, FaUsers } from "react-icons/fa";
+import {
+  FaHandshake,
+  FaInstagram,
+  FaLinkedin,
+  FaPaperPlane,
+  FaUsers,
+} from "react-icons/fa";
 import utraArt from "../assets/images/robonars/Robonars Class.jpg";
 
 // Animation variants
@@ -193,6 +200,210 @@ export default function ContactPage() {
           />
         </motion.div>
       </section>
+
+      {/* Contact Form */}
+      <section className="container mx-auto px-4 relative z-10 max-w-4xl mt-16 sm:mt-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="py-6 sm:py-10"
+        >
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2 [font-family:'ProximaNova',sans-serif]">
+            Send Us a Message
+          </h2>
+          <p className="text-gray-300 text-sm sm:text-base mb-8 [font-family:'ProximaNova',sans-serif]">
+            Fill out the form below and we'll get back to you as soon as
+            possible.
+          </p>
+
+          <ContactForm />
+        </motion.div>
+      </section>
     </div>
+  );
+}
+
+const WEBAPP_URL =
+  "https://script.google.com/macros/s/AKfycbwDSQXD6jh2ypHSK6yUMdQstpkFmsmPsmDE4qNM-0NRmFEu20Pu4sBUJRj5_CzzsAen/exec";
+
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [fieldErrors, setFieldErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // Clear field error on change
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const validate = () => {
+    const errors = {};
+    if (!formData.Name.trim()) errors.Name = "Please provide your name.";
+    if (!formData.Email.trim()) {
+      errors.Email = "Please provide your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
+      errors.Email = "Please provide a properly formatted email address.";
+    }
+    if (!formData.Message.trim()) errors.Message = "Please provide a message.";
+    return errors;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const errors = validate();
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+    setLoading(true);
+    setError(null);
+
+    try {
+      const body = new FormData();
+      Object.entries(formData).forEach(([key, val]) => body.append(key, val));
+
+      const res = await fetch(WEBAPP_URL, { method: "POST", body });
+      const json = await res.json();
+
+      if (json.result === "success") {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Could not send your message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const inputClass = (field) =>
+    `w-full bg-white/5 border rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm sm:text-base [font-family:'ProximaNova',sans-serif] focus:outline-none focus:bg-white/10 transition-all duration-200 ${
+      fieldErrors[field]
+        ? "border-red-500 focus:border-red-400"
+        : "border-white/10 focus:border-purple-400"
+    }`;
+
+  return submitted ? (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="flex flex-col items-center justify-center py-10 text-center"
+    >
+      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-purple-500/30">
+        <FaPaperPlane className="text-2xl text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-2 [font-family:'ProximaNova',sans-serif]">
+        Message Sent!
+      </h3>
+      <p className="text-gray-300 text-sm [font-family:'ProximaNova',sans-serif]">
+        Thanks for reaching out. We'll be in touch soon.
+      </p>
+      <button
+        onClick={() => {
+          setSubmitted(false);
+          setFormData({ Name: "", Email: "", Message: "" });
+        }}
+        className="mt-6 text-xs font-semibold uppercase tracking-wider text-white/60 hover:text-white transition-colors [font-family:'ProximaNova',sans-serif]"
+      >
+        Send another message
+      </button>
+    </motion.div>
+  ) : (
+    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+      <div className="flex flex-col sm:flex-row gap-5">
+        <div className="flex-1">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 [font-family:'ProximaNova',sans-serif]">
+            Name
+          </label>
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your name"
+            value={formData.Name}
+            onChange={handleChange}
+            className={inputClass("Name")}
+          />
+          {fieldErrors.Name && (
+            <div className="mt-1.5 flex items-center gap-1.5 rounded-md bg-red-500/10 border border-red-500/20 px-3 py-1.5">
+              <span className="text-red-400 text-xs">▲</span>
+              <p className="text-red-400 text-xs [font-family:'ProximaNova',sans-serif]">
+                {fieldErrors.Name}
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="flex-1">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 [font-family:'ProximaNova',sans-serif]">
+            Email
+          </label>
+          <input
+            type="text"
+            name="Email"
+            placeholder="your@email.com"
+            value={formData.Email}
+            onChange={handleChange}
+            className={inputClass("Email")}
+          />
+          {fieldErrors.Email && (
+            <div className="mt-1.5 flex items-center gap-1.5 rounded-md bg-red-500/10 border border-red-500/20 px-3 py-1.5">
+              <span className="text-red-400 text-xs">▲</span>
+              <p className="text-red-400 text-xs [font-family:'ProximaNova',sans-serif]">
+                {fieldErrors.Email}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 [font-family:'ProximaNova',sans-serif]">
+          Message
+        </label>
+        <textarea
+          name="Message"
+          rows={5}
+          placeholder="What's on your mind?"
+          value={formData.Message}
+          onChange={handleChange}
+          className={`${inputClass("Message")} resize-none`}
+        />
+        {fieldErrors.Message && (
+          <div className="mt-1.5 flex items-center gap-1.5 rounded-md bg-red-500/10 border border-red-500/20 px-3 py-1.5">
+            <span className="text-red-400 text-xs">▲</span>
+            <p className="text-red-400 text-xs [font-family:'ProximaNova',sans-serif]">
+              {fieldErrors.Message}
+            </p>
+          </div>
+        )}
+      </div>
+
+      {error && (
+        <p className="text-red-400 text-sm text-center [font-family:'ProximaNova',sans-serif]">
+          {error}
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="mt-2 w-full py-3 rounded-xl font-bold text-sm sm:text-base uppercase tracking-wider text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 disabled:opacity-60 disabled:cursor-not-allowed shadow-purple-500/30 transition-all duration-200 [font-family:'ProximaNova',sans-serif] flex items-center justify-center gap-2"
+      >
+        <FaPaperPlane className={`text-sm ${loading ? "animate-pulse" : ""}`} />
+        {loading ? "Sending…" : "Submit"}
+      </button>
+    </form>
   );
 }
