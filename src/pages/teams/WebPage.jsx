@@ -31,8 +31,8 @@ const skills = [
 const team_leadership = [
   {
     name: "Amey Khatri",
-    role: "Executive Director",
-    bio: "CS/Physics 2T8",
+    role: "Web Director",
+    bio: "CS + Physics 2T8",
     img: new URL("../../assets/images/headshots/amey.jpg", import.meta.url)
       .href,
     linkedin: "https://www.linkedin.com/in/ameykhatri/",

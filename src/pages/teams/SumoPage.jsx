@@ -155,12 +155,24 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Aaliyah Pirani",
+    name: "Cindy Zhu",
+    role: "Project Manager",
+    bio: "EngSci 2T9",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
+  {
+    name: "Christina Hu",
     role: "Project Manager",
     bio: "CS 2T8",
-    img: new URL("../../assets/images/headshots/aaliyah.jpeg", import.meta.url)
-      .href,
-    linkedin: "https://www.linkedin.com/in/aaliyahpirani",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
   },
 ];
 

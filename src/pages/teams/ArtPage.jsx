@@ -113,9 +113,19 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jennifer Zhang",
+    name: "Oliver Petrovic",
     role: "Project Manager",
-    bio: "EngSci 2T5 + PEY",
+    bio: "EngSci 2T6 + PEY",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
+  {
+    name: "Guarav Gaur",
+    role: "Project Manager",
+    bio: "MECH 2T6 + PEY",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,

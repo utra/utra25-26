@@ -107,9 +107,19 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Indesh",
+    name: "Lucas Skotiniosis",
     role: "Project Manager",
-    bio: "MECH 2T7 + PEY",
+    bio: "Mech 2T6",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
+  {
+    name: "Indesh Vijayanand",
+    role: "Project Manager",
+    bio: "Mech 2T7",
     img: new URL("../../assets/images/headshots/indesh.png", import.meta.url)
       .href,
     linkedin: "https://www.linkedin.com/in/indesh-vijayanand",
