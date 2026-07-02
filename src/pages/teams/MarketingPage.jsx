@@ -30,38 +30,14 @@ const skills = [
 
 const team_leadership = [
   {
-    name: "Sarah Hira",
-    role: "Director",
-    bio: "Bioinformatics + Chemistry, A&S 2T7",
+    name: "Aneya Kazmi",
+    role: "Marketing Director",
+    bio: "Math 2T8",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
     ).href,
     linkedin: "",
-  },
-  {
-    name: "Maggie Zhao",
-    role: "Director",
-    bio: "CIV 2T7",
-    img: new URL("../../assets/images/headshots/maggie.jpg", import.meta.url)
-      .href,
-    linkedin: "",
-  },
-  {
-    name: "Sabaa Rashid",
-    role: "Associate",
-    bio: "EngSci 2T9 + PEY",
-    img: new URL("../../assets/images/headshots/sabaa.jpg", import.meta.url)
-      .href,
-    linkedin: "https://www.linkedin.com/in/sabaa-a-rashid/",
-  },
-  {
-    name: "Jalilya Zhaxybayeva",
-    role: "Associate",
-    bio: "MECH 2T8",
-    img: new URL("../../assets/images/headshots/jalilya.png", import.meta.url)
-      .href,
-    linkedin: "https://www.linkedin.com/in/jalilya-zhaxybayeva-269089348",
   },
 ];
 

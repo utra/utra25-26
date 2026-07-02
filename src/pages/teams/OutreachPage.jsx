@@ -30,9 +30,19 @@ const skills = [
 
 const team_leadership = [
   {
-    name: "Jane Doe",
-    role: "Outreach Lead",
-    bio: "ECE 2T8",
+    name: "Abel Gemechu",
+    role: "Outreach Director",
+    bio: "Chem 2T8",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
+  {
+    name: "Aslan Ahmed",
+    role: "Outreach Director",
+    bio: "Chem 2T8",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,

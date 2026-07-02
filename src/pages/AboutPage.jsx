@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 // Images
 import utraLogo from "../assets/images/logo/utraLogoWhiteMobile.png";
-import brendanImg from "../assets/images/headshots/brendan.jpeg";
 import lesleyImg from "../assets/images/headshots/lesley.png";
 import stanImg from "../assets/images/headshots/stan.jpg";
-import raiyannImg from "../assets/images/headshots/raiyann.png";
+import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg";
+import maggieImg from "../assets/images/headshots/maggie.jpg";
 import aboutImage from "../assets/images/photoshoot/aboutImage.jpg";
 // Animation variants
 const containerVariants = {
@@ -31,56 +31,63 @@ const itemVariants = {
 
 const teamMembers = [
   {
-    name: "Brendan J. Lee",
+    name: "Kaiser Tam",
     role: "President",
     program: "Mech 2T7",
-    image: brendanImg,
-    linkedin: "https://www.linkedin.com/in/brendanjunilee/",
-  },
-  {
-    name: "Stan Li",
-    role: "Vice-President Internal",
-    program: "ECE 2T7+PEY",
-    image: stanImg,
-    linkedin: "www.linkedin.com/in/stan-li-06a820250",
-  },
-  {
-    name: "Lesley Ha Tchong",
-    role: "Vice-President Partnerships",
-    program: "CHEM 2T7 + PEY",
-    image: lesleyImg,
-    linkedin: "https://www.linkedin.com/in/lesley-ha-tchong-92839b1b9/",
-  },
-  {
-    name: "Rocklen Jeong",
-    role: "Vice-President Partnerships",
-    program: "ECE 2T7",
-    image: utraLogo, // Missing image
+    image: utraLogo,
     linkedin: "",
   },
   {
     name: "Isabella Tang",
     role: "Vice-President Finance",
-    program: "IndE 2T6 + PEY",
-    image: utraLogo, // Missing image
+    program: "Indy 2T6",
+    image: utraLogo,
     linkedin: "https://www.linkedin.com/in/isabella-tang-0a482a22a/",
   },
   {
-    name: "Raiyann Jacob",
+    name: "Stan Li",
+    role: "Vice-President Internal",
+    program: "Comp 2T7",
+    image: stanImg,
+    linkedin: "www.linkedin.com/in/stan-li-06a820250",
+  },
+  {
+    name: "Aaliyah Pirani",
+    role: "Vice-President Internal",
+    program: "CS BIO 2T8",
+    image: aaliyahImg,
+    linkedin: "https://www.linkedin.com/in/aaliyahpirani",
+  },
+  {
+    name: "Lesley Tchong",
+    role: "Vice-President Partnerships",
+    program: "Chem 2T7",
+    image: lesleyImg,
+    linkedin: "https://www.linkedin.com/in/lesley-ha-tchong-92839b1b9/",
+  },
+  {
+    name: "Georgia Zhang",
+    role: "Vice-President Partnerships",
+    program: "ECE 2T8",
+    image: utraLogo,
+    linkedin: "",
+  },
+  {
+    name: "Maggie Zhao",
     role: "Vice-President Communications",
-    program: "EngSci 2T6 + PEY",
-    image: raiyannImg,
-    linkedin: "https://www.linkedin.com/in/raiyannjacob",
+    program: "CIV 2T7",
+    image: maggieImg,
+    linkedin: "",
+  },
+  {
+    name: "Rocklen Jeong",
+    role: "Vice-President RND",
+    program: "Comp 2T7",
+    image: utraLogo,
+    linkedin: "",
   },
 ];
 
-teamMembers.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
-});
 
 const TeamMember = ({ name, role, program, image, linkedin }) => (
   <motion.div
