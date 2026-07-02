@@ -137,11 +137,9 @@ const team_leadership = [
     name: "Melysa Choi",
     role: "Project Manager",
     bio: "Engsci 2T7",
-    img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
-      import.meta.url,
-    ).href,
-    linkedin: "",
+    img: new URL("../../assets/images/headshots/melissa.jpeg", import.meta.url)
+      .href,
+    linkedin: "https://www.linkedin.com/in/melysa-choi/",
   },
 ];
 

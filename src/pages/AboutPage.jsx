@@ -6,6 +6,7 @@ import lesleyImg from "../assets/images/headshots/lesley.png";
 import stanImg from "../assets/images/headshots/stan.jpg";
 import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg";
 import maggieImg from "../assets/images/headshots/maggie.jpg";
+import georgiaImg from "../assets/images/headshots/georgia.jpg";
 import aboutImage from "../assets/images/photoshoot/aboutImage.jpg";
 // Animation variants
 const containerVariants = {
@@ -69,8 +70,8 @@ const teamMembers = [
     name: "Georgia Zhang",
     role: "Vice-President Partnerships",
     program: "ECE 2T8",
-    image: utraLogo,
-    linkedin: "",
+    image: georgiaImg,
+    linkedin: "https://www.linkedin.com/in/zhang-georgia",
   },
   {
     name: "Maggie Zhao",
