@@ -127,21 +127,9 @@ const past_sponsors = [
   },
 ];
 
-const sponsorCardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4 },
-  },
-};
-
 function SponsorCard({ name, logo, companyUrl }) {
   return (
-    <motion.div
-      variants={sponsorCardVariants}
-      className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 sm:p-8 h-36 sm:h-48 w-full hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[rgba(163,160,243,0.35)] transition-all duration-300"
-    >
+    <div className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 sm:p-8 h-36 sm:h-48 w-full hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[rgba(163,160,243,0.35)] transition-all duration-300">
       <a
         href={companyUrl}
         target="_blank"
@@ -154,7 +142,7 @@ function SponsorCard({ name, logo, companyUrl }) {
           className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </a>
-    </motion.div>
+    </div>
   );
 }
 
@@ -183,7 +171,7 @@ function ScrollingCarousel() {
 
 export default function SponsorsPage() {
   return (
-    <main className="relative min-h-[1200px] sm:min-h-[1525px]">
+    <main className="relative min-h-[1200px] sm:min-h-[1600px]">
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{
@@ -212,19 +200,7 @@ export default function SponsorsPage() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pt-4 pb-8 sm:pb-16 relative z-10">
-        <motion.div
-          className="mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: { staggerChildren: 0.07 },
-            },
-          }}
-        >
+        <div className="mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-12">
           {sponsors.map((sponsor) => (
             <SponsorCard
               key={sponsor.name}
@@ -233,7 +209,7 @@ export default function SponsorsPage() {
               companyUrl={sponsor.link}
             />
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />

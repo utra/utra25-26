@@ -32,7 +32,7 @@ export default function ComplaintsPage() {
             href={POLICY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-utra-light-purple/50 text-utra-light-purple hover:bg-utra-light-purple/10 transition-all duration-200 font-bold [font-family:'ProximaNova',sans-serif]"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-utra-gray/50 text-utra-gray hover:bg-utra-light-purple/10 transition-all duration-200 font-bold [font-family:'ProximaNova',sans-serif]"
           >
             View Full EngSoc Policy on Complaints
             <span aria-hidden="true">→</span>
@@ -111,8 +111,8 @@ export default function ComplaintsPage() {
             <span className="font-bold text-white">
               Reasons for complaints:{" "}
             </span>
-            Harassment, sexual violence, defamation, slander, or a failure to
-            do their job
+            Harassment, sexual violence, defamation, slander, or a failure to do
+            their job
           </p>
 
           <p>
@@ -162,7 +162,9 @@ export default function ComplaintsPage() {
           <p className="font-bold text-white">Possible Recommendations:</p>
           <ul className="list-disc list-inside space-y-1 pl-2">
             <li>Recall subject of complaint from their position.</li>
-            <li>Take steps under the Policy on Affiliated Clubs, section 0.9.</li>
+            <li>
+              Take steps under the Policy on Affiliated Clubs, section 0.9.
+            </li>
             <li>Mandate additional training.</li>
             <li>Require subject of complaint to issue an official apology.</li>
             <li>Escalate matter to campus police.</li>
