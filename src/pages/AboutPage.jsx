@@ -107,11 +107,11 @@ const TeamMember = ({ name, role, program, image, linkedin }) => (
       rel="noopener noreferrer"
       className={!linkedin ? "pointer-events-none" : ""}
     >
-      <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-utra-pink/20 group-hover:border-utra-pink transition-colors duration-300 bg-black/40">
+      <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-utra-pink/20 group-hover:border-utra-pink group-hover:shadow-[0_0_30px_-5px_rgba(226,175,226,0.25)] transition-all duration-300 bg-black/40">
         <img
           src={image}
           alt={name}
-          className={`relative inset-0 w-full h-full object-cover z-10 ${image === utraLogo ? "bg-black/40 p-6" : ""}`}
+          className={`relative inset-0 w-full h-full object-cover z-10 transition-transform duration-500 ease-out group-hover:scale-105 ${image === utraLogo ? "bg-black/40 p-6" : ""}`}
         />
       </div>
     </a>
@@ -130,7 +130,7 @@ const TeamMember = ({ name, role, program, image, linkedin }) => (
 const Card = ({ title, description }) => (
   <motion.div
     variants={itemVariants}
-    className="p-8 rounded-xl bg-black bg-opacity-40 flex flex-col items-center text-center"
+    className="card-hover p-8 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm flex flex-col items-center text-center"
   >
     <h3 className="text-[32px] font-extrabold gradient-purple-blue mb-4 [font-family:'ProximaNova',sans-serif]">
       {title}
@@ -169,12 +169,16 @@ export default function AboutPage() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative rounded-[10px] overflow-hidden aspect-video bg-utra-indigo shadow-[0px_10px_20px_-10px_rgba(255,255,255,0.25)]"
+            className="relative rounded-[10px] overflow-hidden aspect-video bg-utra-indigo shadow-[0px_10px_20px_-10px_rgba(255,255,255,0.25)] group"
           >
             {/* Photo Placeholder */}
             <div className="absolute inset-0 bg-gradient-to-br from-utra-blue to-utra-indigo opacity-80" />
             <div className="absolute inset-0 flex items-center justify-center text-white/20 font-bold text-4xl">
-              <img src={aboutImage} alt="" className="object-cover h-full" />
+              <img
+                src={aboutImage}
+                alt=""
+                className="object-cover h-full transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+              />
             </div>
           </motion.div>
         </div>

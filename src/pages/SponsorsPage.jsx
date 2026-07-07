@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import bgGradient from "../assets/images/graphics/background_gradient.png";
 
 export const sponsors = [
@@ -102,11 +103,11 @@ const past_sponsors = [
   },
   {
     name: "Google",
-    img: "https://pngimg.com/d/google_PNG19644.png",
+    img: "https://cdn.freebiesupply.com/images/large/2x/google-logo-transparent.png",
   },
   {
     name: "iRobot",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/IRobot_Green_logo.svg/2560px-IRobot_Green_logo.svg.png",
+    img: "https://upload.wikimedia.org/wikipedia/commons/1/13/IRobot_Green_logo.png",
   },
   {
     name: "Particle",
@@ -126,22 +127,34 @@ const past_sponsors = [
   },
 ];
 
+const sponsorCardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4 },
+  },
+};
+
 function SponsorCard({ name, logo, companyUrl }) {
   return (
-    <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-4 sm:p-8 h-36 sm:h-48 w-full hover:scale-105 transition-transform duration-300">
+    <motion.div
+      variants={sponsorCardVariants}
+      className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 sm:p-8 h-36 sm:h-48 w-full hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[rgba(163,160,243,0.35)] transition-all duration-300"
+    >
       <a
         href={companyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="h-full w-full flex items-center justify-center"
+        className="h-full w-full flex items-center justify-center group"
       >
         <img
           src={logo}
           alt={`${name} logo`}
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </a>
-    </div>
+    </motion.div>
   );
 }
 
@@ -178,11 +191,15 @@ export default function SponsorsPage() {
         }}
       />
       <div className="mx-auto max-w-6xl px-4 pt-4 sm:pt-8 relative z-10">
-        <div className="">
-          <h1 className="text-2xl sm:text-3xl font-semibold text-white mb-3 sm:mb-4 text-center pt-4 sm:pt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h1 className="text-[36px] sm:text-[50px] font-extrabold gradient-purple-blue [font-family:'ProximaNova',sans-serif] mb-3 sm:mb-4 text-center pt-4 sm:pt-8 leading-tight">
             Sponsors & Partners
           </h1>
-          <p className="text-gray-300 text-center font-light leading-6 sm:leading-7 text-xs sm:text-sm max-w-5xl mx-auto px-2">
+          <p className="text-gray-300 text-center font-light leading-6 sm:leading-7 text-sm sm:text-base max-w-5xl mx-auto px-2 [font-family:'ProximaNova',sans-serif]">
             UTRA is supported by a strong network of educational and
             professional institutions, and individuals within the University of
             Toronto, but it also relies heavily on the generous corporate donors
@@ -191,19 +208,32 @@ export default function SponsorsPage() {
             collaborate with one of the leading universities in world, and have
             its title represented within the community and internationally.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pt-4 pb-8 sm:pb-16 relative z-10">
-        <div className="mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-12">
-          {sponsors.map((sponsor) =>
-            SponsorCard({
-              name: sponsor.name,
-              logo: sponsor.img,
-              companyUrl: sponsor.link,
-            }),
-          )}
-        </div>
+        <motion.div
+          className="mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.07 },
+            },
+          }}
+        >
+          {sponsors.map((sponsor) => (
+            <SponsorCard
+              key={sponsor.name}
+              name={sponsor.name}
+              logo={sponsor.img}
+              companyUrl={sponsor.link}
+            />
+          ))}
+        </motion.div>
       </div>
 
       <hr className="h-[1px] mt-10 max-w-screen-2xl mx-auto border-0 bg-gradient-to-r from-transparent via-utra-gray to-transparent relative z-10" />

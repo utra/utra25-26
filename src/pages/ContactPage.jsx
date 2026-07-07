@@ -14,12 +14,20 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
+    },
   },
 };
 
 const cardVariants = {
-  hidden: { y: 30 },
-  visible: { y: 0 },
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
 };
 
 const SocialCard = ({
@@ -35,7 +43,7 @@ const SocialCard = ({
   const CardContainer = secondaryLink ? motion.div : motion.a;
   const containerProps = {
     variants: cardVariants,
-    className: `relative group p-5 sm:p-6 rounded-2xl backdrop-blur-md bg-black/40 border border-white/10 overflow-hidden flex flex-col h-full hover:border-white/20 transition-all duration-300`,
+    className: `relative group p-5 sm:p-6 rounded-2xl backdrop-blur-md bg-black/40 border border-white/10 overflow-hidden flex flex-col h-full hover:border-white/15 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-18px_rgba(163,160,243,0.4)] transition-all duration-300`,
     ...(secondaryLink
       ? {}
       : { href: link, target: "_blank", rel: "noopener noreferrer" }),
@@ -399,7 +407,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="mt-2 w-full py-3 rounded-xl font-bold text-sm sm:text-base uppercase tracking-wider text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 disabled:opacity-60 disabled:cursor-not-allowed shadow-purple-500/30 transition-all duration-200 [font-family:'ProximaNova',sans-serif] flex items-center justify-center gap-2"
+        className="mt-2 w-full py-3 rounded-xl font-bold text-sm sm:text-base uppercase tracking-wider text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 disabled:opacity-60 disabled:cursor-not-allowed shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-0.5 transition-all duration-200 [font-family:'ProximaNova',sans-serif] flex items-center justify-center gap-2"
       >
         <FaPaperPlane className={`text-sm ${loading ? "animate-pulse" : ""}`} />
         {loading ? "Sending…" : "Submit"}

@@ -280,7 +280,7 @@ function ScrollingCarousel() {
 export default function CombatPage() {
   function SkillTag({ skill }) {
     return (
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center transition-transform duration-300 hover:translate-x-1.5">
         <div className="w-[15px] h-[33px] bg-[rgb(163,160,243)] rounded-l-[5px]"></div>
         <div
           className="w-full max-w-[335px] h-[35px] flex items-center rounded-r-[5px] relative overflow-hidden"
@@ -296,7 +296,7 @@ export default function CombatPage() {
 
   function HighlightCard({ title, description }) {
     return (
-      <div className="bg-black bg-opacity-40 py-4 rounded-xl w-full sm:w-[370px] flex items-center text-center flex-col">
+      <div className="card-hover bg-black bg-opacity-40 backdrop-blur-sm py-4 rounded-xl w-full sm:w-[370px] flex items-center text-center flex-col">
         <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[24px] sm:text-[30px] gradient-purple-blue">
           {title}
         </h3>
@@ -360,7 +360,7 @@ export default function CombatPage() {
         />
 
         <div className="relative flex flex-col pt-[50px] sm:pt-[80px] w-full px-6 sm:px-12 md:px-[350px]">
-          <div className="justify-center h-auto sm:h-[150px] w-full md:w-[1000px]">
+          <div className="animate-hero justify-center h-auto sm:h-[150px] w-full md:w-[1000px]">
             <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[56px] sm:text-[80px] md:text-[100px] leading-[0.95]">
               Autonomous <br /> Rover
               <br />
@@ -386,7 +386,7 @@ export default function CombatPage() {
           <div className="hidden md:block w-full max-w-[600px] h-[500px]">
             <img
               src={featureImage}
-              className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
+              className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)] transition-transform duration-500 ease-out hover:scale-[1.02]"
               alt=""
             />
           </div>
@@ -403,7 +403,7 @@ export default function CombatPage() {
             <div className="block md:hidden w-full max-w-[600px] h-[250px] sm:h-[400px] mt-[20px]">
               <img
                 src={featureImage}
-                className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)]"
+                className="w-full h-full object-cover rounded-[10px] drop-shadow-[1px_1px_4px_rgba(191,197,255,0.3)] transition-transform duration-500 ease-out hover:scale-[1.02]"
                 alt=""
               />
             </div>

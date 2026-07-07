@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import bgGradient from "../assets/images/graphics/background_gradient.png";
 import utraArt from "../assets/images/photoshoot/utra_art.png";
 import classroom from "../assets/images/robonars/Robonars Workshop.jpg";
@@ -356,15 +357,16 @@ function TeamCard({ name, tagline, path, img }) {
 
   return (
     <Component {...linkProps} className="group w-full sm:w-auto">
-      <div className="relative bg-black bg-opacity-40 rounded-xl w-full sm:w-[335px] h-[200px] sm:h-[280px] flex flex-col items-center overflow-hidden transition-all duration-300 group-hover:bg-opacity-50 group-hover:scale-105">
+      <div className="card-hover relative bg-black bg-opacity-40 rounded-xl w-full sm:w-[335px] h-[200px] sm:h-[280px] flex flex-col items-center overflow-hidden group-hover:bg-opacity-50">
         <div
-          className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+          className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-all duration-500 ease-out group-hover:scale-110"
           style={{
             backgroundImage: `url(${img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full p-4">
           <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[28px] sm:text-[40px] gradient-purple-blue text-center">
             {name}
@@ -372,9 +374,12 @@ function TeamCard({ name, tagline, path, img }) {
           <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[20px] w-[90%] sm:w-[280px] text-center mt-2">
             {tagline}
           </p>
-          <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-[#a3a0f3] [font-family:'ProximaNova',sans-serif] text-[14px] sm:text-[16px] font-semibold">
-              Learn More →
+          <div className="mt-3 sm:mt-4 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+            <span className="text-[#a3a0f3] [font-family:'ProximaNova',sans-serif] text-[14px] sm:text-[16px] font-semibold inline-flex items-center gap-1">
+              Learn More
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </span>
           </div>
         </div>
@@ -394,14 +399,24 @@ export default function TeamsPage() {
             backgroundImage: `url('${classroom}')`,
           }}
         />
-        <div className="relative z-10 flex flex-col items-start">
+        <motion.div
+          className="relative z-10 flex flex-col items-start"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <h1 className="text-white [font-family:'Afacad',sans-serif] font-bold text-[60px] sm:text-[90px] md:text-[120px] leading-none">
             {pageInfo.title}
           </h1>
-          <p className="text-white [font-family:'ProximaNova',sans-serif] text-[18px] sm:text-[24px] md:text-[32px] mt-2 sm:mt-4 ml-1 sm:ml-4">
+          <motion.p
+            className="text-white [font-family:'ProximaNova',sans-serif] text-[18px] sm:text-[24px] md:text-[32px] mt-2 sm:mt-4 ml-1 sm:ml-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          >
             {pageInfo.subtitle}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
 
       {/* Content Section - Below the fold */}
@@ -422,17 +437,41 @@ export default function TeamsPage() {
             Explore Our Teams
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-[30px]">
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 sm:gap-[30px]"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.08 },
+              },
+            }}
+          >
             {teams.map((team) => (
-              <TeamCard
+              <motion.div
                 key={team.name}
-                name={team.name}
-                tagline={team.tagline}
-                path={team.path}
-                img={team.img}
-              />
+                className="w-full sm:w-auto flex"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.4 },
+                  },
+                }}
+              >
+                <TeamCard
+                  name={team.name}
+                  tagline={team.tagline}
+                  path={team.path}
+                  img={team.img}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <div className="relative z-10 w-full mt-[50px] sm:mt-[100px]">
