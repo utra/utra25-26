@@ -47,11 +47,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-white/10 text-center">
+        <div className="mt-8 pt-6 border-t border-white/10 text-center space-y-2">
           <p className="text-gray-500 text-xs">
             © {new Date().getFullYear()} University of Toronto Robotics
             Association
           </p>
+          <a
+            href="https://skule.github.io/bylaws/policies/policy-on-complaints.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 text-xs hover:text-gray-300 transition-colors duration-200 underline underline-offset-2"
+          >
+            The EngSoc Complaints Policy
+          </a>
         </div>
       </div>
     </footer>
