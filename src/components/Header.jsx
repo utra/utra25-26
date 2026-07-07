@@ -7,6 +7,13 @@ export default function Header() {
   const [isTeamsOpen, setIsTeamsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileTeamsOpen, setIsMobileTeamsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -101,11 +108,15 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full h-[84px] px-4 bg-black text-white fixed top-0 z-50">
+      <header className="w-full h-[84px] px-4 bg-black/95 backdrop-blur-md border-b border-white/10 text-white fixed top-0 z-50">
         <div className="max-w-6xl mx-auto h-full">
           <nav className="flex items-center justify-between h-full">
             <Link to="/">
-              <img src={utraLogo} alt="UTRA Logo" className="max-w-[180px]" />
+              <img
+                src={utraLogo}
+                alt="UTRA Logo"
+                className="max-w-[180px] transition-transform duration-300 hover:scale-105"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -138,7 +149,7 @@ export default function Header() {
                       <div className="absolute left-0 right-0 h-[30px] top-full"></div>
                       {/* Dropdown Menu */}
                       {isTeamsOpen && (
-                        <div className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+30px)] w-[140px] bg-neutral-900 rounded-b shadow-lg z-50">
+                        <div className="animate-dropdown absolute  -translate-x-1/2 top-[calc(100%+30px)] w-[150px] bg-neutral-900/95 backdrop-blur-md border border-white/10 border-t-0 rounded-b-xl shadow-xl shadow-black/50 overflow-hidden z-50">
                           {teamSubItems.map((subItem) => (
                             <Link
                               key={subItem.name}
@@ -199,7 +210,7 @@ export default function Header() {
 
       {/* Mobile Sidebar Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-neutral-900 z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-[280px] bg-neutral-900/95 backdrop-blur-lg border-l border-white/10 z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex justify-end p-4">
           <button
