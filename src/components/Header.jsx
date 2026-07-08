@@ -39,6 +39,7 @@ export default function Header() {
     { name: "Our Teams", path: "/teams", hasDropdown: true },
     { name: "Sponsors", path: "/sponsors" },
     { name: "Contact", path: "/contact" },
+    { name: "Complaints Policy", path: "/complaints" },
     { name: "UTRA Hacks", path: "https://hackathon.utra.ca/", external: true },
   ];
 

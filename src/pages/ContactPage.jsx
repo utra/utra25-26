@@ -9,27 +9,6 @@ import {
 } from "react-icons/fa";
 import utraArt from "../assets/images/robonars/Robonars Class.jpg";
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.15,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.45, ease: "easeOut" },
-  },
-};
-
 const SocialCard = ({
   icon: Icon,
   title,
@@ -37,12 +16,10 @@ const SocialCard = ({
   link,
   label,
   gradient,
-  delay,
   secondaryLink,
 }) => {
-  const CardContainer = secondaryLink ? motion.div : motion.a;
+  const CardContainer = secondaryLink ? "div" : "a";
   const containerProps = {
-    variants: cardVariants,
     className: `relative group p-5 sm:p-6 rounded-2xl backdrop-blur-md bg-black/40 border border-white/10 overflow-hidden flex flex-col h-full hover:border-white/15 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-18px_rgba(163,160,243,0.4)] transition-all duration-300`,
     ...(secondaryLink
       ? {}
@@ -151,12 +128,7 @@ export default function ContactPage() {
 
       {/* Cards Grid */}
       <section className="container mx-auto px-4 relative z-10 max-w-[1450px]">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-5"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-5">
           {/* Instagram */}
           <SocialCard
             icon={FaInstagram}
@@ -206,17 +178,12 @@ export default function ContactPage() {
             label="sponsorships@utra.ca"
             gradient="from-emerald-500 to-teal-500"
           />
-        </motion.div>
+        </div>
       </section>
 
       {/* Contact Form */}
       <section className="container mx-auto px-4 relative z-10 max-w-4xl mt-16 sm:mt-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="py-6 sm:py-10"
-        >
+        <div className="py-6 sm:py-10">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2 [font-family:'ProximaNova',sans-serif]">
             Send Us a Message
           </h2>
@@ -226,7 +193,7 @@ export default function ContactPage() {
           </p>
 
           <ContactForm />
-        </motion.div>
+        </div>
       </section>
     </div>
   );
