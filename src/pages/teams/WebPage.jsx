@@ -37,6 +37,14 @@ const team_leadership = [
       .href,
     linkedin: "https://www.linkedin.com/in/ameykhatri/",
   },
+  {
+    name: "Zayaan Bhanwadia",
+    role: "Web Associate",
+    bio: "CS + Stats 2T9",
+    img: new URL("../../assets/images/headshots/zayaan.jpg", import.meta.url)
+      .href,
+      linkedin: "https://www.linkedin.com/in/zayaan-bhan/"
+  }
   // {
   //   name: "Jane Doe",
   //   role: "Frontend Dev",
