@@ -39,7 +39,7 @@ const team_leadership = [
   },
   {
     name: "Zayaan Bhanwadia",
-    role: "Associate Web Developer",
+    role: "Web Associate",
     bio: "CS + Stats 2T9",
     img: new URL("../../assets/images/headshots/zayaan.jpg", import.meta.url)
       .href,
