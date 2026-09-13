@@ -118,7 +118,7 @@ const team_leadership = [
   {
     name: "Patricia Krisanti",
     role: "Project Manager",
-    bio: "Engsci 2T6",
+    bio: "EngSci - BME 2T6 + PEY",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
@@ -128,18 +128,10 @@ const team_leadership = [
   {
     name: "Zain Azam",
     role: "Project Manager",
-    bio: "ECE 2T7 + PEY",
+    bio: "ECE 2T7",
     img: new URL("../../assets/images/headshots/zain.jpg", import.meta.url)
       .href,
     linkedin: "https://www.linkedin.com/in/zainyusufazam/",
-  },
-  {
-    name: "Melysa Choi",
-    role: "Project Manager",
-    bio: "Engsci 2T7",
-    img: new URL("../../assets/images/headshots/melissa.jpeg", import.meta.url)
-      .href,
-    linkedin: "https://www.linkedin.com/in/melysa-choi/",
   },
 ];
 

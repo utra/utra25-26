@@ -30,15 +30,55 @@ const skills = [
 
 const team_leadership = [
   {
-    name: "Aneya Kazmi",
+    name: "Sarah Hira",
     role: "Marketing Director",
-    bio: "Math 2T8",
+    bio: "Bioinformatics + Chemistry, A&S 2T7",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
     ).href,
     linkedin: "",
   },
+  {
+    name: "Maggie Zhao",
+    role: "Marketing Director",
+    bio: "Civ 2T7",
+    img: new URL(
+      "../../assets/images/headshots/maggie.jpg",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
+  {
+    name: "Aneya Kazmi",
+    role: "Marketing Director",
+    bio: "CS 2T8",
+    img: new URL(
+      "../../assets/images/headshots/aneya.jpg",
+      import.meta.url,
+    ).href,
+    linkedin: "https://www.linkedin.com/in/aneya-kazmi-9530a6249/",
+  },
+  {
+    name: "Sabaa Rashid",
+    role: "Marketing Associate",
+    bio: "EngSci 2T9 + PEY",
+    img: new URL(
+      "../../assets/images/headshots/sabaa.jpg",
+      import.meta.url,
+    ).href,
+    linkedin: "https://www.linkedin.com/in/sabaa-a-rashid/",
+  },
+  {
+    name: "Jalilya Zhaxybayeva",
+    role: "Marketing Associate",
+    bio: "Mech 2T8 ",
+    img: new URL(
+      "../../assets/images/headshots/jalilya.png",
+      import.meta.url,
+    ).href,
+    linkedin: "https://www.linkedin.com/in/jalilya-zhaxybayeva-269089348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  }
 ];
 
 export default function MarketingPage() {
