@@ -30,25 +30,15 @@ const skills = [
 
 const team_leadership = [
   {
-    name: "Abel Gemechu",
-    role: "Outreach Director",
-    bio: "Chem 2T8",
-    img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
-      import.meta.url,
-    ).href,
-    linkedin: "",
-  },
-  {
     name: "Aslan Ahmed",
     role: "Outreach Director",
     bio: "Chem 2T8",
     img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      "../../assets/images/headshots/aslan.jpeg",
       import.meta.url,
     ).href,
-    linkedin: "",
-  },
+    linkedin: "https://www.linkedin.com/in/aslan-ahmed?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+  }
 ];
 
 export default function OutreachPage() {
@@ -177,7 +167,7 @@ export default function OutreachPage() {
           </div>
         </div>
 
-        {/* <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
+        <div className="relative flex flex-col justify-center items-center pt-[100px] w-full">
           <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[30px]">
             Team Leadership
           </h2>
@@ -193,7 +183,7 @@ export default function OutreachPage() {
               />
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
