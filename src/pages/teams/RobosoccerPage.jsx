@@ -156,14 +156,14 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jinali Dona",
+    name: "Anthony Pinson",
     role: "Project Manager",
-    bio: "Mech 2T5 + PEY",
+    bio: "Engsci Robo 2T6",
     img: new URL(
-      "../../assets/images/headshots/jinali.png",
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
     ).href,
-    linkedin: "https://www.linkedin.com/in/jinali-dona?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    linkedin: "",
   },
 ];
 
