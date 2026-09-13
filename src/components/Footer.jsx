@@ -1,20 +1,7 @@
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
 import utraLogo from "../assets/images/logo/utraLogoWhiteMobile.png";
 
-const instagramByPath = {
-  "/teams/art": "https://www.instagram.com/utra_art/",
-  "/teams/sumo": "https://www.instagram.com/utra_sumo/",
-  "/teams/combat": "https://www.instagram.com/utra_combat/",
-  "/teams/6ixpac": "https://www.instagram.com/utra_6ixpac/",
-  "/teams/robosoccer": "https://www.instagram.com/utra_robosoccer/",
-};
-
 export default function Footer() {
-  const { pathname } = useLocation();
-  const instagramUrl =
-    instagramByPath[pathname] ?? "https://www.instagram.com/utra_uoft/";
-
   return (
     <footer className="bg-black text-white">
       {/* Gradient accent line matching the site palette */}
@@ -33,7 +20,7 @@ export default function Footer() {
             {/* Social links */}
             <div className="flex items-center space-x-4 pt-2">
               <a
-                href={instagramUrl}
+                href="https://www.instagram.com/utra_uoft/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:-translate-y-0.5 transition-all duration-200"

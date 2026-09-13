@@ -113,9 +113,9 @@ const team_images = [
 
 const team_leadership = [
   {
-    name: "Jennifer Zhang",
+    name: "Oliver Petrovic",
     role: "Project Manager",
-    bio: "EngSci 2T5 + PEY",
+    bio: "EngSci 2T6 + PEY",
     img: new URL(
       "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
@@ -123,15 +123,15 @@ const team_leadership = [
     linkedin: "",
   },
   {
-    name: "Gaurav gaur",
+    name: "Guarav Gaur",
     role: "Project Manager",
-    bio: "Mech 2T6",
+    bio: "MECH 2T6 + PEY",
     img: new URL(
-      "../../assets/images/headshots/gaurav.jpg",
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
       import.meta.url,
     ).href,
-    linkedin: "https://www.linkedin.com/in/gaurav-gaurrr/",
-  }
+    linkedin: "",
+  },
 ];
 
 import { useRef, useState, useEffect } from "react";

@@ -2,16 +2,12 @@ import { motion } from "framer-motion";
 
 // Images
 import utraLogo from "../assets/images/logo/utraLogoWhiteMobile.png";
+import lesleyImg from "../assets/images/headshots/lesley.png";
 import stanImg from "../assets/images/headshots/stan.jpg";
+import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg";
+import maggieImg from "../assets/images/headshots/maggie.jpg";
+import georgiaImg from "../assets/images/headshots/georgia.jpg";
 import aboutImage from "../assets/images/photoshoot/aboutImage.jpg";
-import brendanImg from "../assets/images/headshots/brendan.jpeg"
-import lesleyImg from "../assets/images/headshots/lesley.png"
-import isabellaImg from "../assets/images/headshots/isabella.jpg"
-import kaiserImg from "../assets/images/headshots/kaiser.jpeg"
-import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg"
-import georgiaImg from "../assets/images/headshots/georgia.jpg"
-
-
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -36,61 +32,61 @@ const itemVariants = {
 
 const teamMembers = [
   {
-    name: "Brendan J. Lee",
+    name: "Kaiser Tam",
     role: "President",
     program: "Mech 2T7",
-    image: brendanImg,
-    linkedin: "https://www.linkedin.com/in/brendanjunilee/",
-  },
-  {
-    name: "Kaiser",
-    role: "President",
-    program: "Mech 2T7",
-    image: kaiserImg,
-    linkedin: "https://www.linkedin.com/in/kaisertam/",
+    image: utraLogo,
+    linkedin: "",
   },
   {
     name: "Isabella Tang",
     role: "Vice-President Finance",
-    program: "IndE 2T6 + PEY",
-    image: isabellaImg,
+    program: "Indy 2T6",
+    image: utraLogo,
     linkedin: "https://www.linkedin.com/in/isabella-tang-0a482a22a/",
   },
   {
     name: "Stan Li",
     role: "Vice-President Internal",
-    program: "ECE 2T7+PEY",
+    program: "Comp 2T7",
     image: stanImg,
     linkedin: "www.linkedin.com/in/stan-li-06a820250",
   },
   {
     name: "Aaliyah Pirani",
     role: "Vice-President Internal",
-    program: "CS + Bio 2T8",
+    program: "CS BIO 2T8",
     image: aaliyahImg,
     linkedin: "https://www.linkedin.com/in/aaliyahpirani",
   },
   {
-    name: "Lesley Ha Tchong",
+    name: "Lesley Tchong",
     role: "Vice-President Partnerships",
-    program: "Chem 2T7 + PEY",
+    program: "Chem 2T7",
     image: lesleyImg,
     linkedin: "https://www.linkedin.com/in/lesley-ha-tchong-92839b1b9/",
   },
   {
-    name: "Rocklen Jeong",
-    role: "Vice-President Partnerships",
-    program: "ECE 2T7",
-    image: utraLogo,
-    linkedin: "",
-  },
-    {
     name: "Georgia Zhang",
     role: "Vice-President Partnerships",
     program: "ECE 2T8",
     image: georgiaImg,
-    linkedin: "https://www.linkedin.com/in/georgiazh/",
-  }
+    linkedin: "https://www.linkedin.com/in/zhang-georgia",
+  },
+  {
+    name: "Maggie Zhao",
+    role: "Vice-President Communications",
+    program: "CIV 2T7",
+    image: maggieImg,
+    linkedin: "",
+  },
+  {
+    name: "Rocklen Jeong",
+    role: "Vice-President RND",
+    program: "Comp 2T7",
+    image: utraLogo,
+    linkedin: "",
+  },
 ];
 
 
