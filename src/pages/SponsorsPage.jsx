@@ -3,6 +3,12 @@ import bgGradient from "../assets/images/graphics/background_gradient.png";
 
 export const sponsors = [
   {
+    name: "Skule SEF",
+    link: "https://skule.ca/finances/SEF.html",
+    img: new URL("../assets/images/logo_sponsors/sef-logo.png", import.meta.url)
+      .href,
+  },
+  {
     name: "AMD",
     link: "https://www.amd.com/en.html",
     img: new URL("../assets/images/logo_sponsors/amd-logo.png", import.meta.url)
@@ -74,12 +80,6 @@ export const sponsors = [
     name: "Prusa Research",
     link: "https://www.prusa3d.com/",
     img: new URL("../assets/images/logo_sponsors/prusa.svg", import.meta.url)
-      .href,
-  },
-  {
-    name: "Skule SEF",
-    link: "https://skule.ca/finances/SEF.html",
-    img: new URL("../assets/images/logo_sponsors/skule.png", import.meta.url)
       .href,
   },
 ];
