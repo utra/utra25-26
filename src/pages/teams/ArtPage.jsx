@@ -123,14 +123,14 @@ const team_leadership = [
     linkedin: "",
   },
   {
-    name: "Guarav Gaur",
+    name: "Gaurav Gaur",
     role: "Project Manager",
-    bio: "MECH 2T6 + PEY",
+    bio: "Mech 2T6",
     img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      "../../assets/images/headshots/gaurav.jpg",
       import.meta.url,
     ).href,
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/gaurav-gaurrr/",
   },
 ];
 

@@ -32,12 +32,12 @@ const team_leadership = [
   {
     name: "Aneya Kazmi",
     role: "Marketing Director",
-    bio: "Math 2T8",
+    bio: "CS 2T8",
     img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      "../../assets/images/headshots/aneya.jpg",
       import.meta.url,
     ).href,
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/aneya-kazmi-9530a6249/",
   },
 ];
 

@@ -124,6 +124,16 @@ const team_leadership = [
       .href,
     linkedin: "https://www.linkedin.com/in/indesh-vijayanand",
   },
+  {
+    name: "Shaun Kwek",
+    role: "Project Manager",
+    bio: "Mech 2T7",
+    img: new URL(
+      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      import.meta.url,
+    ).href,
+    linkedin: "",
+  },
 ];
 
 import { motion } from "framer-motion";
