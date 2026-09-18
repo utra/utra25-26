@@ -24,6 +24,7 @@ import WebPage from "../pages/teams/WebPage";
 import MarketingPage from "../pages/teams/MarketingPage";
 import RobonarsPage from "../pages/teams/RobonarsPage";
 import OutreachPage from "../pages/teams/OutreachPage";
+import RiftPage from "../pages/teams/RiftPage";
 
 // Scroll to top on route change (except back/forward navigation)
 function ScrollToTop() {
@@ -61,6 +62,7 @@ export default function Router() {
         <Route path="/teams/outreach" element={<OutreachPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/complaints" element={<ComplaintsPage />} />
+        <Route path="/teams/rift" element={<RiftPage />} />
       </Routes>
     </>
   );
