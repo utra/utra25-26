@@ -25,6 +25,16 @@ import MarketingPage from "../pages/teams/MarketingPage";
 import RobonarsPage from "../pages/teams/RobonarsPage";
 import OutreachPage from "../pages/teams/OutreachPage";
 
+const RIFT_APPLY_URL =
+  "https://utra.notion.site/3d747514ebfe80de97bde8e87b96631c?pvs=105";
+
+function ExternalRedirect({ to }) {
+  useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+  return null;
+}
+
 // Scroll to top on route change (except back/forward navigation)
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +71,14 @@ export default function Router() {
         <Route path="/teams/outreach" element={<OutreachPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/complaints" element={<ComplaintsPage />} />
+        <Route
+          path="/rift"
+          element={<ExternalRedirect to={RIFT_APPLY_URL} />}
+        />
+        <Route
+          path="/rift/apply"
+          element={<ExternalRedirect to={RIFT_APPLY_URL} />}
+        />
       </Routes>
     </>
   );
