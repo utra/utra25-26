@@ -25,8 +25,10 @@ const teams = [
     name: "ART",
     tagline: "Autonomous rovers that explore, navigate and sense the world.",
     path: "/teams/art",
-    img: new URL("../assets/images/subteams/art/Art robot.jpg", import.meta.url)
-      .href,
+    img: new URL(
+      "../assets/images/subteams/art/PXL_20230603_010015283.jpg",
+      import.meta.url,
+    ).href,
   },
   {
     name: "Combat",
@@ -198,8 +200,10 @@ const carouselImages = [
   },
   {
     name: "art2",
-    img: new URL("../assets/images/subteams/art/Art robot.jpg", import.meta.url)
-      .href,
+    img: new URL(
+      "../assets/images/subteams/art/PXL_20230603_010015283.jpg",
+      import.meta.url,
+    ).href,
   },
   {
     name: "robonars3",
