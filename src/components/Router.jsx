@@ -55,6 +55,7 @@ export default function Router() {
         <Route path="/teams/combat" element={<CombatPage />} />
         <Route path="/teams/6ixpac" element={<SixpacPage />} />
         <Route path="/teams/robosoccer" element={<RobosoccerPage />} />
+        {/* <Route path="/teams/robonars" element={<RobonarsPage />} /> */}
         <Route path="/sponsors" element={<SponsorsPage />} />
         <Route path="/teams/web" element={<WebPage />} />
         <Route path="/teams/marketing" element={<MarketingPage />} />
