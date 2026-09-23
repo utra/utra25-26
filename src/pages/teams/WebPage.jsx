@@ -44,6 +44,14 @@ const team_leadership = [
     img: new URL("../../assets/images/headshots/zayaan.jpg", import.meta.url)
       .href,
       linkedin: "https://www.linkedin.com/in/zayaan-bhan/"
+  },
+  {
+    name: "Georgia Kriebel",
+    role: "Web Associate",
+    bio: "CS + Physics 2T8",
+    img: new URL("../../assets/images/headshots/georgiak.jpeg", import.meta.url)
+      .href,
+      linkedin: "https://www.linkedin.com/in/georgia-kriebel/"
   }
   // {
   //   name: "Jane Doe",
