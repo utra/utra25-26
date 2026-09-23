@@ -7,6 +7,8 @@ import stanImg from "../assets/images/headshots/stan.jpg";
 import aaliyahImg from "../assets/images/headshots/aaliyah.jpeg";
 import maggieImg from "../assets/images/headshots/maggie.jpg";
 import georgiaImg from "../assets/images/headshots/georgia.jpg";
+import isabellaImg from "../assets/images/headshots/isabella.jpg";
+import kaiserImg from "../assets/images/headshots/kaiser.jpeg";
 import aboutImage from "../assets/images/photoshoot/aboutImage.jpg";
 // Animation variants
 const containerVariants = {
@@ -35,14 +37,14 @@ const teamMembers = [
     name: "Kaiser Tam",
     role: "President",
     program: "Mech 2T7",
-    image: utraLogo,
-    linkedin: "",
+    image: kaiserImg,
+    linkedin: "https://www.linkedin.com/in/kaisertam/",
   },
   {
     name: "Isabella Tang",
     role: "Vice-President Finance",
-    program: "Indy 2T6",
-    image: utraLogo,
+    program: "IndE 2T6 + PEY",
+    image: isabellaImg,
     linkedin: "https://www.linkedin.com/in/isabella-tang-0a482a22a/",
   },
   {
@@ -55,7 +57,7 @@ const teamMembers = [
   {
     name: "Aaliyah Pirani",
     role: "Vice-President Internal",
-    program: "CS BIO 2T8",
+    program: "CS + Bio 2T8",
     image: aaliyahImg,
     linkedin: "https://www.linkedin.com/in/aaliyahpirani",
   },
@@ -71,7 +73,7 @@ const teamMembers = [
     role: "Vice-President Partnerships",
     program: "ECE 2T8",
     image: georgiaImg,
-    linkedin: "https://www.linkedin.com/in/zhang-georgia",
+    linkedin: "https://www.linkedin.com/in/georgiazh/",
   },
   {
     name: "Maggie Zhao",

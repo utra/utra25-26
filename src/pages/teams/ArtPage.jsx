@@ -46,16 +46,23 @@ const highlights = [
 
 const team_images = [
   {
-    name: "art1",
+    name: "art-team",
     img: new URL(
-      "../../assets/images/subteams/art/Art robot.jpg",
+      "../../assets/images/subteams/art/art-team.jpg",
       import.meta.url,
     ).href,
   },
   {
-    name: "art2",
+    name: "art-working",
     img: new URL(
-      "../../assets/images/subteams/art/20230601_161926.jpg",
+      "../../assets/images/subteams/art/art-working.jpg",
+      import.meta.url,
+    ).href,
+  },
+  {
+    name: "art-pavement",
+    img: new URL(
+      "../../assets/images/subteams/art/art-pavement.jpg",
       import.meta.url,
     ).href,
   },
@@ -70,20 +77,6 @@ const team_images = [
     name: "art4",
     img: new URL(
       "../../assets/images/subteams/art/20230604_204124.jpg",
-      import.meta.url,
-    ).href,
-  },
-  {
-    name: "art5",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_4167.jpg",
-      import.meta.url,
-    ).href,
-  },
-  {
-    name: "art7",
-    img: new URL(
-      "../../assets/images/subteams/art/IMG_5199.JPG",
       import.meta.url,
     ).href,
   },
@@ -123,14 +116,14 @@ const team_leadership = [
     linkedin: "",
   },
   {
-    name: "Guarav Gaur",
+    name: "Gaurav Gaur",
     role: "Project Manager",
-    bio: "MECH 2T6 + PEY",
+    bio: "Mech 2T6",
     img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      "../../assets/images/headshots/gaurav.jpg",
       import.meta.url,
     ).href,
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/gaurav-gaurrr/",
   },
 ];
 

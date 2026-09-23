@@ -157,12 +157,12 @@ const team_leadership = [
   {
     name: "Cindy Zhu",
     role: "Project Manager",
-    bio: "EngSci 2T9",
+    bio: "EngSci 2T9 + PEY",
     img: new URL(
-      "../../assets/images/logo/utraLogoWhiteMobile.png",
+      "../../assets/images/headshots/cindy.jpg",
       import.meta.url,
     ).href,
-    linkedin: "",
+    linkedin: "https://linkedin.com/in/cindyyzhu",
   },
   {
     name: "Christina Hu",
