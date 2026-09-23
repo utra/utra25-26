@@ -96,6 +96,15 @@ const teams = [
       import.meta.url,
     ).href,
   },
+  {
+    name: "Research and Development",
+    tagline: "Exploring new and emerging areas of robotics research.",
+    path: "/teams/researchanddevelopment",
+    img: new URL(
+      "../assets/images/subteams/researchanddevelopment/RandDheader.jpg",
+      import.meta.url,
+    ).href,
+  }
 ];
 
 const carouselImages = [

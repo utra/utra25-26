@@ -127,6 +127,12 @@ const teams = [
     gradient: "gradient-purple-blue-reversed",
     maxWidth: "max-w-[300px]",
   },
+  {
+    title: "Research and Development",
+    description: "Exploring new and emerging areas of robotics research.",
+    gradient: "gradient-purple-blue-reversed",
+    maxWidth: "max-w-[300px]",
+  }
 ];
 
 function InfoCard({ title, description, gradient, maxWidth }) {

@@ -53,6 +53,7 @@ export default function Header() {
     { name: "Web", path: "/teams/web" },
     { name: "Marketing", path: "/teams/marketing" },
     { name: "Outreach", path: "/teams/outreach" },
+    { name: "Research and Development", path: "/teams/researchanddevelopment" },
   ];
 
   const getNavItemClasses = (path, hasDropdown = false) => {
