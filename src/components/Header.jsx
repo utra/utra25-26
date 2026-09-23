@@ -49,6 +49,7 @@ export default function Header() {
     { name: "Combat", path: "/teams/combat" },
     { name: "Pacbot", path: "/teams/6ixpac" },
     { name: "Robosoccer", path: "/teams/robosoccer" },
+    //{ name: "Robonars", path: "/teams/robonars" },
     { name: "Rift", path: "/teams/rift" },
     { name: "Web", path: "/teams/web" },
     { name: "Marketing", path: "/teams/marketing" },
