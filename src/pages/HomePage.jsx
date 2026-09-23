@@ -115,12 +115,6 @@ const teams = [
     maxWidth: "max-w-[300px]",
   },
   {
-    title: "Robonars",
-    description: "Technical Workshop and Seminar Speaker Series",
-    gradient: "gradient-purple-blue-reversed",
-    maxWidth: "max-w-[300px]",
-  },
-  {
     title: "UTRAHacks",
     description:
       "Organizing UTRAHacks, North America's largest robotics hackathon.",

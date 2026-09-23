@@ -50,7 +50,6 @@ export default function Header() {
     { name: "Pacbot", path: "/teams/6ixpac" },
     { name: "Robosoccer", path: "/teams/robosoccer" },
     { name: "Rift", path: "/teams/rift" },
-    { name: "Robonars", path: "/teams/robonars" },
     { name: "Web", path: "/teams/web" },
     { name: "Marketing", path: "/teams/marketing" },
     { name: "Outreach", path: "/teams/outreach" },

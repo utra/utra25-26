@@ -22,7 +22,6 @@ import SixpacPage from "../pages/teams/SixpacPage";
 import RobosoccerPage from "../pages/teams/RobosoccerPage";
 import WebPage from "../pages/teams/WebPage";
 import MarketingPage from "../pages/teams/MarketingPage";
-import RobonarsPage from "../pages/teams/RobonarsPage";
 import OutreachPage from "../pages/teams/OutreachPage";
 import RiftPage from "../pages/teams/RiftPage";
 
@@ -58,7 +57,6 @@ export default function Router() {
         <Route path="/sponsors" element={<SponsorsPage />} />
         <Route path="/teams/web" element={<WebPage />} />
         <Route path="/teams/marketing" element={<MarketingPage />} />
-        <Route path="/teams/robonars" element={<RobonarsPage />} />
         <Route path="/teams/outreach" element={<OutreachPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/complaints" element={<ComplaintsPage />} />

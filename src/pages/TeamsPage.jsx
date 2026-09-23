@@ -56,15 +56,6 @@ const teams = [
     ).href,
   },
   {
-    name: "Robonars",
-    tagline: "Technical workshops and seminar speaker series.",
-    path: "/teams/robonars",
-    img: new URL(
-      "../assets/images/robonars/Robonars Workshop.jpg",
-      import.meta.url,
-    ).href,
-  },
-  {
     name: "Web",
     tagline: "Designing and maintaining UTRA's online presence.",
     path: "/teams/web",
