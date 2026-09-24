@@ -12,7 +12,7 @@ const heroImage = new URL(
   import.meta.url,
 ).href;
 
-const aboutTitle = "About Research and Development";
+const aboutTitle = "About R&D";
 
 const aboutDescription = "The Research and Development team explores new and emerging areas of robotics research alongside professors. Students get hands-on experience designing, building and testing new technologies, and develop the technical skills to contribute to projects at the forefront of the field";
 
@@ -27,60 +27,38 @@ const skills = [
   "Data Analytics & ML",
 ];
 
-const highlights = [
+const projects = [
   {
     title: "Three-arm Teleoperated Robotic System VR Interface",
     description:
       "Control three Franka robotic arms through VR for surgery-inspired tasks using motion mapping and inverse kinematics.",
+    lead: {
+      name: "Professor Kahrs",
+      role: "",
+      bio: "",
+      img: new URL(
+        "../../assets/images/headshots/ProfKahrs.png",
+        import.meta.url,
+      ).href,
+      linkedin: "",
+    },
   },
   {
     title: "Computer Vision-based Rover Tracking and Analytics System",
     description:
       "Track and analyze rover performance in real time using computer vision, data collection, and analytics.",
+    lead: {
+      name: "Professor Colic",
+      role: "",
+      bio: "",
+      img: new URL(
+        "../../assets/images/headshots/ProfColic.png",
+        import.meta.url,
+      ).href,
+      linkedin: "",
+    },
   },
 ];
-
-const team_leadership = [
-  {
-    name: "Professor Colic",
-    role: "",
-    bio: "Computer Vision-based Rover Tracking and Analytics System",
-    img: new URL(
-      "../../assets/images/headshots/ProfColic.png",
-      import.meta.url,
-    ).href,
-    linkedin: "",
-  },
-  {
-    name: "Professor Kahrs",
-    role: "",
-    bio: "Three-arm Teleoperated Robotic System VR Interface",
-    img: new URL("../../assets/images/headshots/ProfKahrs.png", import.meta.url)
-      .href,
-    linkedin: "",
-  },
-];
-
-import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-
-
-
-const Card = ({ card }) => {
-  return (
-    <div className="group relative h-[180px] w-[260px] min-w-[260px] sm:h-[250px] sm:w-[400px] sm:min-w-[400px] flex-shrink-0 overflow-hidden rounded-[15px] shadow-lg">
-      <div
-        style={{
-          backgroundImage: `url(${card.img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-    </div>
-  );
-};
-
 
 export default function ResearchandDevelopmentPage() {
   function SkillTag({ skill }) {
@@ -99,24 +77,11 @@ export default function ResearchandDevelopmentPage() {
     );
   }
 
-  function HighlightCard({ title, description }) {
-    return (
-      <div className="card-hover bg-black bg-opacity-40 backdrop-blur-sm py-4 rounded-xl w-full sm:w-[370px] flex items-center text-center flex-col">
-        <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[24px] sm:text-[30px] gradient-purple-blue">
-          {title}
-        </h3>
-        <p className="text-white [font-family:'ProximaNova',sans-serif] text-[18px] sm:text-[22px] w-[90%] sm:w-[340px]">
-          {description}
-        </p>
-      </div>
-    );
-  }
-
   function TeamMemberCard({ name, role, bio, img, linkedin }) {
     return (
       <div className="flex flex-col items-center">
         <a
-          href={linkedin}
+          href={linkedin || undefined}
           target="_blank"
           rel="noopener noreferrer"
           className="group cursor-pointer"
@@ -142,8 +107,24 @@ export default function ResearchandDevelopmentPage() {
     );
   }
 
+  function ProjectColumn({ title, description, lead }) {
+    return (
+      <div className="w-full max-w-[600px] flex flex-col">
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] sm:text-[28px] md:text-[32px] mb-[10px] text-white leading-[1.2]">
+          {title}
+        </h3>
+        <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[20px] md:text-[23px] leading-[1.5]">
+          {description}
+        </p>
+        <div className="mt-auto pt-[30px] sm:pt-[40px]">
+          <TeamMemberCard {...lead} />
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)] min-h-[2600px]">
+    <div className="flex flex-col items-center bg-[linear-gradient(180deg,#4F4B60_0%,#6D6886_20%,#575078_34%,#36397E_98%)]">
       {/* Hero background image for desktop */}
       <div
         className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply opacity-90 fade-bottom max-h-[600px]"
@@ -176,7 +157,7 @@ export default function ResearchandDevelopmentPage() {
         </div>
       </div>
 
-      <div className="relative w-full min-h-0 sm:min-h-[2400px] mt-[-20px] pt-[40px] sm:pt-[230px] pb-[40px] sm:pb-0 flex flex-col items-center">
+      <div className="relative w-full mt-[-20px] pt-[40px] sm:pt-[230px] pb-[60px] sm:pb-[120px] flex flex-col items-center">
         <div
           className="absolute inset-0 bg-cover h-full fade-top pointer-events-none"
           style={{
@@ -219,36 +200,18 @@ export default function ResearchandDevelopmentPage() {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center justify-center pt-[60px] sm:pt-[130px] px-6 sm:px-12 md:px-0">
-          {/* <h2 className="gradient-purple-blue [font-family:'ProximaNova',sans-serif] font-bold text-[50px] mb-[10px]"> */}
-          <h2 className="text-gray-100 [font-family:'ProximaNova',sans-serif] font-bold text-[32px] sm:text-[42px] md:text-[50px] mb-[10px]">
-            Highlights
+        <div className="relative flex flex-col items-center pt-[60px] sm:pt-[130px] w-full px-6 sm:px-12 md:px-0">
+          <h2 className="[font-family:'ProximaNova',sans-serif] font-bold text-[32px] sm:text-[42px] md:text-[50px] mb-[20px] sm:mb-[30px] text-white">
+            Current Projects
           </h2>
 
-          <div className="relative flex flex-col sm:flex-row justify-between gap-[20px] sm:gap-[30px] md:gap-[50px] mt-[15px] w-full sm:w-auto">
-            {highlights.map((highlight) => (
-              <HighlightCard
-                key={highlight.title}
-                title={highlight.title}
-                description={highlight.description}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="relative flex flex-col justify-center items-center pt-[50px] sm:pt-[100px] w-full px-6 sm:px-0">
-          <h2 className="text-white [font-family:'ProximaNova',sans-serif] font-bold text-[32px] sm:text-[42px] md:text-[50px] mb-[20px] sm:mb-[30px]">
-            Team Leadership
-          </h2>
-          <div className="flex flex-wrap justify-center gap-[40px] sm:gap-[60px] py-2">
-            {team_leadership.map((leader, index) => (
-              <TeamMemberCard
-                key={`${leader.name}-${index}`}
-                name={leader.name}
-                role={leader.role}
-                bio={leader.bio}
-                img={leader.img}
-                linkedin={leader.linkedin}
+          <div className="flex flex-col md:flex-row md:items-stretch justify-center gap-[50px] sm:gap-[60px] md:gap-[125px]">
+            {projects.map((project) => (
+              <ProjectColumn
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                lead={project.lead}
               />
             ))}
           </div>
