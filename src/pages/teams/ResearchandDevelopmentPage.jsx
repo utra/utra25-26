@@ -14,7 +14,8 @@ const heroImage = new URL(
 
 const aboutTitle = "About R&D";
 
-const aboutDescription = "The Research and Development team explores new and emerging areas of robotics research alongside professors. Students get hands-on experience designing, building and testing new technologies, and develop the technical skills to contribute to projects at the forefront of the field";
+const aboutDescription =
+  "The Research and Development team explores new and emerging areas of robotics research alongside professors. Students get hands-on experience designing, building and testing new technologies, and develop the technical skills to contribute to projects at the forefront of the field";
 
 const featureImage = new URL(
   "../../assets/images/subteams/researchanddevelopment/RandDfeature.jpg",
@@ -29,9 +30,9 @@ const skills = [
 
 const projects = [
   {
-    title: "Three-arm Teleoperated Robotic System VR Interface",
+    title: "Teleoperated Robotic System",
     description:
-      "Control three Franka robotic arms through VR for surgery-inspired tasks using motion mapping and inverse kinematics.",
+      "Three Franka robotic arms are controlled in real time through a VR interface, with inverse kinematics mapping an operator's motion into precise, coordinated manipulation.",
     lead: {
       name: "Professor Kahrs",
       role: "",
@@ -44,9 +45,9 @@ const projects = [
     },
   },
   {
-    title: "Computer Vision-based Rover Tracking and Analytics System",
+    title: "Rover Tracking and Analytics",
     description:
-      "Track and analyze rover performance in real time using computer vision, data collection, and analytics.",
+      "Computer vision tracks a rover as it drives, logging its motion in real time to measure how it moves and performs. The collected data feeds an analytics layer that turns raw runs into readable insights.",
     lead: {
       name: "Professor Colic",
       role: "",
@@ -107,16 +108,16 @@ export default function ResearchandDevelopmentPage() {
     );
   }
 
-  function ProjectColumn({ title, description, lead }) {
+  function ProjectCard({ title, description, lead }) {
     return (
-      <div className="w-full max-w-[600px] flex flex-col">
-        <h3 className="[font-family:'ProximaNova',sans-serif] font-bold text-[24px] sm:text-[28px] md:text-[32px] mb-[10px] text-white leading-[1.2]">
+      <div className="card-hover bg-black bg-opacity-40 backdrop-blur-sm rounded-xl w-full max-w-[520px] flex flex-col px-[28px] sm:px-[42px] py-[34px] sm:py-[46px]">
+        <h3 className="[font-family:'ProximaNova',sans-serif] font-extrabold text-[24px] sm:text-[30px] gradient-purple-blue leading-[1.15] mb-[16px]">
           {title}
         </h3>
-        <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[20px] md:text-[23px] leading-[1.5]">
+        <p className="text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[18px] leading-[1.6]">
           {description}
         </p>
-        <div className="mt-auto pt-[30px] sm:pt-[40px]">
+        <div className="mt-auto pt-[36px] sm:pt-[46px]">
           <TeamMemberCard {...lead} />
         </div>
       </div>
@@ -205,9 +206,9 @@ export default function ResearchandDevelopmentPage() {
             Current Projects
           </h2>
 
-          <div className="flex flex-col md:flex-row md:items-stretch justify-center gap-[50px] sm:gap-[60px] md:gap-[125px]">
+          <div className="flex flex-col md:flex-row md:items-stretch justify-center gap-[36px] sm:gap-[44px] w-full max-w-[1096px]">
             {projects.map((project) => (
-              <ProjectColumn
+              <ProjectCard
                 key={project.title}
                 title={project.title}
                 description={project.description}
@@ -215,6 +216,18 @@ export default function ResearchandDevelopmentPage() {
               />
             ))}
           </div>
+
+          <p className="mt-[40px] sm:mt-[56px] max-w-[640px] text-center text-white [font-family:'ProximaNova',sans-serif] text-[16px] sm:text-[19px] leading-[1.6]">
+            Are you a professor or industry professional with a project you'd
+            like to collaborate on? Reach out at{" "}
+            <a
+              href="mailto:rnd@utra.ca"
+              className="text-[#a3a0f3] font-semibold hover:underline"
+            >
+              rnd@utra.ca
+            </a>
+            .
+          </p>
         </div>
       </div>
     </div>
