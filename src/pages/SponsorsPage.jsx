@@ -9,6 +9,14 @@ export const sponsors = [
       .href,
   },
   {
+    name: "RobotShop",
+    link: "https://www.robotshop.com",
+    img: new URL(
+      "../assets/images/logo_sponsors/robotshop1.png",
+      import.meta.url,
+    ).href,
+  },
+  {
     name: "AMD",
     link: "https://www.amd.com/en.html",
     img: new URL("../assets/images/logo_sponsors/amd-logo.png", import.meta.url)
