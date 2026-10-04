@@ -17,6 +17,14 @@ export const sponsors = [
     ).href,
   },
   {
+    name: "Repeat Robotics",
+    link: "https://repeat-robotics.com",
+    img: new URL(
+      "../assets/images/logo_sponsors/repeatrobotics.png",
+      import.meta.url,
+    ).href,
+  },
+  {
     name: "AMD",
     link: "https://www.amd.com/en.html",
     img: new URL("../assets/images/logo_sponsors/amd-logo.png", import.meta.url)
@@ -98,10 +106,6 @@ const past_sponsors = [
     img: "https://www.3mcanada.ca/3m_theme_assets/themes/3MTheme/assets/images/unicorn/Logo.svg",
   },
   {
-    name: "Atmel",
-    img: "https://www.microchip.com/en-us/about/corporate-overview/acquisitions/atmel/_jcr_content/root/responsivegrid/isolatedimage/image.coreimg.png/1716788933716/atmel.png",
-  },
-  {
     name: "Dremel DigiLab",
     img: "https://www.dremel.com/images/dremel_w340-png--16fe15ef3de449c0a6662896569f4483.png?imgWidth=680&imgHeight=222&scale=1",
   },
@@ -179,7 +183,7 @@ function ScrollingCarousel() {
 
 export default function SponsorsPage() {
   return (
-    <main className="relative min-h-[1200px] sm:min-h-[1600px]">
+    <main className="relative min-h-[1200px] sm:min-h-[1800px]">
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{
