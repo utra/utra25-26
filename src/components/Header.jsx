@@ -36,6 +36,7 @@ export default function Header() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
+    { name: "Events", path: "/events" },
     { name: "Our Teams", path: "/teams", hasDropdown: true },
     { name: "Sponsors", path: "/sponsors" },
     { name: "Contact", path: "/contact" },
@@ -123,7 +124,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <ul className="hidden lg:flex items-center space-x-10 py-[30px]">
+            <ul className="hidden lg:flex items-center space-x-5 xl:space-x-7 py-[30px]">
               {navItems.map((item) => (
                 <li
                   key={item.name}

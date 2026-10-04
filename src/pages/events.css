@@ -1,0 +1,21 @@
+.events-page { min-height: 80vh; color: white; background-image: url("../assets/images/graphics/background_gradient.png"); background-size: cover; background-position: center; }
+.event-button { border: 1px solid #a3a0f34d; border-radius: .65rem; padding: .55rem 1rem; color: #ece9ff; background: #a3a0f312; transition: background .2s; }
+.event-button:hover { background: #a3a0f330; }
+.events-page :focus-visible { outline: 2px solid #c4b5fd; outline-offset: 4px; }
+.event-button:disabled { opacity: .45; cursor: not-allowed; }
+.events-conveyor { display: flex; gap: 1.5rem; overflow-x: auto; padding: 4px 4px 20px; scrollbar-color: #8686f3 #202027; }
+.event-card { min-width: 0; border: 1px solid #ffffff18; background: #1d1b26; border-radius: 1.25rem; overflow: hidden; }
+.event-card h3 { overflow-wrap: anywhere; }
+.events-conveyor > .event-card { flex: 0 0 min(350px, 85vw); }
+.event-card-image { height: 180px; background: linear-gradient(125deg,#443186,#0b3868); display: grid; place-items: center; }
+.event-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.event-card-image > span { font-size: 2.5rem; font-weight: 800; letter-spacing: .15em; opacity: .65; }
+.event-card-image > span > span { display: block; font-size: .75rem; text-align: center; letter-spacing: .4em; }
+.event-empty { border: 1px dashed #ffffff30; border-radius: 1rem; padding: 3rem 1.5rem; color: #ffffff99; }
+.event-calendar { border: 1px solid #ffffff20; border-radius: 1rem; overflow: hidden; background: #ffffff03; }
+.calendar-day, .calendar-blank { min-height: 100px; min-width: 0; border-top: 1px solid #ffffff10; border-right: 1px solid #ffffff10; }
+.calendar-day { text-align: left; padding: .75rem; }
+.calendar-day:hover { background: #a3a0f312; }
+.calendar-day.selected { background: #a3a0f325; box-shadow: inset 0 0 0 2px #a3a0f3; }
+.event-field { display: block; width: 100%; background: #13121b; color: white; border: 1px solid #ffffff30; padding: .7rem; border-radius: .5rem; margin-top: .4rem; color-scheme: dark; }
+@media(max-width: 640px) { .calendar-day, .calendar-blank { min-height: 68px; padding: .5rem; } }
