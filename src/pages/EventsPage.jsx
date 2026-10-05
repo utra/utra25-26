@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { dateKey, eventsOnDay, formatDate, formatTime, loadEvents, safeRegistrationURL } from "../lib/events";
 import "./events.css";
-import workshopPhoto from "../assets/images/robonars/Robonars Workshop.jpg";
+import robotPhoto from "../assets/images/subteams/robosoccer/2018 robocup/DSC01734.JPG";
 
 function EventCard({ event }) {
   const link = safeRegistrationURL(event.registration_url);
@@ -70,10 +70,9 @@ export default function EventsPage() {
   }
 
   return <main className="events-page events-public-page">
-    <div className="events-hero-photo" aria-hidden="true" style={{ backgroundImage: `url(${workshopPhoto})` }} />
+    <div className="events-hero-photo" aria-hidden="true" style={{ backgroundImage: `url(${robotPhoto})` }} />
     <div className="relative max-w-6xl mx-auto px-5 py-16 md:py-24">
-      <p className="text-purple-300 uppercase tracking-[0.25em] text-sm mb-4">Build. Learn. Connect.</p>
-      <h1 className="text-5xl md:text-7xl font-extrabold gradient-purple-blue mb-5">Events at UTRA</h1>
+      <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-5">Events at UTRA</h1>
       <p className="text-white/65 text-xl max-w-xl">Find your next workshop, competition, or chance to meet the team.</p>
       <section className="mt-14" aria-labelledby="upcoming-heading">
         <div className="flex flex-wrap justify-between items-center gap-4 mb-6">
