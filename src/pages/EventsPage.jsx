@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { dateKey, eventsOnDay, formatDate, formatTime, loadEvents, safeRegistrationURL } from "../lib/events";
 import "./events.css";
+import workshopPhoto from "../assets/images/robonars/Robonars Workshop.jpg";
 
 function EventCard({ event }) {
   const link = safeRegistrationURL(event.registration_url);
@@ -68,8 +69,9 @@ export default function EventsPage() {
     setMonth(value); setSelected(`${value}-01`);
   }
 
-  return <main className="events-page">
-    <div className="max-w-6xl mx-auto px-5 py-16 md:py-24">
+  return <main className="events-page events-public-page">
+    <div className="events-hero-photo" aria-hidden="true" style={{ backgroundImage: `url(${workshopPhoto})` }} />
+    <div className="relative max-w-6xl mx-auto px-5 py-16 md:py-24">
       <p className="text-purple-300 uppercase tracking-[0.25em] text-sm mb-4">Build. Learn. Connect.</p>
       <h1 className="text-5xl md:text-7xl font-extrabold gradient-purple-blue mb-5">Events at UTRA</h1>
       <p className="text-white/65 text-xl max-w-xl">Find your next workshop, competition, or chance to meet the team.</p>
@@ -90,11 +92,11 @@ export default function EventsPage() {
       <section className="mt-16" aria-labelledby="calendar-heading">
         <div className="flex flex-wrap items-end justify-between gap-3 mb-6"><h2 id="calendar-heading" className="text-3xl font-bold">The calendar</h2><p className="text-white/55">All times in Toronto · ET</p></div>
         <div className="event-calendar">
-          <div className="flex flex-wrap justify-between items-center gap-4 p-5 border-b border-white/10">
+          <div className="calendar-toolbar flex flex-wrap justify-between items-center gap-4 p-5">
             <h3 className="text-2xl font-bold" aria-live="polite">{monthLabel}</h3>
             <div className="flex gap-2"><button className="event-button" onClick={() => changeMonth(-1)} aria-label="Previous month">←</button><button className="event-button" onClick={() => { setMonth(today.slice(0, 7)); setSelected(today); }}>Today</button><button className="event-button" onClick={() => changeMonth(1)} aria-label="Next month">→</button></div>
           </div>
-          <div className="grid grid-cols-7">{["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => <div className="p-2 text-center text-white/50 text-xs md:text-sm" key={day}>{day}</div>)}</div>
+          <div className="calendar-weekdays grid grid-cols-7">{["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => <div className="p-3 text-center text-white/85 font-semibold text-xs md:text-sm" key={day}>{day}</div>)}</div>
           <div className="grid grid-cols-7">
             {Array.from({ length: offset }, (_, i) => <div key={`blank-${i}`} className="calendar-blank" />)}
             {Array.from({ length: days }, (_, i) => {

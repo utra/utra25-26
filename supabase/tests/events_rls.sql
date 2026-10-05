@@ -1,4 +1,4 @@
--- Run as postgres in a disposable Supabase project after the migration.
+-- Run as postgres in a disposable Supabase project with the events schema configured.
 -- Fixtures and assertions are rolled back. Any unexpected access raises an error.
 begin;
 insert into auth.users (id) values ('e0000000-0000-4000-8000-000000000001'), ('e0000000-0000-4000-8000-000000000002');
