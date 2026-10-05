@@ -23,6 +23,10 @@ Deployment is automated to GitHub Pages via GitHub Actions. The site deploys to 
 
 ## Structure
 
+## Events
+
+`/events` shows upcoming event cards and a custom monthly calendar. Invited organizers use `/admin/events` to create, edit, publish, and delete events. Supabase provides authentication, the database, and private image storage; database policies enforce organizer permissions.
+
 ## Contributing
 
 To contribute to this project, read the [CONTRIBUTING](./docs/CONTRIBUTING.md) file.
