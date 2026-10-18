@@ -37,14 +37,6 @@ export const sponsors = [
       .href,
   },
   {
-    name: "SendCutSend",
-    link: "https://sendcutsend.com/",
-    img: new URL(
-      "../assets/images/logo_sponsors/sendcutsend.svg",
-      import.meta.url,
-    ).href,
-  },
-  {
     name: "Pololu",
     link: "https://www.pololu.com/",
     img: new URL("../assets/images/logo_sponsors/pololu.png", import.meta.url)
